@@ -90,6 +90,33 @@ const blogList = [
   },
 ];
 
+const pillsList = [
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+  {
+    pillLink: "#",
+    pilltext: "Wakacje w styczniu",
+  },
+];
+
 const Blog = () => {
   const [tempList, setTempList] = useState(null);
   return (
@@ -191,7 +218,9 @@ const Blog = () => {
                 <h3>Sprawdź gdzie jechać na wakacje</h3>
               </div>
               <div className={styles.pills__div}>
-                <PillSection />
+                {pillsList.map((item, index) => (
+                  <PillSection item={item} key={index} />
+                ))}
               </div>
             </div>
           </div>

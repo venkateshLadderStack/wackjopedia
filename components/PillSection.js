@@ -1,12 +1,7 @@
-const PillSection = () => {
+const PillSection = ({ item }) => {
   return (
     <>
-      <a href="#">Wakacje w styczniu</a>
-      <a href="#">Wakacje w styczniu</a>
-      <a href="#">Wakacje w styczniu</a>
-      <a href="#">Wakacje w styczniu</a>
-      <a href="#">Wakacje w styczniu</a>
-      <a href="#">Wakacje w styczniu</a>
+      <a href={item.pillLink}>{item.pilltext}</a>
     </>
   );
 };
