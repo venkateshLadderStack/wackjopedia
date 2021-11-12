@@ -6,14 +6,14 @@ const BlogSection = ({ item }) => {
     <>
       <div className={styles.blog}>
         <Image
-          className="mb-4 "
+          className={`${styles.blog__img} `}
           layout="responsive"
           src={item.img}
           width={294}
           height={263}
           alt="blog"
         />
-        <p className="blogText">{item.text}</p>
+        <p className={`${styles.blogText} mt-4`}>{item.text}</p>
       </div>
     </>
   );

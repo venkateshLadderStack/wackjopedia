@@ -124,6 +124,10 @@
     color: #00011D;
 }
 
+.blogright__btn a {
+    color: #00011D;
+}
+
 .deal {
     background: #ffffffd9;
     border: 1px solid #E8E8E8;
@@ -216,7 +220,8 @@
     width: 259px;
 }
 
-.theme__btn {
+.theme__btn,
+.theme__btn:hover {
     text-align: center;
     margin: auto;
     background: linear-gradient(180deg, #FFC700 0%, #FFBC11 100%);

@@ -164,7 +164,7 @@ const Blog = () => {
         </div>
       </div>
       <div className="container">
-        <div className="m-5">
+        <div className="my-5">
           <h3 className="mb-5">Gorące oferty Last Minute</h3>
           <div className="row">
             <OfferSection />
