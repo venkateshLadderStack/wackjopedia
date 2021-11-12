@@ -1,8 +1,6 @@
 import Banner from "../components/banner";
-import BlogSection from "../components/blogSection";
 import Holiday from "../components/Holidaycard";
 import OfferSection from "../components/OfferSection";
-import PaginatedItems from "../components/Paginate";
 import PillSection from "../components/PillSection";
 import styles from "../styles/blog.module.css";
 
