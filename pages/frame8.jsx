@@ -3,6 +3,7 @@ import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
 import OfferSection from "../components/OfferSection";
 import styles from "../styles/blog.module.css";
+import frameStyle from "../styles/frame8.module.css";
 import PillSection from "../components/PillSection";
 
 const pillsList = [
@@ -70,6 +71,20 @@ const frame8 = () => {
             </div>
             <div className="col-4">
               <Holiday />
+            </div>
+          </div>
+          <div>
+            <div className="col-lg-12">
+              <div className={`${frameStyle.location__title}`}>
+                <h3>Znalezione lokalizacje</h3>
+              </div>
+              <div className={frameStyle.location__box}>
+                <p>
+                  Uzupełnij powyższy formularz, a następnie kliknij przycisk
+                  “Szukaj lokalizacji”, <br />
+                  byśmy mogli wyświetlić Ci idealne lokalizacje wakacyjne
+                </p>
+              </div>
             </div>
           </div>
           <div className="py-5">
