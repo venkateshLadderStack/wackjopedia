@@ -1,4 +1,4 @@
-import styles from '../styles/blog.module.css';
+import styles from "../styles/blog.module.css";
 
 const Holiday = () => {
   return (

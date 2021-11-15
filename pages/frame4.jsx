@@ -1,4 +1,5 @@
 import Banner from "../components/banner";
+import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
@@ -85,10 +86,10 @@ const Frame4 = () => {
           <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 pr-0">
-              <div className="row my-2"></div>
+              <DesinationCard />
             </div>
             <div className="col-lg-4 col-md-12 pr-0 mt-2">
-              <Holiday/>
+              <Holiday />
             </div>
           </div>
         </div>
