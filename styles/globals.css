@@ -393,3 +393,15 @@ a.page__link:hover {
   border-width: 4px 4px 0;
   border-top-color: tint(#666, 4%);
 }
+
+.banner {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+  .banner {
+    width: 100%;
+    margin: auto;
+  }
+}

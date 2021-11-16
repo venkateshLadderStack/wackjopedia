@@ -80,8 +80,7 @@ const Frame4 = () => {
         </div>
       </div>
       <div className="container">
-        <h3 className="py-4">Blog Wakacjopedia</h3>
-        <Banner />
+        <Banner title="Blog Wakacjopedia" />
         <div className="mt-5">
           <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
           <div className="row mt-1">

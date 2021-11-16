@@ -123,7 +123,7 @@ const Blog = () => {
     <>
       <div className="container">
         <h3 className="py-4">Blog Wakacjopedia</h3>
-        <Banner />
+        <Banner title="Blog Wakacjopedia" />
         <div className="mt-5">
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 pr-0">

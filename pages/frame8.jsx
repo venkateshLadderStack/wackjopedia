@@ -62,8 +62,7 @@ const frame8 = () => {
     <>
       <div className="container">
         <div className="container">
-          <h3 className="py-4">Gdzie jechać na wakacje w grudniu?</h3>
-          <Banner />
+          <Banner title="Gdzie jechać na wakacje w grudniu?" />
           <div className="row">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
             <div className="col-8">
@@ -74,7 +73,7 @@ const frame8 = () => {
             </div>
           </div>
           <div>
-            <div className="col-lg-12">
+            <div className="col-lg-12 mt-5">
               <div className={`${frameStyle.location__title}`}>
                 <h3>Znalezione lokalizacje</h3>
               </div>
@@ -116,6 +115,15 @@ const frame8 = () => {
             <OfferSection />
             <OfferSection />
             <OfferSection />
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className={styles.deal__btn}>
+                <a href="#" className={`${styles.theme__btn} py-3`}>
+                  pokaż więcej ofert
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
