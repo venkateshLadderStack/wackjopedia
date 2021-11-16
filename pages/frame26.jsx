@@ -3,12 +3,12 @@ import styles from "../styles/frame26.module.css";
 import blogstyles from "../styles/blog.module.css";
 import Banner from "../components/banner";
 import Image from "next/image";
-import locationIMg from "../public/img/locationImg.png";
 import noteImg from "../public/img/noteImg.png";
 import Holiday from "../components/Holidaycard";
 import Frame26Text, { Frame26List } from "../components/Frame26Text";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
+import Locationcard from "../components/Locationcard";
 
 const pillsList = [
   {
@@ -43,19 +43,7 @@ function frame26() {
         <Banner title="Sylwester w Dubaju" />
         <div className="row my-5">
           <div className="col-lg-8 col-md-12 mb-5">
-            <div className={styles.location__section}>
-              <Image
-                src={locationIMg}
-                alt="location"
-                width={675}
-                height={598}
-                loading="lazy"
-              />
-              <div className="d-flex justify-content-between">
-                <p>Gdzie na wakacje w grudniu</p>
-                <p>Źródło: istock / travelpic</p>
-              </div>
-            </div>
+            <Locationcard />
             <div>
               <div className={styles.text__area}>
                 <h4>Gdzie w grudniu jest ciepło?</h4>
