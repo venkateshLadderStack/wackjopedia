@@ -71,25 +71,8 @@ a.page__link:hover {
   font-size: 14px;
 }
 
-.rc__slider__section {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+/* RC SLIDER (RANGE SECTION) */
 
-@media screen and (max-width:767px) {
-  .rc__slider__section {
-    flex-wrap: wrap;
-  }
-
-  .rc__progress__area {
-    width: 100% !important;
-  }
-}
-
-.rc__progress__area {
-  width: 46%;
-}
 
 .rc-slider {
   position: relative;

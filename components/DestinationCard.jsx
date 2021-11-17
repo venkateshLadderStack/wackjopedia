@@ -58,11 +58,15 @@ const DesinationCard = () => {
               setValue(data);
             }}
           />
-          <div className="rc__slider__section">
-            <div className="rc__progress__area mr-2 my-4">
+          <div className={stylesDestination.rc__slider__section}>
+            <div
+              className={`${stylesDestination.rc__progress__area} mr-2 my-4`}
+            >
               <RcSlider label={"Temperatura powietrza"} />
             </div>
-            <div className="rc__progress__area ml-2  my-4">
+            <div
+              className={`${stylesDestination.rc__progress__area} ml-2 my-4`}
+            >
               <RcSlider label={"Temperatura wody"} />
             </div>
           </div>
