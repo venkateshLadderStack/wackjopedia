@@ -1,0 +1,219 @@
+.cross {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.cross a {
+    font-size: 30px;
+    color: #000;
+}
+
+.offcanva {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background: #fdb91c;
+    z-index: 999;
+    left: -100%;
+    top: 0;
+    transition: 0.3s;
+}
+
+.offcanva.active {
+    left: 0;
+}
+
+.offcanva__menu {
+    margin-top: 70px;
+}
+
+.offcanva__menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.offcanva__menu ul li a {
+    font-size: 18px;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.offcanva__menu ul li:hover a {
+    padding-left: 40px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    z-index: 9;
+    opacity: 0.7;
+    left: -100%;
+    top: 0;
+    transition: 0.3s;
+}
+
+.overlay.active {
+    left: 0;
+}
+
+.header__area {
+    border-bottom: 1px solid #e8e8e8;
+    height: 104px;
+    display: flex;
+    align-items: center;
+}
+
+.wd {
+    max-width: 1440px;
+}
+
+.header__fl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header__menu li {
+    display: inline-block;
+    margin: 0 21px;
+}
+
+.header__menu li a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00011d;
+}
+
+.header__btn a {
+    background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
+    border-radius: 30px;
+    width: 259px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    color: #00011d;
+}
+
+.header__bar a {
+    font-size: 35px !important;
+    color: #000;
+    background: transparent;
+    width: auto !important;
+}
+
+.header__bar {
+    display: none;
+}
+
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1449px) {
+    .header__menu li {
+        margin: 0 14px;
+    }
+
+    .header__btn a {
+        width: 210px;
+        height: 51px;
+        font-size: 12px;
+    }
+}
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header__menu li {
+        margin: 0 14px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__btn a {
+        width: 210px;
+        height: 46px;
+        font-size: 12px;
+    }
+
+    .header__btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__bar {
+        display: block;
+        margin-right: 30px;
+    }
+}
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__btn a {
+        width: 210px;
+        height: 46px;
+        font-size: 12px;
+    }
+
+    .header__btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__bar {
+        display: block;
+        margin-right: 30px;
+    }
+}
+
+/* SM Small Device :320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .header__area {
+        height: 80px;
+    }
+
+    .header__menu li {
+        margin: 0 14px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__btn a {
+        width: 210px;
+        height: 46px;
+        font-size: 12px;
+        display: none;
+    }
+
+    .header__bar a {
+        display: block;
+    }
+
+    .header__bar {
+        display: block;
+    }
+
+}

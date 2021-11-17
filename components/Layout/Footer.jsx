@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
+import footerStyle from "../../styles/footer.module.css";
 
 const Footer = () => {
   return (
     <>
-      <div className="footer-area">
+      <div className={footerStyle.footer__area}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="footer-logo">
+              <div className={footerStyle.footer__logo}>
                 <a href="#">
                   <Image
                     src="/img/footer-logo.png"
@@ -19,12 +20,12 @@ const Footer = () => {
                   />
                 </a>
               </div>
-              <div className="footer-fl">
-                <div className="single-footer-wed">
-                  <div className="footer-title">
+              <div className={footerStyle.footer__fl}>
+                <div className={footerStyle.single__footer__wed}>
+                  <div className={footerStyle.footer__title}>
                     <h3>Gdzie jechać</h3>
                   </div>
-                  <div className="footer-list">
+                  <div className={footerStyle.footer__list}>
                     <ul>
                       <li>
                         <a href="#">Gdzie na wakacje w styczniu</a>
@@ -65,11 +66,11 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="single-footer-wed">
-                  <div className="footer-title">
+                <div className={footerStyle.single__footer__wed}>
+                  <div className={footerStyle.footer__title}>
                     <h3>Pogoda</h3>
                   </div>
-                  <div className="footer-list">
+                  <div className={footerStyle.footer__list}>
                     <ul>
                       <li>
                         <a href="#">Wyspy Zielonego Przylądka</a>
@@ -110,11 +111,11 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="single-footer-wed">
-                  <div className="footer-title">
+                <div className={footerStyle.single__footer__wed}>
+                  <div className={footerStyle.footer__title}>
                     <h3>Pogoda</h3>
                   </div>
-                  <div className="footer-list">
+                  <div className={footerStyle.footer__list}>
                     <ul>
                       <li>
                         <a href="#">Wyspy Zielonego Przylądka</a>
@@ -155,11 +156,11 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="single-footer-wed">
-                  <div className="footer-title">
+                <div className={footerStyle.single__footer__wed}>
+                  <div className={footerStyle.footer__title}>
                     <h3>Pogoda</h3>
                   </div>
-                  <div className="footer-list">
+                  <div className={footerStyle.footer__list}>
                     <ul>
                       <li>
                         <a href="#">Wyspy Zielonego Przylądka</a>
@@ -205,11 +206,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom-area">
+      <div className={footerStyle.footer__bottom__area}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="footer-bootom-menu">
+              <div className={footerStyle.footer__bootom__menu}>
                 <ul>
                   <li>
                     <a href="#">Kontakt</a>
@@ -228,7 +229,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="footer-copy">
+              <div className={`${footerStyle.footer__copy}`}>
                 <p>© 2021 Wakacjopedia.pl</p>
                 <p>
                   Opublikowane na stronach www.wakacjopedia.pl informacje lub

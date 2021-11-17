@@ -3,24 +3,30 @@
   float: left;
   margin-right: 15px;
 }
+
 .alignright {
   float: right;
   margin-left: 15px;
 }
+
 .aligncenter {
   display: block;
   margin: 0 auto 15px;
 }
+
 a:focus {
   outline: 0 solid;
 }
+
 * {
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 h1,
 h2,
 h3,
@@ -31,6 +37,7 @@ h6 {
   color: #1b1b21;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   color: #545051;
   font-weight: 300;
@@ -45,6 +52,7 @@ body {
 .selector-for-some-widget {
   box-sizing: content-box;
 }
+
 a:hover {
   text-decoration: none;
 }
@@ -59,35 +67,42 @@ button:focus {
 .container.wd {
   max-width: 1440px;
 }
+
 .container {
   max-width: 1070px;
 }
+
 .header-fl {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header-area {
   border-bottom: 1px solid #e8e8e8;
   height: 104px;
   display: flex;
   align-items: center;
 }
+
 .header-menu ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .header-menu li {
   display: inline-block;
   margin: 0 21px;
 }
+
 .header-menu li a {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #00011d;
 }
+
 .header-btn a {
   background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
   border-radius: 30px;
@@ -102,10 +117,12 @@ button:focus {
   text-align: center;
   color: #00011d;
 }
+
 .banner-area {
   padding: 50px 0;
   text-align: center;
 }
+
 .section-title h3 {
   font-weight: 500;
   font-size: 25px;
@@ -113,13 +130,16 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .vacation-area .section-title {
   margin-bottom: 25px;
 }
+
 .vacation-fl {
   display: flex;
   justify-content: space-between;
 }
+
 .vacation-left {
   width: 65.4%;
   background: rgba(1, 26, 92, 0.9);
@@ -132,6 +152,7 @@ button:focus {
   padding-left: 63px;
   padding-right: 47px;
 }
+
 .vacation-select-title h3 {
   font-weight: 600;
   font-size: 15px;
@@ -139,14 +160,17 @@ button:focus {
   color: #ffffff;
   margin: 0;
 }
+
 .vacation-select-title {
   margin-bottom: 10px;
 }
+
 .vacation-select {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .vacation-select .nice-select {
   background: #2d50ab;
   border-radius: 30px;
@@ -160,14 +184,17 @@ button:focus {
   align-items: center;
   padding: 0 23px;
 }
+
 .single-vacation-select {
   margin-bottom: 35px;
 }
+
 .tem-progress-fl {
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
 }
+
 .tam-progres-title h3 {
   font-weight: 600;
   font-size: 15px;
@@ -175,6 +202,7 @@ button:focus {
   color: #ffffff;
   margin-bottom: 3px;
 }
+
 .tam-progres label {
   font-weight: 600;
   font-size: 15px;
@@ -182,6 +210,7 @@ button:focus {
   color: #ffbd12;
   display: block;
 }
+
 .tam-progres p {
   background: #2d50ab;
   border-radius: 30px;
@@ -191,9 +220,11 @@ button:focus {
   position: relative;
   text-align: center;
 }
+
 .single-tam-progres {
   width: 46%;
 }
+
 .tam-progres p span {
   background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
   border-radius: 30px;
@@ -203,6 +234,7 @@ button:focus {
   position: relative;
   margin: auto;
 }
+
 .tam-progres p span:before {
   position: absolute;
   content: "";
@@ -214,8 +246,7 @@ button:focus {
   top: 50%;
   transform: translateY(-50%);
 }
-.tam-progres p span::after {
-}
+
 .tam-progres p span:after {
   position: absolute;
   content: "";
@@ -227,6 +258,7 @@ button:focus {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .vacation-btn a {
   background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
   border-radius: 30px;
@@ -241,6 +273,7 @@ button:focus {
   text-align: center;
   color: #00011d;
 }
+
 .vacation-card {
   height: 100%;
   background-size: 100%;
@@ -252,24 +285,25 @@ button:focus {
   justify-content: end;
   height: 602px;
 }
+
 .vacation-right {
   width: 29%;
 }
+
 .vacation-card:before {
   position: absolute;
   content: "";
-  background: linear-gradient(
-    360deg,
-    #001a5b 39.63%,
-    rgba(4, 25, 81, 0.95) 67.67%,
-    rgba(0, 32, 81, 0) 97.98%
-  );
+  background: linear-gradient(360deg,
+      #001a5b 39.63%,
+      rgba(4, 25, 81, 0.95) 67.67%,
+      rgba(0, 32, 81, 0) 97.98%);
   border-radius: 0px 0px 30px 30px;
   height: 50%;
   width: 100%;
   bottom: 0;
   left: 0;
 }
+
 .star {
   position: absolute;
   top: 0;
@@ -283,14 +317,17 @@ button:focus {
   align-items: center;
   justify-content: center;
 }
+
 .star a {
   color: #ffc700;
   font-size: 15px;
   margin: 0 2px;
 }
+
 .vacation-containt {
   position: relative;
 }
+
 .vacation-card-title h3 {
   font-weight: 600;
   font-size: 25px;
@@ -298,24 +335,29 @@ button:focus {
   color: #ffffff;
   margin: 0;
 }
+
 .vacation-card-title {
   margin-bottom: 45px;
 }
+
 .vacation-card-text p {
   font-weight: 300;
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
 }
+
 .vacation-card-text p span {
   color: #fbb527;
   font-weight: 700;
   font-size: 22px;
   margin: 0;
 }
+
 .vacation-card-text {
   margin-bottom: 25px;
 }
+
 .vacation-card-btn a {
   background: linear-gradient(0deg, #ffc700 0%, #ffdc82 100%);
   border-radius: 30px;
@@ -329,19 +371,23 @@ button:focus {
   line-height: 19px;
   color: #00011d;
 }
+
 .vacation-area {
   padding-bottom: 70px;
 }
+
 .section-title {
   margin-bottom: 35px;
   text-align: left;
 }
+
 .blog-fl {
   display: flex;
   flex-wrap: wrap;
   max-width: 680px;
   justify-content: space-between;
 }
+
 .single-blog {
   width: 48%;
   background: rgba(255, 255, 255, 0.85);
@@ -354,9 +400,11 @@ button:focus {
   margin-bottom: 24px;
   height: 418px;
 }
+
 .blog-img {
   margin-bottom: 24px;
 }
+
 .blog-text p {
   font-weight: 600;
   font-size: 17px;
@@ -364,11 +412,13 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .blog-btn {
   text-align: center;
   max-width: 680px;
   margin-top: 25px;
 }
+
 .blog-btn a {
   background: linear-gradient(180deg, #ffc700 0%, #ffbc11 100%);
   border-radius: 30px;
@@ -384,12 +434,11 @@ button:focus {
   text-align: center;
   color: #00011d;
 }
+
 .blog-btn a:before {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 199, 0, 0.4) 0%,
-    rgba(255, 188, 17, 0.4) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 199, 0, 0.4) 0%,
+      rgba(255, 188, 17, 0.4) 100%);
   filter: blur(20px);
   border-radius: 30px;
   position: absolute;
@@ -398,15 +447,18 @@ button:focus {
   height: 51px;
   bottom: -9px;
 }
+
 .blog-area {
   padding-bottom: 100px;
 }
+
 .weather-fl {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 680px;
 }
+
 .single-weather {
   width: 31.33%;
   background: rgba(255, 255, 255, 0.85);
@@ -418,9 +470,11 @@ button:focus {
   height: 213px;
   margin-bottom: 17px;
 }
+
 .weather-img {
   margin-bottom: 13px;
 }
+
 .weather-text p {
   font-weight: 600;
   font-size: 15px;
@@ -428,6 +482,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .weather-area {
   padding-bottom: 55px;
 }
@@ -438,6 +493,7 @@ button:focus {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .check-we-fl a {
   width: 31.33%;
   background: #ffffff;
@@ -455,6 +511,7 @@ button:focus {
   color: #00011d;
   margin-bottom: 50px;
 }
+
 .check-we-area {
   padding-bottom: 45px;
 }
@@ -468,17 +525,21 @@ button:focus {
   border-radius: 30px;
   margin-bottom: 40px !important;
 }
+
 .deal-img {
   padding: 8px 6px;
   text-align: center;
   margin-bottom: 14px;
 }
+
 .deal-containt {
   padding: 0 16px;
 }
+
 .deal-containt {
   padding-bottom: 18px;
 }
+
 .deal-title h3 {
   font-weight: 600;
   font-size: 15px;
@@ -486,24 +547,29 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .deal-title {
   margin-bottom: 20px;
 }
+
 .deal-ster {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .deal-ster a {
   font-size: 10px;
   color: #ffc700;
   margin: 0 2px;
 }
+
 .deal-pp {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .deal-pp a {
   background: #ff5656;
   display: flex;
@@ -517,6 +583,7 @@ button:focus {
   font-weight: 700;
   margin-right: 16px;
 }
+
 .deal-pp del {
   font-weight: 500;
   font-size: 14px;
@@ -524,6 +591,7 @@ button:focus {
   text-decoration-line: line-through;
   color: #ff5656;
 }
+
 .deal-text p {
   font-weight: 300;
   font-size: 14px;
@@ -531,11 +599,13 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .deal-text p span {
   font-weight: 700;
   font-size: 20px;
   margin: 0 10px;
 }
+
 .theme-btn {
   text-align: center;
   margin: auto;
@@ -551,28 +621,35 @@ button:focus {
   color: #00011d;
   box-shadow: 3px 14px 25px #ffc00b4f;
 }
+
 .deal-btn a {
   width: 259px;
 }
+
 .deal-area {
   padding-bottom: 44px;
 }
+
 .footer-area {
   background: #00011d;
   padding: 40px 0;
   border-bottom: 1px solid #414253;
 }
+
 .footer-logo {
   margin-bottom: 40px;
 }
+
 .footer-fl {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .single-footer-wed {
   width: 25%;
 }
+
 .footer-title h3 {
   font-weight: 500;
   font-size: 16px;
@@ -580,54 +657,66 @@ button:focus {
   color: #ffffff;
   margin: 0;
 }
+
 .footer-title {
   margin-bottom: 35px;
 }
+
 .footer-list ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .footer-list li {
   display: block;
   margin-bottom: 7px;
 }
+
 .footer-list li a {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
 }
+
 .footer-bottom-area {
   background: #00011d;
 }
+
 .footer-bootom-menu {
   padding: 45px 0;
 }
+
 .footer-bootom-menu ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .footer-bootom-menu li {
   display: inline-block;
   margin: 0 21px;
 }
+
 .footer-bootom-menu li:nth-child(1) {
   margin-left: 0;
 }
+
 .footer-bootom-menu ul li a {
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
 }
+
 .footer-copy {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 30px;
 }
+
 .footer-copy p {
   font-weight: 300;
   font-size: 12px;
@@ -639,32 +728,39 @@ button:focus {
 .humburger-area {
   padding: 32px 0;
 }
+
 .hum-memu a {
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
   color: #00011d;
 }
+
 .holy-area .section-title h3 {
   font-weight: 500;
   font-size: 34px;
   line-height: 51px;
   color: #00011d;
 }
+
 .holy-area .section-title {
   margin-bottom: 50px;
 }
+
 .holy-fl {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .holy-left {
   width: 65.4%;
 }
+
 .holy-right {
   width: 29.1%;
 }
+
 .single-holy {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid #e8e8e8;
@@ -678,6 +774,7 @@ button:focus {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .holy-hu a {
   font-weight: 300;
   font-size: 12px;
@@ -686,6 +783,7 @@ button:focus {
   display: block;
   margin-bottom: 6px;
 }
+
 .holy-title h3 {
   font-weight: 600;
   font-size: 15px;
@@ -693,28 +791,34 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .holy-title {
   margin-bottom: 6px;
 }
+
 .holy-ster {
   display: flex;
   align-items: center;
   margin-bottom: 17px;
 }
+
 .holy-ster a {
   color: #ffc700;
   font-size: 14px;
   margin: 0 3px;
 }
+
 .holy-list-fl {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 24px;
 }
+
 .holy-list {
   width: 50%;
 }
+
 .holy-list a {
   display: block;
   font-weight: 500;
@@ -725,25 +829,31 @@ button:focus {
   display: flex;
   align-items: center;
 }
+
 .holy-list a img {
   max-width: 12px;
   margin-right: 10px;
 }
+
 .holy-containt {
   width: 62%;
 }
+
 .holy-img {
   max-width: 221px;
   position: relative;
 }
+
 .holy-list a i {
   margin-right: 12px;
 }
+
 .holy-last {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .holy-last p {
   width: 50%;
   font-weight: 300;
@@ -752,15 +862,18 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .holy-last p span {
   font-weight: 700;
   font-size: 19px;
 }
+
 .hhl {
   width: 50%;
   display: flex;
   align-items: center;
 }
+
 .hhl a {
   background: #ff5656;
   width: 43px;
@@ -774,6 +887,7 @@ button:focus {
   justify-content: center;
   margin-right: 15px;
 }
+
 .hhl del {
   font-weight: 500;
   font-size: 14px;
@@ -781,6 +895,7 @@ button:focus {
   text-decoration-line: line-through;
   color: #ff5656;
 }
+
 .holy-img a {
   background: #ffffff;
   box-shadow: 0px 6px 11px rgba(0, 1, 29, 0.05);
@@ -799,15 +914,19 @@ button:focus {
   line-height: 22px;
   color: #00011d;
 }
+
 .holy-btn a {
   width: 259px;
 }
+
 .holy-btn {
   margin-top: 40px;
 }
+
 .holy-area {
-  /*! padding-bottom: 60px; */
+  padding-bottom: 60px;
 }
+
 .holy-ri-single {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid #b9c7d5;
@@ -817,6 +936,7 @@ button:focus {
   padding: 21px;
   margin-bottom: 33px;
 }
+
 .holy-ri-single h3 {
   font-weight: 600;
   font-size: 15px;
@@ -824,18 +944,22 @@ button:focus {
   color: #00011d;
   margin-bottom: 16px;
 }
+
 .holy-ri-single ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .holy-ri-single li {
   display: block;
   margin-bottom: 7px;
 }
+
 .holy-ri-single li:last-child {
   margin: 0;
 }
+
 .holy-ri-single li a {
   font-weight: 500;
   font-size: 12px;
@@ -847,6 +971,7 @@ button:focus {
   padding: 40px 0;
   padding-top: 30px;
 }
+
 .blog-wo-title h3 {
   font-weight: 500;
   font-size: 34px;
@@ -854,22 +979,27 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .blog-wo-fl {
   display: flex;
   justify-content: space-between;
 }
+
 .blog-wo-left {
   width: 65.4%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .blog-wo-right {
   width: 29%;
 }
+
 .blog-wo-right .vacation-right {
   width: 100%;
 }
+
 .blog-wo-nev {
   margin-top: 40px;
   display: flex;
@@ -877,6 +1007,7 @@ button:focus {
   justify-content: space-between;
   width: 100%;
 }
+
 .blog-nev-left a {
   background: #ffffff;
   border: 1px solid #e0dfdf;
@@ -891,10 +1022,12 @@ button:focus {
   font-size: 14px;
   color: #00011d;
 }
+
 .blog-mid {
   display: flex;
   align-items: center;
 }
+
 .blog-mid a {
   background: #ffffff;
   border: 1px solid #e0dfdf;
@@ -912,10 +1045,12 @@ button:focus {
   justify-content: center;
   margin: 0 6px;
 }
+
 .blog-mid span {
   font-size: 20px;
   margin: 0 6px;
 }
+
 .blog-wo-area {
   margin-bottom: 60px;
 }
@@ -926,15 +1061,18 @@ button:focus {
   text-align: left;
   margin-bottom: 32px;
 }
+
 .header-gruc-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .header-gruc-menu ul li {
   display: inline-block;
   margin-right: 8px;
 }
+
 .header-gruc-menu ul li a {
   font-family: Poppins;
   font-size: 12px;
@@ -945,10 +1083,12 @@ button:focus {
   text-align: left;
   color: #00011d;
 }
+
 .gazo-title {
   text-align: left;
   margin-bottom: 32px;
 }
+
 .gazo-title h3 {
   margin: 0;
   font-family: Poppins;
@@ -959,24 +1099,28 @@ button:focus {
 }
 
 .vac-img img {
-  quotes: ;
+  /* quotes: ; */
   width: 100%;
 }
+
 .vac-img {
   width: 100%;
   height: 100%;
 }
+
 .vacation-left.ttys {
   padding: 0;
   background: transparent;
   height: auto;
 }
+
 .vacation-btn-tx {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 11px;
 }
+
 .vacation-btn-tx p {
   margin: 0;
   font-family: Poppins;
@@ -989,6 +1133,7 @@ button:focus {
 .grud-wrap {
   margin-top: 51px;
 }
+
 .grud-wrap h4 {
   font-family: Poppins;
   font-weight: 500;
@@ -997,6 +1142,7 @@ button:focus {
   color: #00011d;
   margin-bottom: 45px;
 }
+
 .grud-wrap p {
   margin: 0;
   font-family: Poppins;
@@ -1010,6 +1156,7 @@ button:focus {
 .single-weather.we-bd {
   height: auto;
 }
+
 .weather-box {
   background: rgba(17, 255, 169, 0.21);
   backdrop-filter: blur(42px);
@@ -1017,6 +1164,7 @@ button:focus {
   padding: 15px;
   margin-top: 60px;
 }
+
 .weather-btn a {
   width: 140px;
   height: 42px;
@@ -1035,18 +1183,22 @@ button:focus {
   border: 2px solid transparent;
   transition: 0.3s;
 }
+
 .weather-btn {
   margin-bottom: 25px;
 }
+
 .weather-box-lf {
   width: 40%;
 }
+
 .weather-box-fx {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .weather-tp h4 {
   font-family: Poppins;
   font-weight: 300;
@@ -1055,6 +1207,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .weather-tp span {
   font-family: Poppins;
   font-weight: 300;
@@ -1063,11 +1216,13 @@ button:focus {
   text-align: right;
   color: #00011d;
 }
+
 .weather-tp {
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
+
 .weather-tx p {
   margin: 0;
   font-family: Poppins;
@@ -1076,9 +1231,11 @@ button:focus {
   line-height: 15px;
   color: rgba(0, 1, 29, 0.75);
 }
+
 .weather-tx {
   margin-top: 10px;
 }
+
 .weather-box-fx.lst-bx {
   margin-bottom: 12px;
 }
@@ -1087,6 +1244,7 @@ button:focus {
   width: 31.33%;
   margin-bottom: 40px;
 }
+
 .single-weather.we-bd {
   width: 100%;
 }
@@ -1113,6 +1271,7 @@ button:focus {
   margin-top: 100px;
   max-width: 680px;
 }
+
 .appy-single-box h3 {
   font-family: Poppins;
   font-weight: 500;
@@ -1122,6 +1281,7 @@ button:focus {
   color: #00011d;
   margin-bottom: 24px;
 }
+
 .appy-single-box p {
   font-family: Poppins;
   font-weight: 300;
@@ -1131,6 +1291,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .appy-single-box.appy-lst h5 {
   font-family: Poppins;
   font-weight: 600;
@@ -1140,21 +1301,26 @@ button:focus {
   color: #00011d;
   margin-bottom: 30px;
 }
+
 .appy-single-box {
   margin-bottom: 35px;
 }
+
 .appy-single-box.appy-lst {
   margin-bottom: 30px;
 }
+
 .appy-single-box p span {
   font-weight: 500;
 }
+
 /*frame7-page-style-start*/
 
 /*frame-15-page-style-start*/
 .gazo-title.gazo-title-2 {
   margin-bottom: 0;
 }
+
 .weather-img img {
   width: 100%;
 }
@@ -1168,6 +1334,7 @@ button:focus {
   border-radius: 30px;
   padding: 30px 15px 15px 15px;
 }
+
 .pogo-title h6 {
   font-family: Poppins;
   font-weight: 600;
@@ -1176,16 +1343,20 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .pogo-tx-box.brx .pogo-bx-tt {
   width: 136px;
   margin: auto;
 }
+
 .pogo-title {
   margin-bottom: 32px;
 }
+
 .pogo-bx-tt img {
   max-width: 36px;
 }
+
 .pogo-bx-tt h5 {
   font-family: Poppins;
   font-weight: 300;
@@ -1194,6 +1365,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .pogo-bx-tt span {
   font-family: Poppins;
   font-weight: 300;
@@ -1203,6 +1375,7 @@ button:focus {
   color: #00011d;
   margin-bottom: 13px;
 }
+
 .pogo-bx-tt {
   display: flex;
   align-items: center;
@@ -1210,6 +1383,7 @@ button:focus {
   max-width: 136px;
   position: relative;
 }
+
 .pog-tx p {
   margin: 0;
   font-family: Poppins;
@@ -1220,9 +1394,11 @@ button:focus {
   text-align: center;
   padding-right: 46px;
 }
+
 .pogo-tx-box {
   margin-bottom: 27px;
 }
+
 .pogo-btn a {
   width: 100%;
   height: 51px;
@@ -1242,9 +1418,11 @@ button:focus {
   margin-bottom: 14px;
   box-shadow: 8px 15px 16px -17px #b1b9b9d9;
 }
+
 .pogo-btn a:last-child {
   margin-bottom: 0;
 }
+
 .banner-fl.vvd {
   text-align: center;
   margin-top: 35px;
@@ -1255,14 +1433,17 @@ button:focus {
   width: 64.4%;
   margin-top: 0;
 }
+
 .oppy-ri {
   width: 29%;
 }
+
 .oppy-main-fx {
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
+
 .oppy-ro-top-bx {
   background: rgba(17, 255, 169, 0.21);
   backdrop-filter: blur(42px);
@@ -1275,6 +1456,7 @@ button:focus {
   padding-left: 63px;
   padding-right: 78px;
 }
+
 .oppy-ro-top-bx p {
   font-family: Poppins;
   font-weight: 300;
@@ -1284,6 +1466,7 @@ button:focus {
   margin-bottom: 20px;
   position: relative;
 }
+
 .oppy-ro-top-bx h5 {
   font-family: Poppins;
   font-weight: 500;
@@ -1292,6 +1475,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .oppy-ro-top-bx p:before {
   width: 28px;
   height: 28px;
@@ -1306,41 +1490,53 @@ button:focus {
 .oppy-ro-top-bx {
   margin-bottom: 19px;
 }
+
 .oppy-right-top {
   margin-bottom: 60px;
 }
+
 .vacation-area.vac-2 {
   padding-bottom: 25px;
 }
+
 .oppy-ro-top-bx.cb-cg {
   background: rgba(255, 91, 91, 0.22);
 }
+
 .oppy-ro-top-bx.cb-cg p:before {
   background: #ff5656;
 }
+
 .weather-area.mmns {
   padding-bottom: 0;
 }
+
 .oppy-wrap.oppy-wrap-3 {
   margin-top: 0;
 }
+
 .weather-area.weather-2 {
   padding-bottom: 14px;
 }
+
 .weather-area.weather-3 {
   padding-bottom: 20px;
 }
+
 .deal-area.del-1 {
   padding-bottom: 52px;
 }
+
 .pogo-tx-box.brx {
   width: 100%;
   margin: auto;
   margin-bottom: 27px;
 }
+
 .pogo-tx-box.brx.trd {
   margin-top: 60px;
 }
+
 .pogo-wrap.nncv .pog-tx {
   margin-top: 12px;
 }
@@ -1352,9 +1548,11 @@ button:focus {
   padding: 25px;
   margin-bottom: 15px;
 }
+
 .system-1st {
   width: 23%;
 }
+
 .system-1st h6 {
   font-family: Poppins;
   font-style: normal;
@@ -1364,6 +1562,7 @@ button:focus {
   color: #00011d;
   margin-bottom: 15px;
 }
+
 .system-1st a {
   background: linear-gradient(180deg, #00ffa3 0%, #11ffa9 100%);
   border-radius: 30px;
@@ -1379,9 +1578,11 @@ button:focus {
   text-align: center;
   color: #00011d;
 }
+
 .system-2 {
   width: 11.3%;
 }
+
 .syste-2-tp h5 {
   font-family: Poppins;
   font-weight: 300;
@@ -1390,6 +1591,7 @@ button:focus {
   color: #00011d;
   margin: 0;
 }
+
 .syste-2-tp span {
   font-family: Poppins;
   font-weight: 300;
@@ -1398,12 +1600,14 @@ button:focus {
   text-align: right;
   color: #00011d;
 }
+
 .syste-2-tp {
   display: flex;
   align-items: start;
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .system-2-tp p {
   font-family: Poppins;
   font-weight: 300;
@@ -1412,15 +1616,18 @@ button:focus {
   color: rgba(0, 1, 29, 0.75);
   margin: 0;
 }
+
 .system-fx {
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .system-single-box.box-2 {
   background: #eefff9;
 }
+
 .system-1st.bsd a {
   background: linear-gradient(180deg, #adffe2 0%, #c5ffea 100%);
 }
@@ -1428,10 +1635,12 @@ button:focus {
 .system-single-box.box-3 {
   background: #fff4f4;
 }
+
 .system-1st.bsf a {
   background: linear-gradient(180deg, #ff7070 0%, #ff5656 100%);
   color: #fff;
 }
+
 .system-single-box.box-4 {
   background: rgba(255, 91, 91, 0.22);
 }
@@ -1439,35 +1648,44 @@ button:focus {
 .system-single-box.box-5 {
   background: rgba(255, 245, 17, 0.07);
 }
+
 .system-1st.bsmx a {
   background: linear-gradient(180deg, #ffeca9 0%, #ffdc82 100%);
 }
+
 .pog-tx.vvfr p {
   padding-right: 0;
   padding-left: 72px;
 }
+
 .system-single-box.box-6 {
   background: rgba(17, 255, 169, 0.07);
 }
+
 .system-1st.bsmv a {
   background: linear-gradient(180deg, #adffe2 0%, #c5ffea 100%);
 }
+
 .appy-single-box.boxs-ffs {
   margin-top: 50px;
 }
+
 .section-title.bbf-tit {
   margin-bottom: 65px;
   margin-top: 30px;
 }
+
 .header-bar a {
   font-size: 35px !important;
   color: #000;
   background: transparent;
   width: auto !important;
 }
+
 .header-bar {
   display: none;
 }
+
 .vacation-area.vac-last {
   padding-bottom: 50px;
 }
@@ -1482,6 +1700,7 @@ button:focus {
   margin-bottom: 34px;
   max-width: 680px;
 }
+
 .hotel-ct h4 {
   font-family: Poppins;
   font-weight: 300;
@@ -1491,8 +1710,8 @@ button:focus {
   color: #ffffff;
   margin-bottom: 7px;
 }
-h4 {
-}
+
+
 .hotel-ct h5 {
   font-family: Poppins;
   font-weight: 500;
@@ -1502,9 +1721,11 @@ h4 {
   color: #ffffff;
   margin: 0;
 }
+
 .hotel-ct {
   margin-left: 28px;
 }
+
 .oppy-wrap.oppo-lsy {
   margin-top: 0;
 }
@@ -1523,23 +1744,28 @@ h4 {
   top: 0;
   transition: 0.3s;
 }
+
 .cross {
   position: absolute;
   right: 15px;
   top: 15px;
 }
+
 .cross a {
   font-size: 30px;
   color: #000;
 }
+
 .offcanva-menu {
   margin-top: 70px;
 }
+
 .offcanva-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .offcanva-menu ul li a {
   font-size: 18px;
   color: #000;
@@ -1548,9 +1774,11 @@ h4 {
   display: block;
   transition: 0.3s;
 }
+
 .offcanva-menu ul li:hover a {
   padding-left: 40px;
 }
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -1566,6 +1794,7 @@ h4 {
 .offcanva.active {
   left: 0;
 }
+
 .overlay.active {
   left: 0;
 }
@@ -1573,6 +1802,7 @@ h4 {
 .je-box-area {
   padding-bottom: 60px;
 }
+
 .je-box {
   background: #1a316c;
   backdrop-filter: blur(42px);
@@ -1584,6 +1814,7 @@ h4 {
   justify-content: center;
   text-align: center;
 }
+
 .je-box p {
   font-weight: 600;
   font-size: 15px;
@@ -1592,17 +1823,21 @@ h4 {
   color: #ffffff;
   margin: 0;
 }
+
 .blog-mid a:nth-child(2) {
   background: #00011d;
   color: #fff;
   border-color: transparent;
 }
+
 .blog-img img {
   width: 100%;
 }
+
 .deal-img img {
   width: 100%;
 }
+
 .nice-select::after {
   border-bottom: 7px solid #1a316c;
   border-right: 7px solid #1a316c;
@@ -1626,6 +1861,7 @@ h4 {
   border-top: 7px solid transparent;
   border-left: 7px solid transparent;
 }
+
 .pogo-tx-box.brx .pogo-title {
   padding-left: 37px;
 }

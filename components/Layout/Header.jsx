@@ -3,6 +3,7 @@ import Image from "next/image";
 import useWindowSize from "../../hooks/useWindowSIze";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
+import haerderStyle from "../../styles/Header.module.css";
 
 const Header = () => {
   const { width } = useWindowSize();
@@ -13,17 +14,22 @@ const Header = () => {
     if (width > 786) {
       setShowMobileMenu(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <div className={`offcanva ${showMobileMenu && "active"}`}>
-        <div className="cross">
+      <div
+        className={`${haerderStyle.offcanva} ${
+          showMobileMenu && haerderStyle.active
+        }`}
+      >
+        <div className={haerderStyle.cross}>
           <a href="#">
             <FaTimes onClick={() => setShowMobileMenu(false)} />
           </a>
         </div>
-        <div className="offcanva-menu">
+        <div className={haerderStyle.offcanva__menu}>
           <ul>
             <li>
               <a href="#">Gdzie jechać</a>
@@ -50,15 +56,17 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`overlay ${showMobileMenu && "active"}`}
+        className={`${haerderStyle.overlay} ${
+          showMobileMenu && haerderStyle.active
+        }`}
         onClick={() => setShowMobileMenu(false)}
       ></div>
-      <div className="header-area">
-        <div className="container wd">
+      <div className={haerderStyle.header__area}>
+        <div className={`container ${haerderStyle.wd}`}>
           <div className="row">
             <div className="col-lg-12">
-              <div className="header-fl">
-                <div className="header-logo">
+              <div className={haerderStyle.header__fl}>
+                <div className={haerderStyle.header__logo}>
                   <a href="index.html">
                     <Image
                       src="/img/site-logo.svg"
@@ -69,7 +77,7 @@ const Header = () => {
                     />
                   </a>
                 </div>
-                <div className="header-menu">
+                <div className={haerderStyle.header__menu}>
                   <ul>
                     <li>
                       <a href="#">Gdzie jechać</a>
@@ -94,8 +102,8 @@ const Header = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="header-btn">
-                  <div className="header-bar">
+                <div className={haerderStyle.header__btn}>
+                  <div className={haerderStyle.header__bar}>
                     <a href="#">
                       <AiOutlineMenu onClick={() => setShowMobileMenu(true)} />
                     </a>
