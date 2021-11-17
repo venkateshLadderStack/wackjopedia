@@ -1,5 +1,5 @@
 .system__single__box {
-    background: #11ffa936;
+
     backdrop-filter: blur(42px);
     border-radius: 30px;
     padding: 25px;
@@ -29,7 +29,7 @@
 }
 
 .system__1st a {
-    background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%);
+
     border-radius: 30px;
     width: 100%;
     height: 42px;
@@ -76,4 +76,103 @@
     line-height: 15px;
     color: #00011dbf;
     margin: 0;
+}
+
+.jan {
+    background: #11ffa936;
+}
+
+.jan a {
+    background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%);
+}
+
+.feb {
+    background: #EEFFF9;
+}
+
+.feb a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.mar {
+    background: #eefff9;
+}
+
+.mar a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.april {
+    background: #FFF4F4;
+}
+
+.april a {
+    background: linear-gradient(180deg, #FF7070 0%, #FF5656 100%);
+    color: #fff;
+}
+
+.may {
+    background: #ff5b5b38;
+}
+
+.may a {
+    background: linear-gradient(180deg, #FF7070 0%, #FF5656 100%);
+    color: #fff;
+}
+
+.jun {
+    background: #fff51112;
+}
+
+.jun a {
+    background: linear-gradient(180deg, #FFECA9 0%, #FFDC82 100%);
+
+}
+
+.july {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.july a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.aug {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.aug a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.sep {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.sep a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.oct {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.oct a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.nov {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.nov a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
+}
+
+.dec {
+    background: rgba(17, 255, 169, 0.07);
+}
+
+.dec a {
+    background: linear-gradient(180deg, #ADFFE2 0%, #C5FFEA 100%);
 }
