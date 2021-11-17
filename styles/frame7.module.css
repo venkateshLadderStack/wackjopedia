@@ -1,0 +1,13 @@
+.multi__col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 66.5%;
+}
+
+
+@media screen and (max-width: 991px) {
+    .multi__col {
+        max-width: 100%;
+    }
+}

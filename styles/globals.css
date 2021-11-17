@@ -15,10 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-/* .container {
+.container.wd {
   max-width: 1070px !important;
-} */
+}
 
+.banner {
+  width: 85%;
+  margin: auto;
+}
 
 /* PAGINATE */
 

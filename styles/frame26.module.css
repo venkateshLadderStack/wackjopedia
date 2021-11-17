@@ -91,7 +91,7 @@
 }
 
 .q__a__section h3 {
-    /* font-family: Poppins; */
+    font-family: Poppins;
     font-weight: 500;
     font-size: 25px;
     line-height: 37px;
@@ -101,7 +101,7 @@
 }
 
 .q__a__section h5 {
-    /* font-family: Poppins; */
+    font-family: Poppins;
     font-weight: 600;
     font-size: 15px;
     line-height: 184.5%;
@@ -111,7 +111,7 @@
 }
 
 .q__a__section p {
-    /* font-family: Poppins; */
+    font-family: Poppins;
     font-weight: 300;
     font-size: 15px;
     line-height: 184.5%;
@@ -120,7 +120,14 @@
     margin: 0;
 }
 
+
+
 @media (min-width: 992px) and (max-width: 1200px) {
+    .location__section {
+        width: 100%;
+        margin: auto;
+    }
+
     .text__area h4 {
         font-size: 25px;
         margin-bottom: 12px;

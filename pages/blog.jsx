@@ -122,7 +122,7 @@ const Blog = () => {
   return (
     <>
       <Layout>
-        <div className="container">
+        <div className="container wd">
           <Banner title="Blog Wakacjopedia" />
           <div className="mt-5">
             <div className="row mt-1">
@@ -190,7 +190,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
@@ -210,7 +210,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <div className="row">
               <div className="col-lg-12">

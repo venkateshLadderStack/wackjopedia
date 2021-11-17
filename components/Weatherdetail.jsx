@@ -1,7 +1,6 @@
 import React from "react";
 import style from "../styles/frame5.module.css";
 import Image from "next/image";
-import sunImg from "../public/img/sun.png";
 
 function Weatherdetail({ img }) {
   return (

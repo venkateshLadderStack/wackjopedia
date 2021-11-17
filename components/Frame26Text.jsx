@@ -19,7 +19,7 @@ export default Frame26Text;
 export const Frame26List = ({ title, subtitle, desc }) => {
   return (
     <>
-      <div>
+      <div className={styles.q__a__section}>
         <h3> {title}</h3>
         <h5>{subtitle} </h5>
         <p>{desc}</p>

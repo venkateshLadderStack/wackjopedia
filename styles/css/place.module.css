@@ -1,0 +1,19 @@
+.single__weather {
+    width: 31.33%;
+    background: #ffffffd9;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    padding: 13px 11px;
+    height: 213px;
+    margin-bottom: 17px;
+}
+
+.weather__text p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #00011D;
+    margin: 0;
+}

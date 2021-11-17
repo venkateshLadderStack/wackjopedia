@@ -148,6 +148,13 @@
     margin: 0;
 }
 
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 680px;
+}
+
 
 @media screen and (max-width: 991px) {
     .area__detail {
@@ -160,7 +167,7 @@
     }
 
     .text__details__right {
-        width: 100;
+        width: 100%;
         margin: auto;
     }
 
@@ -168,5 +175,11 @@
         height: 159px;
         padding-left: 54px;
         padding-right: 40px;
+    }
+
+    .right__side.green p::before {
+        background: #00FFA3;
+        left: 30px;
+        top: 50px;
     }
 }

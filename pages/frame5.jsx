@@ -5,13 +5,15 @@ import sunImg from "../public/img/sun.png";
 import breezeImg from "../public/img/breeze.png";
 import Weatherdetail from "../components/Weatherdetail";
 import Banner from "../components/banner";
-import Frame26Text from "../components/Frame26Text";
+import Frame26Text, { Frame26List } from "../components/Frame26Text";
 import Holiday from "../components/Holidaycard";
 import styles from "../styles/blog.module.css";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import Weathercard from "../components/Weathercard";
 import Layout from "../components/Layout";
+import Places from "../components/Places";
+import PerfectMonth from "../components/PerfectMonth";
 
 const details = [
   {
@@ -116,7 +118,7 @@ function frame5() {
   return (
     <>
       <Layout>
-        <div className="container">
+        <div className="container wd mt-5">
           <h3 className="mb-5">Meksyk - pogoda. Kiedy jechać do Meksyku?</h3>
           <div className="row">
             <div className="col-lg-4 col-md-12">
@@ -167,23 +169,49 @@ function frame5() {
                 </div>
               </div>
               <div className={style.text__details__right}>
-                <div className="mb-3">
-                  <div className={`${style.right__side} ${style.green}`}>
-                    <p>Miesiące z idealną lub dobrą pogodą:</p>
-                    <span>grudzień, styczeń, wrzesień, październik</span>
-                  </div>
-                  <div className={`${style.right__side} ${style.red}`}>
-                    <p>Miesiące ze złą lub bardzo złą pogodą:</p>
-                    <span>luty, marzec, kwiecień</span>
-                  </div>
-                </div>
+                <PerfectMonth />
                 <Holiday />
               </div>
             </div>
           </div>
         </div>
 
-        <section className="container">
+        <section className="container wd">
+          <div className={style.places}>
+            <h3 className="py-5">
+              Sprawdź pogodę w miastach i regionach Meksyku
+            </h3>
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+            <Places />
+          </div>
+        </section>
+
+        <section className="container wd">
+          <div className={style.text__details}>
+            <Frame26List
+              title={`Pytania i odpowiedzi`}
+              subtitle={`Lorem Ipsum is simply dummy text of the printing and?`}
+              desc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged`}
+            />
+            <Frame26List
+              subtitle={`Lorem Ipsum is simply dummy text of the printing and?`}
+              desc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged`}
+            />
+            <Frame26List
+              subtitle={`Lorem Ipsum is simply dummy text of the printing and?`}
+              desc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged`}
+            />
+          </div>
+        </section>
+
+        <section className="container wd">
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
@@ -204,7 +232,7 @@ function frame5() {
           </div>
         </section>
 
-        <section className="container">
+        <section className="container wd">
           <div className="my-5">
             <div className="row">
               <div className="col-lg-12">

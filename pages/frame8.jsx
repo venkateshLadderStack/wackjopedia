@@ -62,30 +62,28 @@ const frame8 = () => {
   return (
     <>
       <Layout>
-        <div className="container">
-          <div className="container">
-            <Banner title="Gdzie jechać na wakacje w grudniu?" />
-            <div className="row">
-              <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
-              <div className="col-8">
-                <DesinationCard />
-              </div>
-              <div className="col-4">
-                <Holiday />
-              </div>
+        <div className="container wd">
+          <Banner title="Gdzie jechać na wakacje w grudniu?" />
+          <div className="row">
+            <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
+            <div className="col-8">
+              <DesinationCard />
             </div>
-            <div>
-              <div className="col-lg-12 mt-5">
-                <div className={`${frameStyle.location__title}`}>
-                  <h3>Znalezione lokalizacje</h3>
-                </div>
-                <div className={frameStyle.location__box}>
-                  <p>
-                    Uzupełnij powyższy formularz, a następnie kliknij przycisk
-                    “Szukaj lokalizacji”, <br />
-                    byśmy mogli wyświetlić Ci idealne lokalizacje wakacyjne
-                  </p>
-                </div>
+            <div className="col-4">
+              <Holiday />
+            </div>
+          </div>
+          <div>
+            <div className="col-lg-12 mt-5">
+              <div className={`${frameStyle.location__title}`}>
+                <h3>Znalezione lokalizacje</h3>
+              </div>
+              <div className={frameStyle.location__box}>
+                <p>
+                  Uzupełnij powyższy formularz, a następnie kliknij przycisk
+                  “Szukaj lokalizacji”, <br />
+                  byśmy mogli wyświetlić Ci idealne lokalizacje wakacyjne
+                </p>
               </div>
             </div>
             <div className="py-5">
@@ -93,7 +91,7 @@ const frame8 = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <div className="row">
               <div className="col-lg-12">
@@ -109,7 +107,7 @@ const frame8 = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">

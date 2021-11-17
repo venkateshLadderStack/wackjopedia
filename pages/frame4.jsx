@@ -61,11 +61,11 @@ const Frame4 = () => {
   return (
     <>
       <Layout>
-        <div className="container">
+        <div className="container wd">
           <h3 className="py-4">Pogoda w Afryce</h3>
           <Banner />
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <div className="row">
               <div className="col-lg-12">
@@ -81,7 +81,7 @@ const Frame4 = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <Banner title="Blog Wakacjopedia" />
           <div className="mt-5">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
@@ -95,7 +95,7 @@ const Frame4 = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container wd">
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">

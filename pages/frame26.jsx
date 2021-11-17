@@ -41,7 +41,7 @@ function frame26() {
   return (
     <>
       <Layout>
-        <div className="container">
+        <div className="container wd">
           <Banner title="Sylwester w Dubaju" />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
@@ -69,7 +69,7 @@ function frame26() {
             </div>
           </div>
           <section className="pb-5">
-            <div className="container">
+            <div className="container wd">
               <div className="row">
                 <div className="col-lg-12">
                   <div className={styles.note__section}>
@@ -107,7 +107,7 @@ function frame26() {
                       highlighted={`It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`}
                     />
                     {/* Q & A section */}
-                    <section className={styles.q__a__section}>
+                    <section>
                       <Frame26List
                         title={`Pytania i odpowiedzi`}
                         subtitle={` Lorem Ipsum is simply dummy text of the printing and? `}
@@ -143,7 +143,7 @@ function frame26() {
             </div>
           </section>
 
-          <section className="container">
+          <section className="container wd">
             <div className="my-5">
               <h3 className="mb-5">Gorące oferty Last Minute</h3>
               <div className="row">
@@ -164,7 +164,7 @@ function frame26() {
             </div>
           </section>
 
-          <section className="container">
+          <section className="container wd">
             <div className="my-5">
               <div className="row">
                 <div className="col-lg-12">
