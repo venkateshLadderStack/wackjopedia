@@ -1,5 +1,4 @@
 import Image from "next/image";
-import dealImg from "../public/img/dealimg.png";
 import styles from "../styles/blog.module.css";
 
 const OfferSection = () => {
@@ -8,7 +7,7 @@ const OfferSection = () => {
       <div className="col-lg-3 col-md-4">
         <div className={styles.deal}>
           <div className={styles.deal__img}>
-            <Image src={dealImg} width={224} height={201} alt="" />
+            <Image src={"/img/dealimg.png"} width={224} height={201} alt="" />
           </div>
           <div className={`${styles.deal__containt} px-3`}>
             <div className={styles.deal__title}>

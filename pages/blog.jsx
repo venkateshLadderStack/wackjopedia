@@ -3,89 +3,88 @@ import React, { useState } from "react";
 import Banner from "../components/banner";
 import BlogSection from "../components/blogSection";
 import OfferSection from "../components/OfferSection";
-import blogImg from "../public/img/blog.png";
 import PillSection from "../components/PillSection";
 import PaginatedItems from "../components/Paginate";
 
 const blogList = [
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "1 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "2 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "3 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "4 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "5 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "6 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "7 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "8 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "9 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "10 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "11 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "12 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "13 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "14 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "15 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "16 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "17 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "18 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "19 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
   {
-    img: blogImg,
+    img: "/img/blog.png",
     text: "20 Najlepsze hotele z Aquaparkami w Hiszpani",
   },
 ];
