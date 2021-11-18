@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/common.module.css";
-import style from "../styles/frame7.module.css";
 import Banner from "../components/banner";
 import BlogSection from "../components/Locations";
 import DesinationCard from "../components/DestinationCard";
@@ -143,7 +142,7 @@ export default function Home() {
             </div>
           </div>
           <h3 className="py-5">Często wyszukiwana pogoda</h3>
-          <div className={style.multi__col}>
+          <div className={styles.multi__col}>
             <Places />
             <Places />
             <Places />

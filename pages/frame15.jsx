@@ -3,12 +3,12 @@ import styles from "../styles/common.module.css";
 import Banner from "../components/Banner";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
-import Frame26Text, { Frame26List } from "../components/Frame26Text";
+import Frame26Text, { Frame26List } from "../components/Textarea";
 import Places from "../components/Places";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import PerfectMonth from "../components/PerfectMonth";
-import Frame15weather from "../components/frame15weather";
+import Frame15weather from "../components/Frame15weather";
 import Button from "../components/Button";
 
 const pillsList = [
