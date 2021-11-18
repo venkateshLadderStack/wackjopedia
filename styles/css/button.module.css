@@ -18,3 +18,10 @@
     color: #00011D;
     box-shadow: 3px 14px 25px #ffc00b4f;
 }
+
+@media (min-width:100px) and (max-width:420px) {
+
+    .deal__btn a {
+        width: 200px;
+    }
+}

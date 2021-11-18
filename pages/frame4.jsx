@@ -63,8 +63,7 @@ const Frame4 = () => {
     <>
       <Layout>
         <div className="container wd">
-          <h3 className="py-4">Pogoda w Afryce</h3>
-          <Banner />
+          <Banner title={`Pogoda w Afryce`} />
         </div>
         <div className="container wd">
           <div className="my-5">
@@ -90,7 +89,7 @@ const Frame4 = () => {
               <div className="col-lg-8 col-md-12 pr-0">
                 <DesinationCard />
               </div>
-              <div className="col-lg-4 col-md-12 pr-0 mt-2">
+              <div className="col-lg-4 col-md-12 mt-2">
                 <Holiday />
               </div>
             </div>

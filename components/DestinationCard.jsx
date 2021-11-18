@@ -32,47 +32,49 @@ const DesinationCard = () => {
   console.log(value);
   return (
     <>
-      <div className={`${stylesDestination.vacation__left} pb-5`}>
-        <div className={stylesDestination.single__vacation__select}>
-          <NiceSelect
-            options={options}
-            label={"Gdzie chcesz jechać?"}
-            defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-            emitSelected={(data) => {
-              setValue(data);
-            }}
-          />
-          <NiceSelect
-            options={options}
-            label={"Kiedy chcesz jechać?"}
-            defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-            emitSelected={(data) => {
-              setValue(data);
-            }}
-          />
-          <NiceSelect
-            options={options}
-            label={"Jaka pogoda Cię interesuje?"}
-            defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-            emitSelected={(data) => {
-              setValue(data);
-            }}
-          />
-          <div className={stylesDestination.rc__slider__section}>
-            <div
-              className={`${stylesDestination.rc__progress__area} mr-2 my-4`}
-            >
-              <RcSlider label={"Temperatura powietrza"} />
-            </div>
-            <div
-              className={`${stylesDestination.rc__progress__area} ml-2 my-4`}
-            >
-              <RcSlider label={"Temperatura wody"} />
+      <div className="container">
+        <div className={`${stylesDestination.vacation__left} pb-5`}>
+          <div className={stylesDestination.single__vacation__select}>
+            <NiceSelect
+              options={options}
+              label={"Gdzie chcesz jechać?"}
+              defaultvalue={"Afryka, Ameryka Południowa, Europa"}
+              emitSelected={(data) => {
+                setValue(data);
+              }}
+            />
+            <NiceSelect
+              options={options}
+              label={"Kiedy chcesz jechać?"}
+              defaultvalue={"Afryka, Ameryka Południowa, Europa"}
+              emitSelected={(data) => {
+                setValue(data);
+              }}
+            />
+            <NiceSelect
+              options={options}
+              label={"Jaka pogoda Cię interesuje?"}
+              defaultvalue={"Afryka, Ameryka Południowa, Europa"}
+              emitSelected={(data) => {
+                setValue(data);
+              }}
+            />
+            <div className={stylesDestination.rc__slider__section}>
+              <div
+                className={`${stylesDestination.rc__progress__area} mr-2 my-4`}
+              >
+                <RcSlider label={"Temperatura powietrza"} />
+              </div>
+              <div
+                className={`${stylesDestination.rc__progress__area} ml-2 my-4`}
+              >
+                <RcSlider label={"Temperatura wody"} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className={stylesDestination.vacation__btn}>
-          <a href="#">Szukaj lokalizacji</a>
+          <div className={stylesDestination.vacation__btn}>
+            <a href="#">Szukaj lokalizacji</a>
+          </div>
         </div>
       </div>
     </>

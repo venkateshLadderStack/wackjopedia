@@ -129,12 +129,21 @@ const wakacje = () => {
               <Bestdeal />
               <Button />
             </div>
-            <div className="col-lg-4 col-md-12">
-              <Seracharea item={searchAreaList} title={`Szukaj wakacji w`} />
-              <Seracharea
-                item={bestLocations}
-                title={`Popularne kierunki wakacyjne`}
-              />
+            <div className="col-lg-4 col-md-12 my-5">
+              <div className="row">
+                <div className="col-lg-12 col-md-6 col-sm-12">
+                  <Seracharea
+                    item={searchAreaList}
+                    title={`Szukaj wakacji w`}
+                  />
+                </div>
+                <div className="col-lg-12 col-md-6 col-sm-12">
+                  <Seracharea
+                    item={bestLocations}
+                    title={`Popularne kierunki wakacyjne`}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <Banner />
