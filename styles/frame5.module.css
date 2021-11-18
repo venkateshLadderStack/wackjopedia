@@ -24,50 +24,6 @@
     margin: 0;
 }
 
-.weather__condition {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 27px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 136px;
-    margin: auto;
-    position: relative
-}
-
-.weather__condition h5 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 35px;
-    line-height: 52px;
-    color: #00011D;
-    margin: 0;
-}
-
-.weather__condition span {
-    font-family: 'Poppins', sans-serif;
-
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: right;
-    color: #00011D;
-    margin-bottom: 13px;
-}
-
-.air__temp {
-    padding-right: 0;
-    padding-left: 72px;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 15px;
-    color: rgba(0, 1, 29, 0.75);
-    text-align: center;
-    /* padding-right: 46px; */
-}
 
 .area__detail {
     display: flex;

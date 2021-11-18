@@ -1,15 +1,15 @@
-import React from "react";
-import styles from "../styles/frame26.module.css";
-import blogstyles from "../styles/blog.module.css";
-import Banner from "../components/banner";
+import Layout from "../components/Layout";
+import style from "../styles/common.module.css";
+import frame26styles from "../styles/frame26.module.css";
 import Image from "next/image";
-import noteImg from "../public/img/noteImg.png";
+import Banner from "../components/Banner";
 import Holiday from "../components/Holidaycard";
-import Frame26Text, { Frame26List } from "../components/Frame26Text";
+import Frame26Text, { Frame26List } from "../components/Textarea";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import Locationcard from "../components/Locationcard";
-import Layout from "../components/Layout";
+import noteImg from "../public/img/noteImg.png";
+import Button from "../components/Button";
 
 const pillsList = [
   {
@@ -47,7 +47,7 @@ function frame26() {
             <div className="col-lg-8 col-md-12 mb-5">
               <Locationcard />
               <div>
-                <div className={styles.text__area}>
+                <div className={frame26styles.text__area}>
                   <h4>Gdzie w grudniu jest ciepło?</h4>
                   <p>
                     {`Lorem Ipsum is simply dummy text of the printing and
@@ -72,7 +72,7 @@ function frame26() {
             <div className="container wd">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className={styles.note__section}>
+                  <div className={frame26styles.note__section}>
                     <div className="img">
                       <Image
                         src={noteImg}
@@ -81,7 +81,7 @@ function frame26() {
                         alt="note"
                       />
                     </div>
-                    <div className={`${styles.note__text} ml-4`}>
+                    <div className={`${frame26styles.note__text} ml-4`}>
                       <h4>Czytaj również:</h4>
                       <p>Najlepsze hotele z aquaparkami w Hiszpanii</p>
                     </div>
@@ -90,7 +90,7 @@ function frame26() {
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className={styles.text__desc}>
+                  <div className={style.multi__col}>
                     <Frame26Text
                       title={`Opady`}
                       desc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `}
@@ -154,11 +154,7 @@ function frame26() {
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className={blogstyles.deal__btn}>
-                    <a href="#" className={`${blogstyles.theme__btn} py-3`}>
-                      pokaż więcej ofert
-                    </a>
-                  </div>
+                  <Button />
                 </div>
               </div>
             </div>
@@ -168,10 +164,10 @@ function frame26() {
             <div className="my-5">
               <div className="row">
                 <div className="col-lg-12">
-                  <div className={blogstyles.pills__title}>
+                  <div className={style.pills__title}>
                     <h3>Sprawdź gdzie jechać na wakacje</h3>
                   </div>
-                  <div className={blogstyles.pills__div}>
+                  <div className={style.pills__div}>
                     {pillsList.map((item, index) => (
                       <PillSection item={item} key={index} />
                     ))}

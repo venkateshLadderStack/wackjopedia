@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/perfectmonth.module.css";
+import styles from "../styles/css/perfectmonth.module.css";
 
 function PerfectMonth() {
   return (

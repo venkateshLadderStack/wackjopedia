@@ -1,5 +1,4 @@
-import React from "react";
-import style from "../styles/frame5.module.css";
+import style from "../styles/css/weatherdetail.module.css";
 import Image from "next/image";
 
 function Weatherdetail({ img }) {

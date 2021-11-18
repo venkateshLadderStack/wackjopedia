@@ -1,19 +1,20 @@
 import React from "react";
-import Locationcard from "../components/Locationcard";
+import Layout from "../components/Layout";
 import style from "../styles/frame5.module.css";
-import sunImg from "../public/img/sun.png";
-import breezeImg from "../public/img/breeze.png";
+import styles from "../styles/common.module.css";
+import Banner from "../components/Banner";
+import Locationcard from "../components/Locationcard";
 import Weatherdetail from "../components/Weatherdetail";
-import Banner from "../components/banner";
-import Frame26Text, { Frame26List } from "../components/Frame26Text";
+import Frame26Text, { Frame26List } from "../components/Textarea";
 import Holiday from "../components/Holidaycard";
-import styles from "../styles/blog.module.css";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import Weathercard from "../components/Weathercard";
-import Layout from "../components/Layout";
 import Places from "../components/Places";
 import PerfectMonth from "../components/PerfectMonth";
+import sunImg from "../public/img/sun.png";
+import breezeImg from "../public/img/breeze.png";
+import Button from "../components/Button";
 
 const details = [
   {
@@ -222,11 +223,7 @@ function frame5() {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <div className={styles.deal__btn}>
-                  <a href="#" className={`${styles.theme__btn} py-3`}>
-                    pokaż więcej ofert
-                  </a>
-                </div>
+                <Button />
               </div>
             </div>
           </div>

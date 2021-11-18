@@ -1,18 +1,15 @@
-import React from "react";
-import Frame7style from "../styles/frame7.module.css";
-import Banner from "../components/banner";
+import Layout from "../components/Layout";
+import styles from "../styles/common.module.css";
+import Banner from "../components/Banner";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
-import Layout from "../components/Layout";
 import Frame26Text, { Frame26List } from "../components/Frame26Text";
 import Places from "../components/Places";
-// import styles from "../styles/css/place.module.css";
-import style from "../styles/frame7.module.css";
-import styles from "../styles/blog.module.css";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import PerfectMonth from "../components/PerfectMonth";
 import Frame15weather from "../components/frame15weather";
+import Button from "../components/Button";
 
 const pillsList = [
   {
@@ -96,7 +93,7 @@ function frame15() {
             </div>
           </div>
 
-          <div className={style.multi__col}>
+          <div className={styles.multi__col}>
             <h3 className="py-5">
               Sprawdź pogodę w miastach i regionach Meksyku
             </h3>
@@ -111,7 +108,7 @@ function frame15() {
             <Places />
           </div>
 
-          <div className={style.multi__col}>
+          <div className={styles.multi__col}>
             <Frame26List
               title={`Pytania i odpowiedzi`}
               subtitle={`Lorem Ipsum is simply dummy text of the printing and?`}
@@ -143,11 +140,7 @@ function frame15() {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <div className={styles.deal__btn}>
-                  <a href="#" className={`${styles.theme__btn} py-3`}>
-                    pokaż więcej ofert
-                  </a>
-                </div>
+                <Button />
               </div>
             </div>
           </div>

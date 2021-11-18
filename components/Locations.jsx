@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/blog.module.css";
+import styles from "../styles/css/locations.module.css";
 
 const BlogSection = ({ item }) => {
   return (

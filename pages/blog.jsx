@@ -1,11 +1,13 @@
-import styles from "../styles/blog.module.css";
+import styles from "../styles/common.module.css";
 import React, { useState } from "react";
 import Banner from "../components/banner";
-import BlogSection from "../components/blogSection";
+import BlogSection from "../components/Locations";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import PaginatedItems from "../components/Paginate";
 import Layout from "../components/Layout";
+import Holiday from "../components/Holidaycard";
+import Button from "../components/Button";
 
 const blogList = [
   {
@@ -149,43 +151,7 @@ const Blog = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-12 pr-0 mt-2">
-                <div className={styles.blog__right}>
-                  <div className={styles.bgImg}>
-                    <span className={styles.rating}>
-                      <span>
-                        <i className="fas fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fas fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fas fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fas fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fas fa-star"></i>
-                      </span>
-                    </span>
-                    <div
-                      className={styles.blogright__caption}
-                      style={{ zIndex: "1" }}
-                    >
-                      <div className={`${styles.blogright__title} mb-3`}>
-                        <h3>Gorące oferty wakacyjne</h3>
-                      </div>
-                      <div className={styles.blogright__text}>
-                        <p>
-                          już od <span>3 555 zł</span> za os.
-                        </p>
-                      </div>
-                      <div className={styles.blogright__btn}>
-                        <a href="#">sprawdź oferty</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Holiday />
               </div>
             </div>
           </div>
@@ -201,11 +167,7 @@ const Blog = () => {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <div className={styles.deal__btn}>
-                  <a href="#" className={`${styles.theme__btn} py-3`}>
-                    pokaż więcej ofert
-                  </a>
-                </div>
+                <Button />
               </div>
             </div>
           </div>

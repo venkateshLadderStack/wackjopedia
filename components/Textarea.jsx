@@ -1,10 +1,10 @@
-import styles from "../styles/frame26.module.css";
+import styles from "../styles/css/textarea.module.css";
 
 const Frame26Text = ({ title, desc, highlighted }) => {
   return (
     <>
       <div className={styles.weather__detail}>
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>
           {desc}
           <span>{highlighted}</span>
@@ -19,7 +19,7 @@ export default Frame26Text;
 export const Frame26List = ({ title, subtitle, desc }) => {
   return (
     <>
-      <div className={styles.q__a__section}>
+      <div className={styles.weather__detail}>
         <h3> {title}</h3>
         <h5>{subtitle} </h5>
         <p>{desc}</p>

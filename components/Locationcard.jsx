@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "../styles/frame26.module.css";
+import styles from "../styles/css/locationcard.module.css";
 import Image from "next/image";
 import locationIMg from "../public/img/locationImg.png";
 

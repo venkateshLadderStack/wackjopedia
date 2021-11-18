@@ -1,11 +1,12 @@
-import Banner from "../components/banner";
+import Layout from "../components/Layout";
+import styles from "../styles/common.module.css";
+import frameStyle from "../styles/frame8.module.css";
+import Banner from "../components/Banner";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
 import OfferSection from "../components/OfferSection";
-import styles from "../styles/blog.module.css";
-import frameStyle from "../styles/frame8.module.css";
 import PillSection from "../components/PillSection";
-import Layout from "../components/Layout";
+import Button from "../components/Button";
 
 const pillsList = [
   {
@@ -118,11 +119,7 @@ const frame8 = () => {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <div className={styles.deal__btn}>
-                  <a href="#" className={`${styles.theme__btn} py-3`}>
-                    pokaż więcej ofert
-                  </a>
-                </div>
+                <Button />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/blog.module.css";
+import styles from "../styles/css/offer.module.css";
 
 const OfferSection = () => {
   return (

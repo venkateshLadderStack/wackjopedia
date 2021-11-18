@@ -1,13 +1,14 @@
-import styles from "../styles/blog.module.css";
+import styles from "../styles/common.module.css";
 import Frame7style from "../styles/frame7.module.css";
-import Banner from "../components/banner";
-import Frame26Text, { Frame26List } from "../components/Frame26Text";
+import Banner from "../components/Banner";
+import Frame26Text, { Frame26List } from "../components/Textarea";
 import Holiday from "../components/Holidaycard";
 import Layout from "../components/Layout";
 import Locationcard from "../components/Locationcard";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import Frequentsearch from "../components/Frequentsearch";
+import Button from "../components/Button";
 
 const pillsList = [
   {
@@ -107,11 +108,7 @@ function frame7() {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <div className={styles.deal__btn}>
-                  <a href="#" className={`${styles.theme__btn} py-3`}>
-                    pokaż więcej ofert
-                  </a>
-                </div>
+                <Button />
               </div>
             </div>
           </div>

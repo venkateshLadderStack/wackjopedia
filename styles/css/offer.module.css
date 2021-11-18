@@ -1,0 +1,96 @@
+.deal {
+    background: #ffffffd9;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    box-shadow: 0px 6px 11px rgb(0 1 29 / 5%);
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    margin-bottom: 40px !important;
+}
+
+.deal__img {
+    padding: 8px 6px;
+    text-align: center;
+    margin-bottom: 14 px;
+}
+
+.deal__containt {
+    padding-bottom: 18px;
+}
+
+
+.deal__title {
+    margin-bottom: 20px;
+}
+
+.deal-pp {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.deal__pp a,
+.deal__pp a:hover {
+    background: #FF5656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 27px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-right: 16px;
+}
+
+.deal__pp del {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration-line: line-through;
+    color: #FF5656;
+}
+
+.deal__text p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #00011D;
+    margin: 0;
+}
+
+.deal__text p span {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.deal__title h3 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #00011D;
+    margin: 0;
+}
+
+.offer__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.offer__rating span {
+    font-size: 10px;
+    color: #FFC700;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+
+@media (min-width:100px) and (max-width:420px) {
+
+    .deal-btn a {
+        width: 200px;
+    }
+}

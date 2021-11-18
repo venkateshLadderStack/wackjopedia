@@ -5,11 +5,11 @@ import breezeImg from "../public/img/breeze.png";
 function Frame15weather() {
   return (
     <>
-      <div className="pogo-wrap p-5">
-        <div className="pogo-title">
+      <div className="pogo-wrap pb-4">
+        <div className="pogo-title pb-1">
           <h6>Pogoda teraz:</h6>
         </div>
-        <div className="pogo-tx-box">
+        <div className="pogo-tx-box pb-1">
           <div className="pogo-bx-tt">
             <Image loading="lazy" width={36} height={35} src={sunImg} alt="" />
             <h5>25</h5>
