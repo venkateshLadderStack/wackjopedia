@@ -1,0 +1,33 @@
+.location__title {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.location__title h3 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #00011D;
+    margin: 0;
+}
+
+.location__box {
+    background: #1A316C;
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    max-width: 680px;
+    height: 176px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.location__box p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 184.5%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}

@@ -9,7 +9,7 @@
 }
 
 .blogText {
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: 17px;
     line-height: 25px;
     color: #00011D;
@@ -26,6 +26,13 @@
     padding-top: 12px;
     margin-bottom: 24px;
     height: 418px;
+
+}
+
+@media screen and (max-width:992px) {
+    .blog {
+        text-align: center;
+    }
 }
 
 .blog span {
@@ -276,6 +283,15 @@
     margin-bottom: 50px;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    .pills__div a,
+    .pills__div a:hover {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+}
+
 @media (min-width:100px) and (max-width:420px) {
     .blog {
         height: 400px;
@@ -283,7 +299,8 @@
 
     .blog__right {
         float: unset;
-        margin-left: 7%;
+        margin-left: auto;
+        width: 100%;
     }
 
     .deal-btn a {

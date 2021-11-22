@@ -1,4 +1,4 @@
-// import "../styles/globals.css";
+import "../styles/globals.css";
 import "../styles/css/bootstrap.min.css";
 import "../styles/css/default.css";
 import "../styles/css/style.css";

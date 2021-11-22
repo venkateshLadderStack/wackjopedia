@@ -6,6 +6,7 @@ const BlogSection = ({ item }) => {
     <>
       <div className={styles.blog}>
         <Image
+          loading="lazy"
           className={`${styles.blog__img} `}
           layout="responsive"
           src={item.img}

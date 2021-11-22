@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import footerStyle from "../../styles/footer.module.css";
 
 const Footer = ({ footerData }) => {
   const { copyright, footer_columns, page_links, logo } = footerData;
   return (
     <>
-      <div className="footer-area">
+      <div className={footerStyle.footer__area}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="footer-logo">
+              <div className={footerStyle.footer__logo}>
                 <a href="#">
                   <Image
                     src={logo?.url}
@@ -24,10 +25,10 @@ const Footer = ({ footerData }) => {
                   />
                 </a>
               </div>
-              <div className="footer-fl">
+              <div className={footerStyle.footer__fl}>
                 {footer_columns.map((column, i) => (
-                  <div className="single-footer-wed" key={i}>
-                    <div className="footer-title">
+                  <div className={footerStyle.single__footer__wed} key={i}>
+                    <div className={footerStyle.footer__title}>
                       <h3>{column?.title}</h3>
                     </div>
                     <div className="footer-list">
@@ -46,11 +47,11 @@ const Footer = ({ footerData }) => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom-area">
+      <div className={footerStyle.footer__bottom__area}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="footer-bootom-menu">
+              <div className={footerStyle.footer__bootom__menu}>
                 <ul>
                   {page_links.map((link, i) => (
                     <li key={i}>
@@ -59,7 +60,7 @@ const Footer = ({ footerData }) => {
                   ))}
                 </ul>
               </div>
-              <div className="footer-copy">
+              <div className={`${footerStyle.footer__copy}`}>
                 <p>© 2021 Wakacjopedia.pl</p>
                 <p>{copyright}</p>
               </div>
