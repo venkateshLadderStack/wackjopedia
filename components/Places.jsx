@@ -3,7 +3,7 @@ import Image from "next/image";
 import placeImg from "../public/img/place.png";
 import styles from "../styles/css/place.module.css";
 
-function Places() {
+function Places({ item }) {
   return (
     <>
       <div className={styles.single__weather}>
@@ -12,12 +12,12 @@ function Places() {
             loading="lazy"
             width={189}
             height={121}
-            src={placeImg}
+            src={item?.images[0]?.url}
             alt="place-img"
           />
         </div>
         <div className={`${styles.weather__text} m-2`}>
-          <p>Meksyk</p>
+          <p>{item?.city}</p>
         </div>
       </div>
     </>

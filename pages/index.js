@@ -87,7 +87,12 @@ const blogList = [
   },
 ];
 
-export default function Home({ headerData, footerData }) {
+export default function Home({
+  headerData,
+  footerData,
+  holidays,
+  holidayTags,
+}) {
   return (
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">
@@ -99,7 +104,7 @@ export default function Home({ headerData, footerData }) {
               <DesinationCard />
               <div className="row my-2">
                 <h3 className="py-5">Ostatnio na naszym blogu</h3>
-                {blogList?.map((item, index) => (
+                {holidays?.map((item, index) => (
                   <div key={index} className="col-lg-6 col-md-12">
                     <BlogSection item={item} />
                   </div>
@@ -125,15 +130,9 @@ export default function Home({ headerData, footerData }) {
       <section className="container wd">
         <h3 className="py-2">Często wyszukiwana pogoda</h3>
         <div className={style.places}>
-          <Places />
-          <Places />
-          <Places />
-          <Places />
-          <Places />
-          <Places />
-          <Places />
-          <Places />
-          <Places />
+          {holidays?.map((item, i) => (
+            <Places key={i} item={item} />
+          ))}
         </div>
       </section>
 
@@ -145,7 +144,7 @@ export default function Home({ headerData, footerData }) {
                 <h3>Sprawdź gdzie jechać na wakacje</h3>
               </div>
               <div className={styles.pills__div}>
-                {pillsList.map((item, index) => (
+                {holidayTags?.map((item, index) => (
                   <PillSection item={item} key={index} />
                 ))}
               </div>
@@ -158,10 +157,9 @@ export default function Home({ headerData, footerData }) {
         <div className="my-5">
           <h3 className="mb-5">Gorące oferty Last Minute</h3>
           <div className="row">
-            <OfferSection />
-            <OfferSection />
-            <OfferSection />
-            <OfferSection />
+            {holidays?.map((item, i) => (
+              <OfferSection item={item} key={i} />
+            ))}
           </div>
           <div className="row">
             <div className="col-lg-12">
@@ -191,10 +189,24 @@ export const getStaticProps = async (context) => {
 
   const footerData = await footerRes.json();
 
+  const holidaysRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/hotels"
+  );
+
+  const holidays = await holidaysRes.json();
+
+  const holidayTagsRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/tags"
+  );
+
+  const holidayTags = await holidayTagsRes.json();
+
   return {
     props: {
       headerData,
       footerData,
+      holidays,
+      holidayTags,
     },
   };
 };
