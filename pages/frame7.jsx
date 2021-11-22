@@ -35,7 +35,7 @@ const pillsList = [
     pilltext: "Wakacje w styczniu",
   },
 ];
-function frame7({ headerData, footerData }) {
+function Frame7({ headerData, footerData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -137,7 +137,7 @@ function frame7({ headerData, footerData }) {
   );
 }
 
-export default frame7;
+export default Frame7;
 
 export const getStaticProps = async (context) => {
   const headerRes = await fetch(

@@ -114,7 +114,7 @@ const MonthlyWeather = [
   },
 ];
 
-function frame5({ headerData, footerData }) {
+function Frame5({ headerData, footerData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -253,7 +253,7 @@ function frame5({ headerData, footerData }) {
   );
 }
 
-export default frame5;
+export default Frame5;
 
 export const getStaticProps = async (context) => {
   const headerRes = await fetch(

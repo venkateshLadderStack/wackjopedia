@@ -37,7 +37,7 @@ const pillsList = [
     pilltext: "Wakacje w styczniu",
   },
 ];
-function frame26({ headerData, footerData }) {
+function Frame26({ headerData, footerData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -186,7 +186,7 @@ function frame26({ headerData, footerData }) {
   );
 }
 
-export default frame26;
+export default Frame26;
 
 export const getStaticProps = async (context) => {
   const headerRes = await fetch(

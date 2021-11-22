@@ -41,7 +41,7 @@ const pillsList = [
   },
 ];
 
-function frame15({ headerData, footerData }) {
+function Frame15({ headerData, footerData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -173,7 +173,7 @@ function frame15({ headerData, footerData }) {
   );
 }
 
-export default frame15;
+export default Frame15;
 
 export const getStaticProps = async (context) => {
   const headerRes = await fetch(

@@ -58,7 +58,7 @@ const pillsList = [
   },
 ];
 
-const frame8 = ({ headerData, footerData }) => {
+const Frame8 = ({ headerData, footerData }) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -132,7 +132,7 @@ const frame8 = ({ headerData, footerData }) => {
   );
 };
 
-export default frame8;
+export default Frame8;
 
 export const getStaticProps = async (context) => {
   const headerRes = await fetch(
