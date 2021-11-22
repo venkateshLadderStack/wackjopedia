@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/Layout";
 
-export default function Home() {
+export default function Home({ headerData, footerData }) {
   return (
-    <Layout>
+    <Layout headerData={headerData} footerData={footerData}>
       <div>
         <Head>
           <title>Create Next App</title>
@@ -67,3 +67,24 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const getStaticProps = async (context) => {
+  const headerRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/navbar"
+  );
+
+  const headerData = await headerRes.json();
+
+  const footerRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/footer"
+  );
+
+  const footerData = await footerRes.json();
+
+  return {
+    props: {
+      headerData,
+      footerData,
+    },
+  };
+};

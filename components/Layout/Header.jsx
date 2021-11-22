@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import useWindowSize from "../../hooks/useWindowSIze";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 
-const Header = () => {
+const Header = ({ headerData }) => {
+  const { logo, links } = headerData;
+
+  const navlinks = links.slice(0, links.length - 1);
+  const btnLink = links[links.length - 1];
+
   const { width } = useWindowSize();
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -25,27 +31,11 @@ const Header = () => {
         </div>
         <div className="offcanva-menu">
           <ul>
-            <li>
-              <a href="#">Gdzie jechać</a>
-            </li>
-            <li>
-              <a href="#">Pogoda</a>
-            </li>
-            <li>
-              <a href="#">Wakacje</a>
-            </li>
-            <li>
-              <a href="#">Last Minute</a>
-            </li>
-            <li>
-              <a href="#">Lokalizacje</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Szukaj w serwisie</a>
-            </li>
+            {links.map((link, i) => (
+              <li key={i}>
+                <Link href={link.url}>{link.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -59,39 +49,26 @@ const Header = () => {
             <div className="col-lg-12">
               <div className="header-fl">
                 <div className="header-logo">
-                  <a href="index.html">
+                  <Link href="/" passHref>
                     <Image
-                      src="/img/site-logo.svg"
-                      alt=""
+                      src={logo?.url}
+                      alt={logo?.alternativeText}
                       width={185}
                       height={33}
                       layout="fixed"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL={logo?.url}
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="header-menu">
                   <ul>
-                    <li>
-                      <a href="#">Gdzie jechać</a>
-                    </li>
-                    <li>
-                      <a href="#">Pogoda</a>
-                    </li>
-                    <li>
-                      <a href="#">Wakacje</a>
-                    </li>
-                    <li>
-                      <a href="#">Last Minute</a>
-                    </li>
-                    <li>
-                      <a href="#">Lokalizacje</a>
-                    </li>
-                    <li>
-                      <a href="#">Blog</a>
-                    </li>
-                    <li>
-                      <a href="#">Szukaj w serwisie</a>
-                    </li>
+                    {navlinks.map((link, i) => (
+                      <li key={i}>
+                        <Link href={link?.url}>{link?.name}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="header-btn">
@@ -100,7 +77,7 @@ const Header = () => {
                       <AiOutlineMenu onClick={() => setShowMobileMenu(true)} />
                     </a>
                   </div>
-                  <a href="#">Znajdź miejsce na wakacje</a>
+                  <Link href={btnLink?.url}>{btnLink?.name}</Link>
                 </div>
               </div>
             </div>
