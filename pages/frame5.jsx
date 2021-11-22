@@ -114,7 +114,7 @@ const MonthlyWeather = [
   },
 ];
 
-function Frame5({ headerData, footerData }) {
+function Frame5({ headerData, footerData, holidays, holidayTags }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -181,15 +181,9 @@ function Frame5({ headerData, footerData }) {
             <h3 className="py-5">
               Sprawdź pogodę w miastach i regionach Meksyku
             </h3>
-            <Places />
-            <Places />
-            <Places />
-            <Places />
-            <Places />
-            <Places />
-            <Places />
-            <Places />
-            <Places />
+            {holidays?.map((item, i) => (
+              <Places key={i} item={item} />
+            ))}
           </div>
         </section>
 
@@ -215,10 +209,9 @@ function Frame5({ headerData, footerData }) {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              <OfferSection />
-              <OfferSection />
-              <OfferSection />
-              <OfferSection />
+              {holidays?.map((item, i) => (
+                <OfferSection item={item} key={i} />
+              ))}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -240,7 +233,7 @@ function Frame5({ headerData, footerData }) {
                   <h3>Sprawdź gdzie jechać na wakacje</h3>
                 </div>
                 <div className={styles.pills__div}>
-                  {pillsList.map((item, index) => (
+                  {holidayTags?.map((item, index) => (
                     <PillSection item={item} key={index} />
                   ))}
                 </div>
@@ -268,10 +261,24 @@ export const getStaticProps = async (context) => {
 
   const footerData = await footerRes.json();
 
+  const holidaysRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/hotels"
+  );
+
+  const holidays = await holidaysRes.json();
+
+  const holidayTagsRes = await fetch(
+    "https://wakacjopedia-strapi.herokuapp.com/tags"
+  );
+
+  const holidayTags = await holidayTagsRes.json();
+
   return {
     props: {
       headerData,
       footerData,
+      holidays,
+      holidayTags,
     },
   };
 };
