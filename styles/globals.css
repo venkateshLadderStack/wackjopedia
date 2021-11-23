@@ -76,6 +76,8 @@ a.page__link:hover {
 }
 
 /* RC SLIDER (RANGE SECTION) */
+
+
 .rc-slider {
   position: relative;
   height: 14px;
@@ -125,6 +127,10 @@ a.page__link:hover {
 .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
   border-color: tint(#2db7f5, 20%);
   box-shadow: 0 0 0 5px tint(#2db7f5, 50%);
+}
+
+.rc-slider-handle:focus {
+  outline: none;
 }
 
 .rc-slider-tooltip {
