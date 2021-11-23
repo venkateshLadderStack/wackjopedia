@@ -116,17 +116,10 @@ const wakacje = ({ headerData, footerData, holidayTags, holidays }) => {
           <h3 className="my-5 ">Najlepsze oferty wakacyjne</h3>
           <div className="row">
             <div className="col-lg-8 col-md-12">
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
-              <Bestdeal />
+              {holidays?.map((item, i) => (
+                <Bestdeal key={i} item={item} />
+              ))}
+
               <Button />
             </div>
             <div className="col-lg-4 col-md-12 my-5">
