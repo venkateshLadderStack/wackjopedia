@@ -1,8 +1,9 @@
 import Layout from "../components/Layout";
 import style from "../styles/common.module.css";
+import blogstyles from "../styles/blog.module.css";
 import frame26styles from "../styles/frame26.module.css";
 import Image from "next/image";
-import Banner from "../components/Banner";
+import Banner from "../components/banner";
 import Holiday from "../components/Holidaycard";
 import Frame26Text, { Frame26List } from "../components/Textarea";
 import OfferSection from "../components/OfferSection";
