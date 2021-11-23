@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
 import rcStyle from "../styles/css/rcSlider.module.css";
-import Slider, { SliderTooltip } from "rc-slider";
-
-const { Handle } = Slider;
-const style = { width: 250, marginBottom: "50px" };
-// function log(value) {
-//   console.log(value); //eslint-disable-line
-// }
-const wrapperStyle = { width: 400, margin: 50 };
+import Slider from "rc-slider";
 
 const { createSliderWithTooltip } = Slider;
 const Slide = createSliderWithTooltip(Slider.Range);
-const handle = (props) => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <SliderTooltip prefixCls="rc-slider-tooltip">
-      <Handle value={value} {...restProps} />
-    </SliderTooltip>
-  );
-};
+
 const RcSlider = ({ label, emitValue }) => {
   const [mintemp, setMinTemp] = useState(10);
   const [maxTemp, setMaxTemp] = useState(30);
