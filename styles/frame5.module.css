@@ -52,6 +52,10 @@
     margin-bottom: 24px;
 }
 
+.places {
+    width: 64.4%;
+}
+
 @media screen and (max-width: 991px) {
     .area__detail {
         display: block;
@@ -67,4 +71,7 @@
         margin: auto;
     }
 
+    .places {
+        width: 100%;
+    }
 }

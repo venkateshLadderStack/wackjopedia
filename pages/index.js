@@ -1,13 +1,14 @@
 import Banner from "../components/banner";
-import BlogSection from "../components/blogSection";
+import BlogSection from "../components/Locations";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
 import Layout from "../components/Layout";
 import OfferSection from "../components/OfferSection";
 import PillSection from "../components/PillSection";
 import Places from "../components/Places";
-import styles from "../styles/blog.module.css";
+import styles from "../styles/common.module.css";
 import style from "../styles/frame5.module.css";
+import Button from "../components/Button";
 
 const pillsList = [
   {
@@ -112,15 +113,11 @@ export default function Home({
               </div>
               <div className="row pb-5">
                 <div className="col-lg-12">
-                  <div className={styles.deal__btn}>
-                    <a href="#" className={`${styles.theme__btn} py-3`}>
-                      pokaż więcej ofert
-                    </a>
-                  </div>
+                  <Button />
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-12 pr-0 mt-5">
+            <div className="col-lg-4 col-md-12 pr-0">
               <Holiday />
             </div>
           </div>
@@ -130,24 +127,24 @@ export default function Home({
       <section className="container wd">
         <h3 className="py-2">Często wyszukiwana pogoda</h3>
         <div className={style.places}>
-          {holidays?.map((item, i) => (
-            <Places key={i} item={item} />
-          ))}
+          <div className="row">
+            {holidays?.map((item, i) => (
+              <Places key={i} item={item} />
+            ))}
+          </div>
         </div>
       </section>
 
       <div className="container wd">
         <div className="my-5">
           <div className="row">
-            <div className="col-lg-12">
-              <div className={styles.pills__title}>
-                <h3>Sprawdź gdzie jechać na wakacje</h3>
-              </div>
-              <div className={styles.pills__div}>
-                {holidayTags?.map((item, index) => (
-                  <PillSection item={item} key={index} />
-                ))}
-              </div>
+            <div className={styles.pills__title}>
+              <h3>Sprawdź gdzie jechać na wakacje</h3>
+            </div>
+            <div className={styles.pills__div}>
+              {holidayTags?.map((item, index) => (
+                <PillSection item={item} key={index} />
+              ))}
             </div>
           </div>
         </div>
@@ -163,11 +160,7 @@ export default function Home({
           </div>
           <div className="row">
             <div className="col-lg-12">
-              <div className={styles.deal__btn}>
-                <a href="#" className={`${styles.theme__btn} py-3`}>
-                  pokaż więcej ofert
-                </a>
-              </div>
+              <Button />
             </div>
           </div>
         </div>

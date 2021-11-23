@@ -1,5 +1,4 @@
 import styles from "../styles/common.module.css";
-import Frame7style from "../styles/frame7.module.css";
 import Banner from "../components/Banner";
 import Frame26Text, { Frame26List } from "../components/Textarea";
 import Holiday from "../components/Holidaycard";
@@ -55,7 +54,7 @@ function Frame7({ headerData, footerData, holidayTags, holidays }) {
             </div>
           </div>
 
-          <section className={Frame7style.multi__col}>
+          <section className={styles.multi__col}>
             <Frequentsearch />
             <Frequentsearch />
             <Frequentsearch />
@@ -65,7 +64,7 @@ function Frame7({ headerData, footerData, holidayTags, holidays }) {
             <Frequentsearch />
           </section>
 
-          <div className={Frame7style.multi__col}>
+          <div className={styles.multi__col}>
             <Frame26Text
               title={`Opady`}
               desc={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `}

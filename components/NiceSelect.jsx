@@ -27,6 +27,7 @@ const NiceSelect = ({ options, label, defaultvalue, emitSelected }) => {
                   <li
                     className={`${styles.option} 
                      ${select == list.value && styles.selected}`}
+                    defaultValue={defaultvalue}
                     onClick={() => {
                       setSelect(list.value);
                       emitSelected(list.value);

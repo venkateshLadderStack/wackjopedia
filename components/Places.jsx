@@ -6,8 +6,8 @@ import styles from "../styles/css/place.module.css";
 function Places({ item }) {
   return (
     <>
-      <div className={styles.single__weather}>
-        <div className={styles.weather__img}>
+      <div className="col-lg-4 col-md-4 col-sm-12">
+        <div className={styles.single__weather}>
           <Image
             loading="lazy"
             width={189}
@@ -15,9 +15,9 @@ function Places({ item }) {
             src={item?.images[0]?.url}
             alt="place-img"
           />
-        </div>
-        <div className={`${styles.weather__text} m-2`}>
-          <p>{item?.city}</p>
+          <div className={`${styles.weather__text} m-2`}>
+            <p>{item?.city}</p>
+          </div>
         </div>
       </div>
     </>
