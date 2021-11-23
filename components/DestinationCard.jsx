@@ -28,11 +28,13 @@ const options = [
 ];
 
 const DesinationCard = () => {
-  const [location, setLocation] = useState();
-  const [time, setTime] = useState();
-  const [weather, setWeather] = useState();
-  const [airTemp, setAirTemp] = useState();
-  const [waterTemp, setWaterTemp] = useState();
+  const [location, setLocation] = useState(
+    `Afryka, Ameryka Południowa, Europa`
+  );
+  const [time, setTime] = useState(`Afryka, Ameryka Południowa, Europa`);
+  const [weather, setWeather] = useState(`Afryka, Ameryka Południowa, Europa`);
+  const [airTemp, setAirTemp] = useState(`10,30`);
+  const [waterTemp, setWaterTemp] = useState(`10,30`);
 
   const submission = () => {
     const data = [
@@ -54,31 +56,19 @@ const DesinationCard = () => {
               options={options}
               label={"Gdzie chcesz jechać?"}
               defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-              emitSelected={(data) => {
-                data = undefined
-                  ? setLocation(data)
-                  : setLocation(`Afryka, Ameryka Południowa, Europa`);
-              }}
+              emitSelected={(data) => setLocation(data)}
             />
             <NiceSelect
               options={options}
               label={"Kiedy chcesz jechać?"}
               defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-              emitSelected={(data) => {
-                data = undefined
-                  ? setTime(data)
-                  : setTime(`Afryka, Ameryka Południowa, Europa`);
-              }}
+              emitSelected={(data) => setTime(data)}
             />
             <NiceSelect
               options={options}
               label={"Jaka pogoda Cię interesuje?"}
               defaultvalue={"Afryka, Ameryka Południowa, Europa"}
-              emitSelected={(data) => {
-                data == undefined
-                  ? setWeather(data)
-                  : setWeather(`Afryka, Ameryka Południowa, Europa`);
-              }}
+              emitSelected={(data) => setWeather(data)}
             />
             <div className={stylesDestination.rc__slider__section}>
               <div
@@ -86,9 +76,7 @@ const DesinationCard = () => {
               >
                 <RcSlider
                   label={"Temperatura powietrza"}
-                  emitValue={(temp) => {
-                    temp == undefined ? setAirTemp(temp) : setAirTemp(`10,30`);
-                  }}
+                  emitValue={(temp) => setAirTemp(temp)}
                 />
               </div>
               <div
@@ -96,11 +84,7 @@ const DesinationCard = () => {
               >
                 <RcSlider
                   label={"Temperatura wody"}
-                  emitValue={(temp) => {
-                    temp == undefined
-                      ? setWaterTemp(temp)
-                      : setWaterTemp(`10,30`);
-                  }}
+                  emitValue={(temp) => setWaterTemp(temp)}
                 />
               </div>
             </div>

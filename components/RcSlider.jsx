@@ -25,8 +25,7 @@ const RcSlider = ({ label, emitValue }) => {
   const values = (value) => {
     setMinTemp(value[0]);
     setMaxTemp(value[1]);
-    const temp = value;
-    emitValue(temp);
+    emitValue(value);
   };
 
   return (
