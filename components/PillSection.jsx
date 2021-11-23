@@ -1,7 +1,7 @@
 const PillSection = ({ item }) => {
   return (
     <>
-      <a href={item.pillLink}>{item.pilltext}</a>
+      <a href="#">{item?.tag_name}</a>
     </>
   );
 };

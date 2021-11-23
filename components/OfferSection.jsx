@@ -1,42 +1,46 @@
 import Image from "next/image";
 import styles from "../styles/css/offer.module.css";
 
-const OfferSection = () => {
+const OfferSection = ({ item }) => {
+  const fillRange = (end) => {
+    return Array(end)
+      .fill()
+      .map((item, index) => 1 + index);
+  };
+
+  const stars = fillRange(item?.rating);
+
   return (
     <>
       <div className="col-lg-3 col-md-4">
         <div className={styles.deal}>
           <div className={styles.deal__img}>
-            <Image src={"/img/dealimg.png"} width={224} height={201} alt="" />
+            <Image
+              src={item?.images[0]?.url}
+              width={224}
+              height={201}
+              alt=""
+              loading="lazy"
+            />
           </div>
           <div className={`${styles.deal__containt} px-3`}>
             <div className={styles.deal__title}>
-              <h3>Iberostar Paraiso del Mar</h3>
+              <h3>{item?.title}</h3>
             </div>
             <div className={styles.offer__rating}>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
+              {stars?.map((i) => (
+                <span key={i}>
+                  <i className="fas fa-star"></i>
+                </span>
+              ))}
             </div>
             <div className={styles.deal__pp}>
               <a href="#">-11%</a>
-              <del>3 355 zł</del>
+              <del>{item?.actual_price} zł</del>
             </div>
             <div className={styles.deal__text}>
               <p>
-                od <span>2 755 zł</span> za os.
+                od <span>{item?.discount_price} zł</span> za os.
               </p>
             </div>
           </div>

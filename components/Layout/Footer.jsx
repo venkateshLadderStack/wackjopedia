@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import footerStyle from "../../styles/footer.module.css";
 
-const Footer = () => {
+const Footer = ({ footerData }) => {
+  const { copyright, footer_columns, page_links, logo } = footerData;
   return (
     <>
       <div className={footerStyle.footer__area}>
@@ -12,195 +14,34 @@ const Footer = () => {
               <div className={footerStyle.footer__logo}>
                 <a href="#">
                   <Image
-                    src="/img/footer-logo.png"
-                    alt=""
+                    src={logo?.url}
+                    alt={logo?.alternativeText}
                     width={185}
                     height={35}
                     layout="fixed"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={logo?.url}
                   />
                 </a>
               </div>
               <div className={footerStyle.footer__fl}>
-                <div className={footerStyle.single__footer__wed}>
-                  <div className={footerStyle.footer__title}>
-                    <h3>Gdzie jechać</h3>
+                {footer_columns.map((column, i) => (
+                  <div className={footerStyle.single__footer__wed} key={i}>
+                    <div className={footerStyle.footer__title}>
+                      <h3>{column?.title}</h3>
+                    </div>
+                    <div className="footer-list">
+                      <ul>
+                        {column?.footer_links.map((link, i) => (
+                          <li key={i}>
+                            <Link href={link?.url}>{link?.name}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className={footerStyle.footer__list}>
-                    <ul>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                      <li>
-                        <a href="#">Gdzie na wakacje w styczniu</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={footerStyle.single__footer__wed}>
-                  <div className={footerStyle.footer__title}>
-                    <h3>Pogoda</h3>
-                  </div>
-                  <div className={footerStyle.footer__list}>
-                    <ul>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={footerStyle.single__footer__wed}>
-                  <div className={footerStyle.footer__title}>
-                    <h3>Pogoda</h3>
-                  </div>
-                  <div className={footerStyle.footer__list}>
-                    <ul>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={footerStyle.single__footer__wed}>
-                  <div className={footerStyle.footer__title}>
-                    <h3>Pogoda</h3>
-                  </div>
-                  <div className={footerStyle.footer__list}>
-                    <ul>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                      <li>
-                        <a href="#">Wyspy Zielonego Przylądka</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -212,30 +53,16 @@ const Footer = () => {
             <div className="col-lg-12">
               <div className={footerStyle.footer__bootom__menu}>
                 <ul>
-                  <li>
-                    <a href="#">Kontakt</a>
-                  </li>
-                  <li>
-                    <a href="#">Regulamin</a>
-                  </li>
-                  <li>
-                    <a href="#">Polityka prywatności</a>
-                  </li>
-                  <li>
-                    <a href="#">Mapa strony</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
+                  {page_links.map((link, i) => (
+                    <li key={i}>
+                      <Link href={link?.url}>{link?.name}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className={`${footerStyle.footer__copy}`}>
                 <p>© 2021 Wakacjopedia.pl</p>
-                <p>
-                  Opublikowane na stronach www.wakacjopedia.pl informacje lub
-                  ceny nie stanowią oferty w rozumieniu przepisów kodeksu
-                  cywilnego.
-                </p>
+                <p>{copyright}</p>
               </div>
             </div>
           </div>

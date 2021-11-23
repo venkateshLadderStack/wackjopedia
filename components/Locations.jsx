@@ -9,12 +9,12 @@ const BlogSection = ({ item }) => {
           loading="lazy"
           className={`${styles.blog__img} `}
           layout="responsive"
-          src={item.img}
+          src={item?.images[0]?.url}
           width={294}
           height={263}
           alt="blog"
         />
-        <p className={`${styles.blogText} mt-4`}>{item.text}</p>
+        <p className={`${styles.blogText} mt-4`}>{item?.title}</p>
       </div>
     </>
   );
