@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/css/offer.module.css";
+import ImageComponent from "./ImageComponent";
 
 const OfferSection = ({ item }) => {
   const fillRange = (end) => {
@@ -15,8 +16,8 @@ const OfferSection = ({ item }) => {
       <div className="col-lg-3 col-md-4">
         <div className={styles.deal}>
           <div className={styles.deal__img}>
-            <Image
-              src={item?.images[0]?.url}
+            <ImageComponent
+              src={item?.images[0]?.hash}
               width={224}
               height={201}
               alt=""
@@ -35,7 +36,14 @@ const OfferSection = ({ item }) => {
               ))}
             </div>
             <div className={styles.deal__pp}>
-              <a href="#">-11%</a>
+              <a href="#">
+                {Math.round(
+                  ((item?.actual_price - item?.discount_price) /
+                    item?.discount_price) *
+                    100
+                )}
+                %
+              </a>
               <del>{item?.actual_price} zł</del>
             </div>
             <div className={styles.deal__text}>

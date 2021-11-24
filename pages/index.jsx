@@ -10,94 +10,17 @@ import styles from "../styles/common.module.css";
 import style from "../styles/frame5.module.css";
 import Button from "../components/Button";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-
-const blogList = [
-  {
-    img: "/img/blog.png",
-    text: "1 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "2 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "3 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "4 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "5 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "6 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-];
-
 export default function Home({
   headerData,
   footerData,
   holidays,
   holidayTags,
+  homeData,
 }) {
   return (
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">
-        <Banner />
+        <Banner image={homeData?.banner_image?.hash} />
         <div className="mt-5">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
@@ -118,7 +41,7 @@ export default function Home({
               </div>
             </div>
             <div className="col-lg-4 col-md-12 pr-0">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
         </div>
@@ -194,12 +117,17 @@ export const getStaticProps = async (context) => {
 
   const holidayTags = await holidayTagsRes.json();
 
+  const homeRes = await fetch("https://wakacjopedia-strapi.herokuapp.com/home");
+
+  const homeData = await homeRes.json();
+
   return {
     props: {
       headerData,
       footerData,
       holidays,
       holidayTags,
+      homeData,
     },
   };
 };
