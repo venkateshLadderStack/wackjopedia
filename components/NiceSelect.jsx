@@ -35,6 +35,7 @@ const NiceSelect = ({ options, label, defaultvalue, emitSelected }) => {
               <>
                 {list.disabled ? (
                   <li
+                    key={index}
                     className={`${styles.option} 
                   ${list.disabled && styles.disabled}`}
                   >
@@ -42,6 +43,7 @@ const NiceSelect = ({ options, label, defaultvalue, emitSelected }) => {
                   </li>
                 ) : (
                   <li
+                    key={index}
                     className={`${styles.option} 
                      ${select == list.value && styles.selected}`}
                     defaultValue={defaultvalue}

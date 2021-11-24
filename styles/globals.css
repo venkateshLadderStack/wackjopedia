@@ -146,10 +146,6 @@ a.page__link:hover {
   display: none;
 }
 
-.rc-slider-tooltip-placement-top {
-  padding: 4px 0 8px 0;
-}
-
 .rc-slider-tooltip-inner {
   padding: 6px 2px;
   min-width: 24px;
@@ -163,3 +159,11 @@ a.page__link:hover {
   border-radius: 6px;
   box-shadow: 0 0 4px #d9d9d9;
 }
+
+/* .rc-slider-tooltip-placement-top {
+  padding: 4px 0 8px 0;
+} */
+
+/* .rc-slider-tooltip-inner {
+  display: none;
+} */

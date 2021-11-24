@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import useWindowSize from "../../hooks/useWindowSIze";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import haerderStyle from "../../styles/Header.module.css";
 
 const Header = ({ headerData }) => {
   const { logo, links } = headerData;
-
   const navlinks = links.slice(0, links.length - 1);
   const btnLink = links[links.length - 1];
-
-  const { width } = useWindowSize();
-
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-  useEffect(() => {
-    if (width < 786) {
-      setShowMobileMenu(true);
-    }
-  }, [width]);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import rcStyle from "../styles/css/rcSlider.module.css";
 import Slider from "rc-slider";
 
@@ -18,7 +18,7 @@ const RcSlider = ({ label, emitValue }) => {
     <>
       <div className={rcStyle.rc__slider__title}>
         <h3>{label}</h3>
-        <p className={rcStyle.value__label}>
+        <p className={`${rcStyle.value__label} mb-4`}>
           {mintemp}°C- {maxTemp}°C
         </p>
         <Slide
@@ -27,11 +27,9 @@ const RcSlider = ({ label, emitValue }) => {
           pushable
           defaultValue={[mintemp, maxTemp]}
           onChange={values}
+          tipFormatter={(value) => `${value} °C`}
           trackStyle={[{ backgroundColor: `#FFBC11` }]}
-          handleStyle={[
-            { backgroundColor: "#A2BCFF" },
-            { backgroundColor: "#A2BCFF" },
-          ]}
+          handleStyle={[{ backgroundColor: "#A2BCFF" }]}
           railStyle={{ backgroundColor: "#2D50AB" }}
         />
       </div>
