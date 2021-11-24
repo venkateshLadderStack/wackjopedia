@@ -11,6 +11,10 @@ import PillSection from "../components/PillSection";
 import Locationcard from "../components/Locationcard";
 import noteImg from "../public/img/noteImg.png";
 import Button from "../components/Button";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { getHolidayData, getHolidayTags } from "../queries/holidayData";
+import { getFooterData, getHeaderData } from "../queries/layout";
+import { getHomePageData } from "../queries/homePage";
 
 const pillsList = [
   {
@@ -185,36 +189,38 @@ function Frame26({ headerData, footerData, holidays, holidayTags }) {
 export default Frame26;
 
 export const getStaticProps = async (context) => {
-  const headerRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/navbar"
-  );
+  const client = new ApolloClient({
+    uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
+    cache: new InMemoryCache(),
+  });
 
-  const headerData = await headerRes.json();
+  const holidayData = await client.query({
+    query: getHolidayData,
+  });
 
-  const footerRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/footer"
-  );
+  const headerData = await client.query({
+    query: getHeaderData,
+  });
 
-  const footerData = await footerRes.json();
+  const footerData = await client.query({
+    query: getFooterData,
+  });
 
-  const holidaysRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/hotels"
-  );
+  const holidayTags = await client.query({
+    query: getHolidayTags,
+  });
 
-  const holidays = await holidaysRes.json();
-
-  const holidayTagsRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/tags"
-  );
-
-  const holidayTags = await holidayTagsRes.json();
+  const homeData = await client.query({
+    query: getHomePageData,
+  });
 
   return {
     props: {
-      headerData,
-      footerData,
-      holidays,
-      holidayTags,
+      headerData: headerData?.data?.navbar,
+      footerData: footerData?.data?.footer,
+      holidayTags: holidayTags?.data?.tags,
+      homeData: homeData?.data?.home,
+      holidays: holidayData?.data?.hotels,
     },
   };
 };

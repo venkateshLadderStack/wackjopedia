@@ -8,116 +8,10 @@ import PaginatedItems from "../components/Paginate";
 import Layout from "../components/Layout";
 import Holiday from "../components/Holidaycard";
 import Button from "../components/Button";
-
-const blogList = [
-  {
-    img: "/img/blog.png",
-    text: "1 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "2 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "3 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "4 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "5 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "6 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "7 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "8 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "9 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "10 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "11 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "12 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "13 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "14 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "15 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "16 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "17 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "18 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "19 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-  {
-    img: "/img/blog.png",
-    text: "20 Najlepsze hotele z Aquaparkami w Hiszpani",
-  },
-];
-
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { getHolidayData, getHolidayTags } from "../queries/holidayData";
+import { getFooterData, getHeaderData } from "../queries/layout";
+import { getHomePageData } from "../queries/homePage";
 
 const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
   const [tempList, setTempList] = useState(null);
@@ -140,7 +34,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
                   <div className="col-12">
                     <div className={styles.pagination__area}>
                       <PaginatedItems
-                        items={blogList}
+                        items={holidays}
                         itemsPerPage={10}
                         emitCurrentItems={(data) => {
                           setTempList(data);
@@ -195,36 +89,38 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
 export default Blog;
 
 export const getStaticProps = async (context) => {
-  const headerRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/navbar"
-  );
+  const client = new ApolloClient({
+    uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
+    cache: new InMemoryCache(),
+  });
 
-  const headerData = await headerRes.json();
+  const holidayData = await client.query({
+    query: getHolidayData,
+  });
 
-  const footerRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/footer"
-  );
+  const headerData = await client.query({
+    query: getHeaderData,
+  });
 
-  const footerData = await footerRes.json();
+  const footerData = await client.query({
+    query: getFooterData,
+  });
 
-  const holidaysRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/hotels"
-  );
+  const holidayTags = await client.query({
+    query: getHolidayTags,
+  });
 
-  const holidays = await holidaysRes.json();
-
-  const holidayTagsRes = await fetch(
-    "https://wakacjopedia-strapi.herokuapp.com/tags"
-  );
-
-  const holidayTags = await holidayTagsRes.json();
+  const homeData = await client.query({
+    query: getHomePageData,
+  });
 
   return {
     props: {
-      headerData,
-      footerData,
-      holidays,
-      holidayTags,
+      headerData: headerData?.data?.navbar,
+      footerData: footerData?.data?.footer,
+      holidayTags: holidayTags?.data?.tags,
+      homeData: homeData?.data?.home,
+      holidays: holidayData?.data?.hotels,
     },
   };
 };
