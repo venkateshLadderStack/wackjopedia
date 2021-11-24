@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/css/locations.module.css";
 
 const BlogSection = ({ item }) => {
+  console.log(item, "ITEm");
   return (
     <>
       <div className={styles.blog}>

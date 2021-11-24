@@ -22,7 +22,6 @@ export default function Home({
   homeData,
   data,
 }) {
-  console.log(data);
   return (
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">

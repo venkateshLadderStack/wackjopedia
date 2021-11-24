@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 export const getHolidayData = gql`
   query {
     hotels {
+      title
       actual_price
       city
       content

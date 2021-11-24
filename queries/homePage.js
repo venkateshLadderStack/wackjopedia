@@ -9,6 +9,7 @@ export const getHomePageData = gql`
         url
       }
       featured_holiday {
+        title
         actual_price
         city
         content
