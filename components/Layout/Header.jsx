@@ -52,9 +52,7 @@ const Header = ({ headerData }) => {
                       width={185}
                       height={33}
                       layout="fixed"
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL={logo?.url}
+                      loading="eager"
                     />
                   </Link>
                 </div>
