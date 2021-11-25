@@ -1,6 +1,6 @@
-import Image from "next/image";
 import styles from "../styles/css/offer.module.css";
 import ImageComponent from "./ImageComponent";
+import Link from "next/link";
 
 const OfferSection = ({ item }) => {
   const fillRange = (end) => {
@@ -12,8 +12,8 @@ const OfferSection = ({ item }) => {
   const stars = fillRange(item?.rating);
 
   return (
-    <>
-      <div className="col-lg-3 col-md-4">
+    <Link href={`/holiday/${item?.slug}`} passHref>
+      <div className="col-lg-3 col-md-4 pointer">
         <div className={styles.deal}>
           <div className={styles.deal__img}>
             <ImageComponent
@@ -54,7 +54,7 @@ const OfferSection = ({ item }) => {
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
