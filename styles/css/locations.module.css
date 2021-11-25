@@ -23,11 +23,15 @@
 .blog__img {
     max-width: 294px;
     max-height: 263px;
+    margin: auto;
+}
+
+.blog__img span {
+    border-radius: 30px;
 }
 
 .blog span {
-    /* overflow: visible !important; */
-    top: 7px;
+    top: 4px;
 }
 
 /* @media screen and (max-width:992px) {

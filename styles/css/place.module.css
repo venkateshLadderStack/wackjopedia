@@ -24,3 +24,7 @@
     max-width: 189px;
     max-height: 121px;
 }
+
+.place__img span {
+    border-radius: 20px;
+}

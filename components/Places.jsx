@@ -9,13 +9,15 @@ function Places({ item }) {
     <>
       <div className="col-lg-4 col-md-4 col-sm-12">
         <div className={styles.single__weather}>
-          <ImageComponent
-            loading="lazy"
-            width={189}
-            height={121}
-            src={item?.thumbnail?.hash}
-            alt="place-img"
-          />
+          <div className={styles.place__img}>
+            <ImageComponent
+              loading="lazy"
+              width={189}
+              height={121}
+              src={item?.thumbnail?.hash}
+              alt="place-img"
+            />
+          </div>
           <div className={`${styles.weather__text} m-2`}>
             <p>{item?.city}</p>
           </div>

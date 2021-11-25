@@ -31,10 +31,10 @@ export default function Home({
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 pr-0">
               <DesinationCard />
+              <h3 className="py-5">Ostatnio na naszym blogu</h3>
               <div className="row my-2">
-                <h3 className="py-5">Ostatnio na naszym blogu</h3>
                 {holidays?.map((item, index) => (
-                  <div key={index} className="col-lg-6 col-md-12">
+                  <div key={index} className="col-lg-6 col-md-6 col-sm-12 my-2">
                     <BlogSection item={item} />
                   </div>
                 ))}
@@ -86,7 +86,7 @@ export default function Home({
               <OfferSection item={item} key={i} />
             ))}
           </div>
-          <div className="row">
+          <div className="row my-5">
             <div className="col-lg-12">
               <Button />
             </div>

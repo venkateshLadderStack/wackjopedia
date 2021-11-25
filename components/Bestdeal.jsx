@@ -19,7 +19,7 @@ const Bestdeal = ({ item }) => {
       <div className={styles.single__holy}>
         <div className={styles.holy__img}>
           <Image
-            // layout="responsive"
+            layout="responsive"
             loading="lazy"
             width={221}
             height={199}
