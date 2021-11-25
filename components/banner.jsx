@@ -33,7 +33,9 @@ const Banner = ({ title, image }) => {
                 </span>
               </i>
             </div>
-            <button className={styles.btn}>sprawdź oferty</button>
+            <button className={styles.btn}>
+              sprawdź oferty <i className="fas fa-angle-right px-1"></i>
+            </button>
           </div>
         </div>
         {/* {image ? (
