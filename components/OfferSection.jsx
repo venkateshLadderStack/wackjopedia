@@ -17,7 +17,7 @@ const OfferSection = ({ item }) => {
         <div className={styles.deal}>
           <div className={styles.deal__img}>
             <ImageComponent
-              src={item?.images[0]?.hash}
+              src={item?.thumbnail?.hash}
               width={224}
               height={201}
               alt=""

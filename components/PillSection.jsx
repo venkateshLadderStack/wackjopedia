@@ -1,7 +1,7 @@
 const PillSection = ({ item }) => {
   return (
     <>
-      <a href="#">{item?.tag_name}</a>
+      <a href="#">Places in {item?.tag_name}</a>
     </>
   );
 };

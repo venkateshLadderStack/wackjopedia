@@ -16,7 +16,9 @@ const Holiday = ({ data }) => {
         <div
           className={styles.bgImg}
           style={{
-            backgroundImage: `url(${data?.images[1]?.url || "/img/bgImg.png"})`,
+            backgroundImage: `url(${
+              data?.featured_showcase_image?.url || "/img/bgImg.png"
+            })`,
           }}
         >
           <span className={styles.rating}>

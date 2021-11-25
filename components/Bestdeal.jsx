@@ -23,7 +23,7 @@ const Bestdeal = ({ item }) => {
             loading="lazy"
             width={221}
             height={199}
-            src={item?.images[0]?.url || bestdeal}
+            src={item?.thumbnail?.url || bestdeal}
             alt=""
           />
           <a href="#">8.9</a>
