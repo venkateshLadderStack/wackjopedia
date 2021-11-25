@@ -5,6 +5,7 @@ export const getHolidayData = gql`
     hotels {
       title
       actual_price
+      title
       city
       content
       country
@@ -16,10 +17,26 @@ export const getHolidayData = gql`
       slug
       rating
       location
-      images {
-        alternativeText
+      thumbnail {
         hash
         url
+      }
+      featured_image {
+        hash
+        url
+      }
+      featured_showcase_image {
+        hash
+        url
+      }
+      slug
+      holiday_tags {
+        tag_name
+        slug
+      }
+      holiday_months {
+        tag_name
+        slug
       }
     }
   }

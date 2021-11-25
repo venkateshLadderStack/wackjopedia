@@ -13,7 +13,7 @@ function Places({ item }) {
             loading="lazy"
             width={189}
             height={121}
-            src={item?.images[0]?.hash}
+            src={item?.thumbnail?.hash}
             alt="place-img"
           />
           <div className={`${styles.weather__text} m-2`}>

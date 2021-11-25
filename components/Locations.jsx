@@ -10,7 +10,7 @@ const BlogSection = ({ item }) => {
           loading="lazy"
           className={`${styles.blog__img} `}
           layout="responsive"
-          src={item?.images[0]?.url}
+          src={item?.thumbnail?.url}
           width={294}
           height={263}
           alt="blog"
