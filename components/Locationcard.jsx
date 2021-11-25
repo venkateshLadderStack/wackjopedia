@@ -1,13 +1,14 @@
 import styles from "../styles/css/locationcard.module.css";
 import Image from "next/image";
 import locationIMg from "../public/img/locationImg.png";
+import ImageComponent from "./ImageComponent";
 
-function Locationcard() {
+function Locationcard({ data }) {
   return (
     <>
       <div className={styles.location__section}>
-        <Image
-          src={locationIMg}
+        <ImageComponent
+          src={data?.featured_image?.hash}
           alt="location"
           width={675}
           height={598}

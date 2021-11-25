@@ -16,32 +16,6 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
 function Frame26({ headerData, footerData, holidays, holidayTags }) {
   return (
     <>

@@ -10,11 +10,12 @@ const ImageComponent = ({
   layout = "responsive",
   blurDataURL,
   alt = "picture",
+  className,
 }) => {
   const hostUrl = `https://res.cloudinary.com/dsxtmwsbn/image/upload/v1636749401`;
   return (
     <Image
-      //   className="object-center object-cover w-full h-full"
+      className={className}
       src={`${hostUrl}/${src}`}
       alt={alt}
       width={width ? width : undefined}
