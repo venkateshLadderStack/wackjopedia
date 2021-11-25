@@ -16,15 +16,21 @@
     padding-top: 12px;
     margin-bottom: 24px;
     height: 418px;
+    max-width: 330px;
+    margin: auto;
+}
 
+.blog__img {
+    max-width: 294px;
+    max-height: 263px;
 }
 
 .blog span {
-    overflow: visible !important;
+    /* overflow: visible !important; */
     top: 7px;
 }
 
-@media screen and (max-width:992px) {
+/* @media screen and (max-width:992px) {
     .blog {
         text-align: center;
     }
@@ -93,6 +99,7 @@
 @media (min-width:950px) and (max-width:992px) {
     .blog {
         height: 950px;
+        height: 418px;
     }
 
 }
@@ -101,4 +108,4 @@
     .blog {
         height: 850px;
     }
-}
+} */

@@ -1,0 +1,59 @@
+.banner {
+    width: 85%;
+    margin: auto;
+    height: 200px;
+}
+
+.bgImg {
+    background-image: url(../../public/img/banner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 200px;
+    border-radius: 25px;
+}
+
+.caption {
+    color: white !important;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    width: 60%;
+}
+
+.caption h3 {
+    color: white !important;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.caption p {
+    font-size: 14px;
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn,
+.btn:active,
+.btn:focus {
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #00011d;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 50px;
+}
