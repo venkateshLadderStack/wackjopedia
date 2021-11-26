@@ -1,16 +1,17 @@
 .banner {
     width: 85%;
     margin: auto;
-    height: 200px;
+    height: auto;
     font-family: 'Poppins', sans-serif !important;
 }
 
 .bgImg {
     background-image: url(../../public/img/banner.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    /* background-position: center center; */
+    /* background-attachment: fixed; */
     position: relative;
-    padding: 100px 40px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -27,7 +28,6 @@
 }
 
 .caption h3 {
-
     color: white !important;
     font-size: 25px;
     font-weight: 600;
@@ -53,8 +53,9 @@
 .btn,
 .btn:active,
 .btn:focus {
-    font-size: 16px !important;
-    margin-top: 20px;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    margin-top: 10px;
     text-transform: uppercase;
     border-radius: 5px;
     color: #00011d;
@@ -64,8 +65,56 @@
     outline: none;
     border: none;
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 5px 30px;
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .banner {
+        width: 100%;
+    }
+
+    .caption {
+        top: 10px;
+        left: 10px;
+        width: 70%;
+    }
+
+    .caption h3 {
+        font-size: 15px;
+    }
+
+    .check span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px !important;
+        font-weight: 500;
+    }
+
+    .btn,
+    .btn:active,
+    .btn:focus {
+        font-size: 10px !important;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .caption {
+        top: 15px;
+        left: 40px;
+        width: 70%;
+    }
+
+    .check {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {}

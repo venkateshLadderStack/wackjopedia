@@ -32,17 +32,20 @@ export default function Home({
             <div className="col-lg-8 col-md-12 pr-0">
               <DesinationCard />
               <h3 className="py-5">Ostatnio na naszym blogu</h3>
-              <div className="row my-2">
-                {holidays?.map((item, index) => (
-                  <div key={index} className="col-lg-6 col-md-6 col-sm-12 my-2">
-                    <BlogSection item={item} />
-                  </div>
-                ))}
+              <div className="container">
+                <div className="row my-2">
+                  {holidays?.map((item, index) => (
+                    <div
+                      key={index}
+                      className="col-lg-6 col-md-12 col-sm-12 my-2"
+                    >
+                      <BlogSection item={item} />
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="row pb-5">
-                <div className="col-lg-12">
-                  <Button />
-                </div>
+                <div className="col-lg-12">{/* <Button /> */}</div>
               </div>
             </div>
             <div className="col-lg-4 col-md-12 pr-0">
@@ -52,12 +55,14 @@ export default function Home({
         </div>
       </div>
 
-      <section className="container wd">
+      <section className="container wd my-5">
         <h3 className="py-2">Często wyszukiwana pogoda</h3>
         <div className={style.places}>
           <div className="row">
             {holidays?.map((item, i) => (
-              <Places key={i} item={item} />
+              <div key={i} className="col-lg-4 col-md-4 col-sm-12 my-2">
+                <Places item={item} />
+              </div>
             ))}
           </div>
         </div>
@@ -87,9 +92,7 @@ export default function Home({
             ))}
           </div>
           <div className="row my-5">
-            <div className="col-lg-12">
-              <Button />
-            </div>
+            <div className="col-lg-12">{/* <Button /> */}</div>
           </div>
         </div>
       </div>
