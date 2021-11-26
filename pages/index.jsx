@@ -29,7 +29,7 @@ export default function Home({
         <div className="mt-5">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
-            <div className="col-lg-8 col-md-12 pr-0">
+            <div className="col-lg-8 col-md-12 px-0">
               <DesinationCard />
               <h3 className="py-5">Ostatnio na naszym blogu</h3>
               <div className="container">
