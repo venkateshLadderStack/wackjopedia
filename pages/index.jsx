@@ -45,7 +45,9 @@ export default function Home({
                 </div>
               </div>
               <div className="row pb-5">
-                <div className="col-lg-12">{/* <Button /> */}</div>
+                <div className="col-lg-12">
+                  <Button />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
@@ -68,31 +70,29 @@ export default function Home({
         </div>
       </section>
 
-      <div className="container wd">
-        <div className="my-5">
-          <div className="row">
-            <div className={styles.pills__title}>
-              <h3>Sprawdź gdzie jechać na wakacje</h3>
-            </div>
-            <div className={styles.pills__div}>
-              {holidayTags?.map((item, index) => (
-                <PillSection item={item} key={index} />
-              ))}
-            </div>
+      <div className="container wd my-5">
+        <div className="row">
+          <div className={styles.pills__title}>
+            <h3>Sprawdź gdzie jechać na wakacje</h3>
+          </div>
+          <div className={styles.pills__div}>
+            {holidayTags?.map((item, index) => (
+              <PillSection item={item} key={index} />
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="container wd">
-        <div className="my-5">
-          <h3 className="mb-5">Gorące oferty Last Minute</h3>
-          <div className="row">
-            {holidays?.map((item, i) => (
-              <OfferSection item={item} key={i} />
-            ))}
-          </div>
-          <div className="row my-5">
-            <div className="col-lg-12">{/* <Button /> */}</div>
+      <div className="container wd my-5">
+        <h3 className="mb-5">Gorące oferty Last Minute</h3>
+        <div className="row">
+          {holidays?.map((item, i) => (
+            <OfferSection item={item} key={i} />
+          ))}
+        </div>
+        <div className="row my-5">
+          <div className="col-lg-12">
+            <Button />
           </div>
         </div>
       </div>

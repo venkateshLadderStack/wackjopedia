@@ -58,10 +58,22 @@ a {
   position: absolute;
   left: 20px;
   font-size: 14px;
-}
-
-a.page__link:hover {
-  background-color: #fff;
+  background: #ffffff;
+  border: 1px solid #e0dfdf;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 34px;
+  height: 34px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #00011d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+  cursor: pointer;
 }
 
 .page__next,
@@ -69,6 +81,17 @@ a.page__link:hover {
   position: absolute;
   right: 20px;
   font-size: 14px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #e0dfdf;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 34px;
+  height: 34px;
+  color: #00011d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* RC SLIDER (RANGE SECTION) */

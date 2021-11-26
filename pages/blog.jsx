@@ -22,10 +22,10 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
           <Banner title="Blog Wakacjopedia" />
           <div className="mt-5">
             <div className="row mt-1">
-              <div className="col-lg-8 col-md-12 pr-0">
+              <div className="col-lg-8 col-md-12">
                 <div className="row my-2">
                   {holidays?.map((item, index) => (
-                    <div key={index} className="col-lg-6 col-md-12">
+                    <div key={index} className="col-lg-6 col-md-6 col-sm-12">
                       <BlogSection item={item} />
                     </div>
                   ))}
@@ -44,7 +44,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12 pr-0 mt-2">
+              <div className="col-lg-4 col-md-12 mt-2">
                 <Holiday />
               </div>
             </div>

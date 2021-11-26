@@ -7,7 +7,7 @@ const BlogSection = ({ item }) => {
   console.log(item, "ITEm");
   return (
     <Link href={`/holiday/${item?.slug}`} passHref>
-      <div className="pointer">
+      <div className="pointer my-3">
         <div className={styles.blog}>
           <div className={`${styles.blog__img} `}>
             <ImageComponent

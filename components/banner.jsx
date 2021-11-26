@@ -1,7 +1,3 @@
-import Image from "next/image";
-import bannerImg from "../public/img/banner.png";
-import ImageComponent from "./ImageComponent";
-import Link from "next/link";
 import styles from "../styles/css/banner.module.css";
 
 const Banner = ({ title, image }) => {
@@ -14,9 +10,9 @@ const Banner = ({ title, image }) => {
             <h3> wakacje.pL</h3>
             <h3 className="mt-2"> #PRZEDLUZAMYWAKACJE</h3>
             <div className={styles.check}>
-              <div>
+              <div className="d-flex flex-row align-items-center">
                 <i
-                  className="fa fa-check mb-2"
+                  className="fa fa-check"
                   style={{
                     color: `#FFC700`,
                   }}
@@ -26,7 +22,7 @@ const Banner = ({ title, image }) => {
                   Kierunki peine slonaca
                 </span>
               </div>
-              <div>
+              <div className="d-flex flex-row align-items-center">
                 <i
                   className="fa fa-check"
                   style={{
