@@ -48,7 +48,7 @@ export default function Home({
                 <div className="col-lg-12">{/* <Button /> */}</div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-12 pr-0">
+            <div className="col-lg-4 col-md-12">
               <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>

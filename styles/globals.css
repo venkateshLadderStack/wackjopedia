@@ -17,6 +17,7 @@ a {
 
 .container.wd {
   max-width: 1070px !important;
+  overflow-x: hidden;
 }
 
 /* PAGINATE */
