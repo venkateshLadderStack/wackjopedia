@@ -45,7 +45,7 @@ export default function Home({
             <div className="col-lg-8 col-md-12">
               <div className="container">
                 <div className="row my-2">
-                  {holidays?.slice(0, 6)?.map((item, index) => (
+                  {holidays?.slice(0, 5)?.map((item, index) => (
                     <div
                       key={index}
                       className="col-lg-6 col-md-6 col-sm-12 my-2"

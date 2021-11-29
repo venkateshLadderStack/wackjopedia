@@ -74,8 +74,10 @@ function Frame15({ headerData, footerData, holidays, holidayTags, homeData }) {
             <h3 className="py-5">
               Sprawdź pogodę w miastach i regionach Meksyku
             </h3>
-            {holidays?.map((item, i) => (
-              <Places key={i} item={item} />
+            {holidays?.slice(0, 6)?.map((item, i) => (
+              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
+                <Places item={item} />
+              </div>
             ))}
           </div>
 
