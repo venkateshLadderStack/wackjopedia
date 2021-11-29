@@ -32,6 +32,17 @@ export default function Home({
             <div className="col-lg-8 col-md-12 px-0">
               <DesinationCard />
               <h3 className="py-5">Ostatnio na naszym blogu</h3>
+            </div>
+            <div className="col-lg-4 col-md-12">
+              <Holiday data={homeData?.featured_holiday} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-12">
               <div className="container">
                 <div className="row my-2">
                   {holidays?.map((item, i) => {
@@ -54,9 +65,6 @@ export default function Home({
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-12">
-              <Holiday data={homeData?.featured_holiday} />
-            </div>
           </div>
         </div>
       </div>
@@ -66,7 +74,7 @@ export default function Home({
         <div className={style.places}>
           <div className="row">
             {holidays?.map((item, i) => (
-              <div key={i} className="col-lg-4 col-md-4 col-sm-12 my-2">
+              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
                 <Places item={item} />
               </div>
             ))}

@@ -13,33 +13,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-function Frame7({ headerData, footerData, holidayTags, holidays }) {
+function Frame7({ headerData, footerData, holidayTags, holidays, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -54,7 +28,7 @@ function Frame7({ headerData, footerData, holidayTags, holidays }) {
               />
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
 

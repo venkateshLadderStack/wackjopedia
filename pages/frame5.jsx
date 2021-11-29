@@ -119,7 +119,7 @@ const MonthlyWeather = [
   },
 ];
 
-function Frame5({ headerData, footerData, holidays, holidayTags }) {
+function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -175,7 +175,7 @@ function Frame5({ headerData, footerData, holidays, holidayTags }) {
               </div>
               <div className={style.text__details__right}>
                 <PerfectMonth />
-                <Holiday />
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>

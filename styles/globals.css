@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -188,4 +189,10 @@ a {
 
 .pointer {
   cursor: pointer;
+}
+
+.best_deal_img {
+  /* width: 300px;
+  height: 290px; */
+  border-radius: 30px;
 }

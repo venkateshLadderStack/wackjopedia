@@ -13,7 +13,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
+const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
   const [tempList, setTempList] = useState(null);
   return (
     <>

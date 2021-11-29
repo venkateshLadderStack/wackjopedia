@@ -16,7 +16,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-function Frame26({ headerData, footerData, holidays, holidayTags }) {
+function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -44,7 +44,7 @@ function Frame26({ headerData, footerData, holidays, holidayTags }) {
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
           <section className="pb-5">
