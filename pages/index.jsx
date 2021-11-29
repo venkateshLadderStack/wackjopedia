@@ -45,7 +45,7 @@ export default function Home({
             <div className="col-lg-8 col-md-12">
               <div className="container">
                 <div className="row my-2">
-                  {holidays?.map((item, index) => (
+                  {holidays?.slice(0, 6)?.map((item, index) => (
                     <div
                       key={index}
                       className="col-lg-6 col-md-6 col-sm-12 my-2"
@@ -94,9 +94,9 @@ export default function Home({
       <div className="container wd my-5">
         <h3 className="mb-5">Gorące oferty Last Minute</h3>
         <div className="row">
-          {holidays?.map((item, i) => (
-            <OfferSection item={item} key={i} />
-          ))}
+          {holidays?.map((item, i) => {
+            return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+          })}
         </div>
         <div className="row my-5">
           <div className="col-lg-12">
