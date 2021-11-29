@@ -4,7 +4,9 @@ import ImageComponent from "./ImageComponent";
 import Link from "next/link";
 
 const BlogSection = ({ item }) => {
-  console.log(item, "ITEm");
+  // console.log(item, "ITEm");
+  // const items = [{ ...item }];
+  // console.log(items);
   return (
     <Link href={`/holiday/${item?.slug}`} passHref>
       <div className="pointer my-3">

@@ -14,6 +14,7 @@ import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
 const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
+  console.log(holidays);
   const [tempList, setTempList] = useState(null);
   return (
     <>
@@ -24,7 +25,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
             <div className="row mt-1">
               <div className="col-lg-8 col-md-12">
                 <div className="row my-2">
-                  {holidays?.map((item, index) => (
+                  {tempList?.map((item, index) => (
                     <div key={index} className="col-lg-6 col-md-6 col-sm-12">
                       <BlogSection item={item} />
                     </div>
