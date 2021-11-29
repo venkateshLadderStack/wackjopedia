@@ -14,7 +14,6 @@ import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
 const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
-  console.log(holidays);
   const [tempList, setTempList] = useState(null);
   return (
     <>
@@ -55,9 +54,9 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => (
-                <OfferSection item={item} key={i} />
-              ))}
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
             </div>
             <div className="row">
               <div className="col-lg-12">
