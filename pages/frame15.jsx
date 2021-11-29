@@ -131,9 +131,9 @@ function Frame15({ headerData, footerData, holidays, holidayTags }) {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => (
-                <OfferSection item={item} key={i} />
-              ))}
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
             </div>
             <div className="row">
               <div className="col-lg-12">
