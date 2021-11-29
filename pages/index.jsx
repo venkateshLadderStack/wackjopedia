@@ -34,14 +34,18 @@ export default function Home({
               <h3 className="py-5">Ostatnio na naszym blogu</h3>
               <div className="container">
                 <div className="row my-2">
-                  {holidays?.map((item, index) => (
-                    <div
-                      key={index}
-                      className="col-lg-6 col-md-12 col-sm-12 my-2"
-                    >
-                      <BlogSection item={item} />
-                    </div>
-                  ))}
+                  {holidays?.map((item, i) => {
+                    return i <= 5 ? (
+                      <>
+                        <div
+                          key={i}
+                          className="col-lg-6 col-md-12 col-sm-12 my-2"
+                        >
+                          <BlogSection item={item} />
+                        </div>
+                      </>
+                    ) : null;
+                  })}
                 </div>
               </div>
               <div className="row pb-5">

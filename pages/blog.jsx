@@ -44,7 +44,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12 mt-2">
+              <div className="col-lg-4 col-md-12 mt-4">
                 <Holiday />
               </div>
             </div>
