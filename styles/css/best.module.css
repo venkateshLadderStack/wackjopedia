@@ -196,6 +196,7 @@
     max-width: 100%;
     width: 100%;
     margin-bottom: 30px;
+    max-height: 350px;
   }
 
   .holy__img img {

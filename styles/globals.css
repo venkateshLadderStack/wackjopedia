@@ -189,3 +189,9 @@ a {
 .pointer {
   cursor: pointer;
 }
+
+.best_deal_img {
+  /* width: 300px;
+  height: 290px; */
+  border-radius: 30px;
+}
