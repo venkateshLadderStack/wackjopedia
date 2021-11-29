@@ -63,7 +63,13 @@ const pillsList = [
   },
 ];
 
-const Frame8 = ({ headerData, footerData, holidays, holidayTags }) => {
+const Frame8 = ({
+  headerData,
+  footerData,
+  holidays,
+  holidayTags,
+  homeData,
+}) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -75,7 +81,7 @@ const Frame8 = ({ headerData, footerData, holidays, holidayTags }) => {
               <DesinationCard />
             </div>
             <div className="col-4">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
           <div>

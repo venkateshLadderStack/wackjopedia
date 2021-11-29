@@ -15,34 +15,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-
-function Frame15({ headerData, footerData, holidays, holidayTags }) {
+function Frame15({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -93,7 +66,7 @@ function Frame15({ headerData, footerData, holidays, holidayTags }) {
             </div>
             <div className="col-lg-4 col-mg-12">
               <PerfectMonth />
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
 

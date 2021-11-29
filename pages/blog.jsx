@@ -13,8 +13,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
-  console.log(holidays);
+const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
   const [tempList, setTempList] = useState(null);
   return (
     <>
@@ -46,7 +45,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-12 mt-2">
-                <Holiday />
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>

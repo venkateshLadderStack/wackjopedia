@@ -41,26 +41,13 @@ const bestLocations = [
   { link: "#", label: "Wakacje Dominikana" },
 ];
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-
-const wakacje = ({ headerData, footerData, holidayTags, holidays }) => {
+const wakacje = ({
+  headerData,
+  footerData,
+  holidayTags,
+  holidays,
+  homeData,
+}) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -143,7 +130,7 @@ const wakacje = ({ headerData, footerData, holidayTags, holidays }) => {
               />
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
         </section>

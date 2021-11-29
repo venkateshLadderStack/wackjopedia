@@ -11,58 +11,13 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-
-const Frame4 = ({ headerData, footerData, holidayTags, holidays }) => {
+const Frame4 = ({
+  headerData,
+  footerData,
+  holidayTags,
+  holidays,
+  homeData,
+}) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -94,7 +49,7 @@ const Frame4 = ({ headerData, footerData, holidayTags, holidays }) => {
                 <DesinationCard />
               </div>
               <div className="col-lg-4 col-md-12 mt-2">
-                <Holiday />
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>

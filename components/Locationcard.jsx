@@ -1,6 +1,4 @@
 import styles from "../styles/css/locationcard.module.css";
-import Image from "next/image";
-import locationIMg from "../public/img/locationImg.png";
 import ImageComponent from "./ImageComponent";
 
 function Locationcard({ data }) {
