@@ -4,7 +4,7 @@ import Bestdeal from "../components/Bestdeal";
 import Layout from "../components/Layout";
 import Seracharea from "../components/Searcharea";
 import Button from "../components/Button";
-import Banner from "../components/banner";
+import Banner from "../components/Banner";
 import Frame26Text, { Frame26List } from "../components/Textarea";
 import Holiday from "../components/Holidaycard";
 import OfferSection from "../components/OfferSection";

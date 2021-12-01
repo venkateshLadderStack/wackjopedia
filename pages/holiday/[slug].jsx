@@ -1,8 +1,7 @@
 import style from "../../styles/common.module.css";
 import blogstyles from "../../styles/blog.module.css";
 import frame26styles from "../../styles/frame26.module.css";
-import React from "react";
-import Banner from "../../components/banner";
+import Banner from "../../components/Banner";
 import Holiday from "../../components/Holidaycard";
 import Layout from "../../components/Layout";
 import Locationcard from "../../components/Locationcard";
@@ -15,7 +14,7 @@ import { getFooterData, getHeaderData } from "../../queries/layout";
 import { getHomePageData } from "../../queries/homePage";
 import MarkdownIt from "markdown-it";
 
-const holidayDetail = ({
+const HolidayDetail = ({
   headerData,
   footerData,
   holidays,
@@ -93,7 +92,7 @@ const holidayDetail = ({
   );
 };
 
-export default holidayDetail;
+export default HolidayDetail;
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
