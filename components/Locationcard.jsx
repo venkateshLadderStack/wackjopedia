@@ -2,6 +2,7 @@ import styles from "../styles/css/locationcard.module.css";
 import ImageComponent from "./ImageComponent";
 
 function Locationcard({ data }) {
+  console.log(data);
   return (
     <>
       <div className={styles.location__section}>
