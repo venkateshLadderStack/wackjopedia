@@ -44,8 +44,8 @@ const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12 mt-4">
-                <Holiday />
+              <div className="col-lg-4 col-md-12 mt-2">
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>

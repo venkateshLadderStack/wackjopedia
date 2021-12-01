@@ -45,18 +45,14 @@ export default function Home({
             <div className="col-lg-8 col-md-12">
               <div className="container">
                 <div className="row my-2">
-                  {holidays?.map((item, i) => {
-                    return i <= 5 ? (
-                      <>
-                        <div
-                          key={i}
-                          className="col-lg-6 col-md-12 col-sm-12 my-2"
-                        >
-                          <BlogSection item={item} />
-                        </div>
-                      </>
-                    ) : null;
-                  })}
+                  {holidays?.slice(0, 5)?.map((item, index) => (
+                    <div
+                      key={index}
+                      className="col-lg-6 col-md-6 col-sm-12 my-2"
+                    >
+                      <BlogSection item={item} />
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="row pb-5">

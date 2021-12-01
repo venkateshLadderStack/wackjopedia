@@ -12,6 +12,8 @@ function Locationcard({ data }) {
           width={675}
           height={598}
           loading="lazy"
+          objectFit="cover"
+          className="img_bod_rad"
         />
         <div className="d-flex justify-content-between">
           <p className="p-2">Gdzie na wakacje w grudniu</p>
