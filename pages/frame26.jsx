@@ -24,7 +24,7 @@ function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
           <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
-              <Locationcard />
+              <Locationcard data={holidays[0]} />
               <div>
                 <div className={frame26styles.text__area}>
                   <h4>Gdzie w grudniu jest ciepło?</h4>

@@ -6,7 +6,7 @@ import Link from "next/link";
 const Banner = ({ data }) => {
   return (
     <>
-      <div className={styles.banner}>
+      <div className={`${styles.banner} py-4`}>
         <div className={styles.bgImg}>
           <ImageComponent
             src={data?.image?.hash}
