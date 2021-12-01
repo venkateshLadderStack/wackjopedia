@@ -74,7 +74,7 @@ const Frame8 = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner title="Gdzie jechać na wakacje w grudniu?" />
+          <Banner data={homeData?.banner} />
           <div className="row">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
             <div className="col-8">
@@ -98,7 +98,7 @@ const Frame8 = ({
               </div>
             </div>
             <div className="py-5">
-              <Banner />
+              <Banner data={homeData?.banner} />
             </div>
           </div>
         </div>

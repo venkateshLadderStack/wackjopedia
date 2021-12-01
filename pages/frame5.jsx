@@ -147,10 +147,10 @@ function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
               </div>
             </div>
             <div className="col-lg-8 col-md-12">
-              <Locationcard />
+              <Locationcard data={holidays[0]} />
             </div>
           </div>
-          <Banner />
+          <Banner data={homeData?.banner} />
           <div className="mt-5">
             <div className={style.area__detail}>
               <div className={style.text__details}>

@@ -28,7 +28,7 @@ const holidayDetail = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner title={holidayDetail?.title} />
+          <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
               <Locationcard data={holidayDetail} />

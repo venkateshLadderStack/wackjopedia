@@ -3,11 +3,23 @@ import { gql } from "@apollo/client";
 export const getHomePageData = gql`
   query {
     home {
+      banner {
+        hashtag
+        point_1
+        point_2
+        btn_text
+        btn_link
+        image {
+          hash
+          url
+        }
+      }
       banner_image {
         alternativeText
         hash
         url
       }
+
       featured_holiday {
         title
         actual_price

@@ -78,7 +78,7 @@ const wakacje = ({
               </div>
             </div>
           </div>
-          <Banner />
+          <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12">
               <Frame26Text

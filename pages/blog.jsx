@@ -19,7 +19,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner title="Blog Wakacjopedia" />
+          <Banner data={homeData?.banner} />
           <div className="mt-5">
             <div className="row mt-1">
               <div className="col-lg-8 col-md-12">

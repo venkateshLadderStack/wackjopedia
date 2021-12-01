@@ -20,7 +20,7 @@ function Frame15({ headerData, footerData, holidays, holidayTags, homeData }) {
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <section className="container md">
-          <Banner title={`Meksyk - najważniejsze informacje`} />
+          <Banner data={homeData?.banner} />
           <div className="row">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
             <div className="col-lg-8 col-md-12 mt-3">
@@ -30,7 +30,7 @@ function Frame15({ headerData, footerData, holidays, holidayTags, homeData }) {
               <Frame15weather />
             </div>
           </div>
-          <Banner />
+          <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-mg-12">
               <Frame26Text

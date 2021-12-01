@@ -6,7 +6,6 @@
     backdrop-filter: blur(42px);
     border-radius: 30px;
     margin-bottom: 40px !important;
-    min-height: 405px;
     max-width: 250px;
     margin: auto;
 }
@@ -31,7 +30,8 @@
 
 
 .deal__title {
-    margin-bottom: 20px;
+    min-height: 50px;
+    margin: auto;
 }
 
 .deal-pp {
