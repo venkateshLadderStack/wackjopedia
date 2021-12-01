@@ -29,15 +29,31 @@ export default function Home({
         <div className="mt-5">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
-            <div className="col-lg-8 col-md-12 pr-0">
+            <div className="col-lg-8 col-md-12 px-0">
               <DesinationCard />
-              <div className="row my-2">
-                <h3 className="py-5">Ostatnio na naszym blogu</h3>
-                {holidays?.map((item, index) => (
-                  <div key={index} className="col-lg-6 col-md-12">
-                    <BlogSection item={item} />
-                  </div>
-                ))}
+              <h3 className="py-5">Ostatnio na naszym blogu</h3>
+            </div>
+            <div className="col-lg-4 col-md-12">
+              <Holiday data={homeData?.featured_holiday} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-md-12">
+              <div className="container">
+                <div className="row my-2">
+                  {holidays?.slice(0, 5)?.map((item, index) => (
+                    <div
+                      key={index}
+                      className="col-lg-6 col-md-6 col-sm-12 my-2"
+                    >
+                      <BlogSection item={item} />
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="row pb-5">
                 <div className="col-lg-12">
@@ -45,51 +61,46 @@ export default function Home({
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-12 pr-0">
-              <Holiday data={homeData?.featured_holiday} />
-            </div>
           </div>
         </div>
       </div>
 
-      <section className="container wd">
+      <section className="container wd my-5">
         <h3 className="py-2">Często wyszukiwana pogoda</h3>
         <div className={style.places}>
           <div className="row">
             {holidays?.map((item, i) => (
-              <Places key={i} item={item} />
+              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
+                <Places item={item} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <div className="container wd">
-        <div className="my-5">
-          <div className="row">
-            <div className={styles.pills__title}>
-              <h3>Sprawdź gdzie jechać na wakacje</h3>
-            </div>
-            <div className={styles.pills__div}>
-              {holidayTags?.map((item, index) => (
-                <PillSection item={item} key={index} />
-              ))}
-            </div>
+      <div className="container wd my-5">
+        <div className="row">
+          <div className={styles.pills__title}>
+            <h3>Sprawdź gdzie jechać na wakacje</h3>
+          </div>
+          <div className={styles.pills__div}>
+            {holidayTags?.map((item, index) => (
+              <PillSection item={item} key={index} />
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="container wd">
-        <div className="my-5">
-          <h3 className="mb-5">Gorące oferty Last Minute</h3>
-          <div className="row">
-            {holidays?.map((item, i) => (
-              <OfferSection item={item} key={i} />
-            ))}
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <Button />
-            </div>
+      <div className="container wd my-5">
+        <h3 className="mb-5">Gorące oferty Last Minute</h3>
+        <div className="row">
+          {holidays?.map((item, i) => {
+            return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+          })}
+        </div>
+        <div className="row my-5">
+          <div className="col-lg-12">
+            <Button />
           </div>
         </div>
       </div>

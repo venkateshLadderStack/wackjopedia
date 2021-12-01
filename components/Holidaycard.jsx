@@ -1,4 +1,6 @@
 import styles from "../styles/css/holiday.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const Holiday = ({ data }) => {
   const fillRange = (end = 5) => {
@@ -12,15 +14,22 @@ const Holiday = ({ data }) => {
   return (
     <>
       <div className={styles.holiday}>
-        {/* inline styles for now, let it be there */}
-        <div
-          className={styles.bgImg}
-          style={{
-            backgroundImage: `url(${
-              data?.featured_showcase_image?.url || "/img/bgImg.png"
-            })`,
-          }}
-        >
+        <div className={styles.bgImg}>
+          <div
+            style={{
+              zIndex: -9,
+            }}
+          >
+            <Image
+              src={data?.featured_image?.url}
+              alt=""
+              layout="fill"
+              className={styles.bg_next}
+              loading="lazy"
+              objectFit="cover"
+              objectPosition="top"
+            />
+          </div>
           <span className={styles.rating}>
             {stars?.map((i) => (
               <span key={i}>
@@ -28,6 +37,7 @@ const Holiday = ({ data }) => {
               </span>
             ))}
           </span>
+
           <div className={styles.holiday__caption} style={{ zIndex: "1" }}>
             <div className={`${styles.holiday__title} mb-3`}>
               <h3>{data?.title || "Gorące oferty wakacyjne"}</h3>
@@ -38,7 +48,7 @@ const Holiday = ({ data }) => {
               </p>
             </div>
             <div className={styles.holiday__btn}>
-              <a href="#">sprawdź oferty</a>
+              <Link href={`/holiday/${data?.slug}`}>sprawdź oferty</Link>
             </div>
           </div>
         </div>

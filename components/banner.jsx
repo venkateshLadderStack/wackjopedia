@@ -1,7 +1,3 @@
-import Image from "next/image";
-import bannerImg from "../public/img/banner.png";
-import ImageComponent from "./ImageComponent";
-import Link from "next/link";
 import styles from "../styles/css/banner.module.css";
 
 const Banner = ({ title, image }) => {
@@ -11,27 +7,33 @@ const Banner = ({ title, image }) => {
       <div className={styles.banner}>
         <div className={styles.bgImg}>
           <div className={styles.caption}>
-            <h3>hello</h3>
-            <h3>Second Line</h3>
+            <h3> wakacje.pL</h3>
+            <h3 className="mt-2"> #PRZEDLUZAMYWAKACJE</h3>
             <div className={styles.check}>
-              <i
-                className="fa fa-check"
-                style={{ color: "orange" }}
-                aria-hidden="true"
-              >
-                <span style={{ color: "white" }} className="px-2">
-                  Kiedy chcesz jechać
+              <div className="d-flex flex-row align-items-center">
+                <i
+                  className="fa fa-check"
+                  style={{
+                    color: `#FFC700`,
+                  }}
+                  aria-hidden="true"
+                ></i>
+                <span style={{ color: "white" }} className="pl-2">
+                  Kierunki peine slonaca
                 </span>
-              </i>
-              <i
-                className="fa fa-check"
-                style={{ color: "orange" }}
-                aria-hidden="true"
-              >
-                <span style={{ color: "white" }} className="px-3">
-                  Jaka pogoda Cię interesuje
+              </div>
+              <div className="d-flex flex-row align-items-center">
+                <i
+                  className="fa fa-check"
+                  style={{
+                    color: `#FFC700`,
+                  }}
+                  aria-hidden="true"
+                ></i>
+                <span style={{ color: "white" }} className="pl-2">
+                  Skarzystaj z ikazji cenowych
                 </span>
-              </i>
+              </div>
             </div>
             <button className={styles.btn}>
               sprawdź oferty <i className="fas fa-angle-right px-1"></i>

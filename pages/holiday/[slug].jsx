@@ -21,6 +21,7 @@ const holidayDetail = ({
   holidays,
   holidayTags,
   holidayDetail,
+  homeData,
 }) => {
   const md = new MarkdownIt();
   return (
@@ -39,7 +40,7 @@ const holidayDetail = ({
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
           <section className="pb-5">

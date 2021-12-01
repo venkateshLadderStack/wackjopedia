@@ -13,7 +13,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
+const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
   const [tempList, setTempList] = useState(null);
   return (
     <>
@@ -22,10 +22,10 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
           <Banner title="Blog Wakacjopedia" />
           <div className="mt-5">
             <div className="row mt-1">
-              <div className="col-lg-8 col-md-12 pr-0">
+              <div className="col-lg-8 col-md-12">
                 <div className="row my-2">
-                  {holidays?.map((item, index) => (
-                    <div key={index} className="col-lg-6 col-md-12">
+                  {tempList?.map((item, index) => (
+                    <div key={index} className="col-lg-6 col-md-6 col-sm-12">
                       <BlogSection item={item} />
                     </div>
                   ))}
@@ -44,8 +44,8 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12 pr-0 mt-2">
-                <Holiday />
+              <div className="col-lg-4 col-md-12 mt-2">
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>
@@ -54,9 +54,9 @@ const Blog = ({ headerData, footerData, holidayTags, holidays }) => {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => (
-                <OfferSection item={item} key={i} />
-              ))}
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
             </div>
             <div className="row">
               <div className="col-lg-12">

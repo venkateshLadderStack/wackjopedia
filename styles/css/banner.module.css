@@ -1,15 +1,17 @@
 .banner {
     width: 85%;
     margin: auto;
-    height: 200px;
+    height: auto;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .bgImg {
     background-image: url(../../public/img/banner.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    /* background-position: center center; */
+    /* background-attachment: fixed; */
     position: relative;
-    padding: 100px 40px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -43,19 +45,69 @@
     margin-top: 10px;
 }
 
+.check span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
 .btn,
 .btn:active,
 .btn:focus {
-    margin-top: 20px;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    margin-top: 10px;
+    text-transform: uppercase;
     border-radius: 5px;
     color: #00011d;
     font-weight: 600;
     font-size: 18px;
-    background: linear-gradient(180deg, #ffbc11 0%, #f9b233 100%);
+    background: linear-gradient(0deg, #FFC700 0%, #FFDC82 100%);
     outline: none;
     border: none;
     cursor: pointer;
-    padding: 5px 50px;
+    padding: 5px 30px;
     display: flex;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+    .banner {
+        width: 100%;
+    }
+
+    .caption h3 {
+        font-size: 16px;
+    }
+
+    .check span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+
+    .btn,
+    .btn:active,
+    .btn:focus {
+        font-size: 12px !important;
+        padding: 5px 10px;
+        margin-top: 15px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .caption {
+        top: 20px;
+        left: 40px;
+        width: 70%;
+    }
+
+    .check {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-top: 8px;
+    }
 }

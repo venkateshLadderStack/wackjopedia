@@ -7,8 +7,8 @@ import ImageComponent from "./ImageComponent";
 function Places({ item }) {
   return (
     <>
-      <div className="col-lg-4 col-md-4 col-sm-12">
-        <div className={styles.single__weather}>
+      <div className={styles.single__weather}>
+        <div className={styles.place__img}>
           <ImageComponent
             loading="lazy"
             width={189}
@@ -16,9 +16,9 @@ function Places({ item }) {
             src={item?.thumbnail?.hash}
             alt="place-img"
           />
-          <div className={`${styles.weather__text} m-2`}>
-            <p>{item?.city}</p>
-          </div>
+        </div>
+        <div className={`${styles.weather__text} m-2`}>
+          <p>{item?.city}</p>
         </div>
       </div>
     </>

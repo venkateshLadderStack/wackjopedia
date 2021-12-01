@@ -50,7 +50,7 @@ const DesinationCard = () => {
   return (
     <>
       <div className="container">
-        <div className={`${stylesDestination.vacation__left} pb-5`}>
+        <div className={`${stylesDestination.vacation__left}`}>
           <div className={stylesDestination.single__vacation__select}>
             <NiceSelect
               options={options}

@@ -15,34 +15,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-const pillsList = [
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-  {
-    pillLink: "#",
-    pilltext: "Wakacje w styczniu",
-  },
-];
-
-function Frame15({ headerData, footerData, holidays, holidayTags }) {
+function Frame15({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -93,7 +66,7 @@ function Frame15({ headerData, footerData, holidays, holidayTags }) {
             </div>
             <div className="col-lg-4 col-mg-12">
               <PerfectMonth />
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
 
@@ -101,8 +74,10 @@ function Frame15({ headerData, footerData, holidays, holidayTags }) {
             <h3 className="py-5">
               Sprawdź pogodę w miastach i regionach Meksyku
             </h3>
-            {holidays?.map((item, i) => (
-              <Places key={i} item={item} />
+            {holidays?.slice(0, 6)?.map((item, i) => (
+              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
+                <Places item={item} />
+              </div>
             ))}
           </div>
 
@@ -131,9 +106,9 @@ function Frame15({ headerData, footerData, holidays, holidayTags }) {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => (
-                <OfferSection item={item} key={i} />
-              ))}
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
             </div>
             <div className="row">
               <div className="col-lg-12">

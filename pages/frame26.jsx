@@ -16,7 +16,7 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
 
-function Frame26({ headerData, footerData, holidays, holidayTags }) {
+function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -44,7 +44,7 @@ function Frame26({ headerData, footerData, holidays, holidayTags }) {
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday />
+              <Holiday data={homeData?.featured_holiday} />
             </div>
           </div>
           <section className="pb-5">
@@ -126,9 +126,9 @@ function Frame26({ headerData, footerData, holidays, holidayTags }) {
             <div className="my-5">
               <h3 className="mb-5">Gorące oferty Last Minute</h3>
               <div className="row">
-                {holidays?.map((item, i) => (
-                  <OfferSection item={item} key={i} />
-                ))}
+                {holidays?.map((item, i) => {
+                  return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+                })}
               </div>
               <div className="row">
                 <div className="col-lg-12">

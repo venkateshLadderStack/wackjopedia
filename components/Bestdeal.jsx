@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/css/best.module.css";
 import bestdeal from "../public/img/bestdeal.png";
 import dateIcon from "../public/img/cal.png";
-import ImageComponent from "./ImageComponent";
+import useWindowSize from "../hooks/useWindowSIze";
 
 const Bestdeal = ({ item }) => {
   const fillRange = (end = 5) => {
@@ -14,17 +14,21 @@ const Bestdeal = ({ item }) => {
 
   const stars = fillRange(item?.rating);
 
+  const { width } = useWindowSize();
+
   return (
     <div>
       <div className={styles.single__holy}>
         <div className={styles.holy__img}>
           <Image
-            // layout="responsive"
             loading="lazy"
-            width={221}
-            height={199}
+            width={width > 786 ? 350 : 450}
+            height={width > 786 ? 199 : 310}
+            layout="fixed"
             src={item?.thumbnail?.url || bestdeal}
             alt=""
+            objectFit="cover"
+            className="best_deal_img"
           />
           <a href="#">8.9</a>
         </div>

@@ -10,6 +10,8 @@ const ImageComponent = ({
   layout = "responsive",
   blurDataURL,
   alt = "picture",
+  objectFit,
+  objectPosition,
   className,
 }) => {
   const hostUrl = `https://res.cloudinary.com/dsxtmwsbn/image/upload/v1636749401`;
@@ -24,6 +26,8 @@ const ImageComponent = ({
       quality={quality}
       blurDataURL={blurDataURL ? blurDataURL : undefined}
       loading={loading}
+      objectFit={objectFit}
+      objectPosition={objectPosition}
     />
   );
 };

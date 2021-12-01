@@ -6,12 +6,23 @@
     backdrop-filter: blur(42px);
     border-radius: 30px;
     margin-bottom: 40px !important;
+    min-height: 405px;
+    max-width: 250px;
+    margin: auto;
 }
 
 .deal__img {
     padding: 8px 6px;
     text-align: center;
-    margin-bottom: 14 px;
+    margin: auto;
+    margin-bottom: 14px;
+    max-width: 224px;
+    max-height: 199px;
+}
+
+.deal__img span {
+    top: 4px;
+    border-radius: 30px;
 }
 
 .deal__containt {

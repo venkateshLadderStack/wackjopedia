@@ -119,7 +119,7 @@ const MonthlyWeather = [
   },
 ];
 
-function Frame5({ headerData, footerData, holidays, holidayTags }) {
+function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -175,7 +175,7 @@ function Frame5({ headerData, footerData, holidays, holidayTags }) {
               </div>
               <div className={style.text__details__right}>
                 <PerfectMonth />
-                <Holiday />
+                <Holiday data={homeData?.featured_holiday} />
               </div>
             </div>
           </div>
@@ -214,9 +214,9 @@ function Frame5({ headerData, footerData, holidays, holidayTags }) {
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => (
-                <OfferSection item={item} key={i} />
-              ))}
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
             </div>
             <div className="row">
               <div className="col-lg-12">

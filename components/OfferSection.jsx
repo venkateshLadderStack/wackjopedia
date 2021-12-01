@@ -13,7 +13,7 @@ const OfferSection = ({ item }) => {
 
   return (
     <Link href={`/holiday/${item?.slug}`} passHref>
-      <div className="col-lg-3 col-md-4 pointer">
+      <div className="col-lg-3 col-md-4 col-sm-6 pointer">
         <div className={styles.deal}>
           <div className={styles.deal__img}>
             <ImageComponent

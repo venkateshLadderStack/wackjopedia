@@ -4,20 +4,23 @@ import ImageComponent from "./ImageComponent";
 import Link from "next/link";
 
 const BlogSection = ({ item }) => {
-  console.log(item, "ITEm");
+  // console.log(item, "ITEm");
+  // const items = [{ ...item }];
+  // console.log(items);
   return (
     <Link href={`/holiday/${item?.slug}`} passHref>
-      <div className="pointer">
+      <div className="pointer my-3">
         <div className={styles.blog}>
-          <ImageComponent
-            loading="lazy"
-            className={`${styles.blog__img} `}
-            layout="responsive"
-            src={item?.thumbnail?.hash}
-            width={294}
-            height={263}
-            alt="blog"
-          />
+          <div className={`${styles.blog__img} `}>
+            <ImageComponent
+              loading="lazy"
+              layout="responsive"
+              src={item?.thumbnail?.hash}
+              width={294}
+              height={263}
+              alt="blog"
+            />
+          </div>
           <p className={`${styles.blogText} mt-4`}>{item?.title}</p>
         </div>
       </div>
