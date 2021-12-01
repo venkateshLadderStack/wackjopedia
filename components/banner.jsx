@@ -1,14 +1,26 @@
 import styles from "../styles/css/banner.module.css";
+import Image from "next/image";
+import ImageComponent from "./ImageComponent";
+import Link from "next/link";
 
-const Banner = ({ title, image }) => {
+const Banner = ({ data }) => {
   return (
     <>
-      <h3 className="py-4">{title}</h3>
       <div className={styles.banner}>
         <div className={styles.bgImg}>
+          <ImageComponent
+            src={data?.image?.hash}
+            layout="fill"
+            alt=""
+            objectFit="cover"
+            objectPosition="center"
+            className="img_bod_rad"
+            preload={true}
+            quality={60}
+          />
           <div className={styles.caption}>
             <h3> wakacje.pL</h3>
-            <h3 className="mt-2"> #PRZEDLUZAMYWAKACJE</h3>
+            <h3 className="mt-2"> {data?.hashtag}</h3>
             <div className={styles.check}>
               <div className="d-flex flex-row align-items-center">
                 <i
@@ -19,7 +31,7 @@ const Banner = ({ title, image }) => {
                   aria-hidden="true"
                 ></i>
                 <span style={{ color: "white" }} className="pl-2">
-                  Kierunki peine slonaca
+                  {data?.point_1}
                 </span>
               </div>
               <div className="d-flex flex-row align-items-center">
@@ -31,34 +43,15 @@ const Banner = ({ title, image }) => {
                   aria-hidden="true"
                 ></i>
                 <span style={{ color: "white" }} className="pl-2">
-                  Skarzystaj z ikazji cenowych
+                  {data?.point_2}
                 </span>
               </div>
             </div>
             <button className={styles.btn}>
-              sprawdź oferty <i className="fas fa-angle-right px-1"></i>
+              {data?.btn_text} <i className="fas fa-angle-right px-1"></i>
             </button>
           </div>
         </div>
-        {/* {image ? (
-          <ImageComponent
-            layout="responsive"
-            loading="lazy"
-            width={5}
-            height={1}
-            src={image}
-            alt="banner"
-          />
-        ) : (
-          <Image
-            layout="responsive"
-            loading="lazy"
-            width={5}
-            height={1}
-            src={bannerImg}
-            alt="banner"
-          />
-        )} */}
       </div>
     </>
   );

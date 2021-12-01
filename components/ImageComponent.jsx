@@ -13,6 +13,7 @@ const ImageComponent = ({
   objectFit,
   objectPosition,
   className,
+  preload,
 }) => {
   const hostUrl = `https://res.cloudinary.com/dsxtmwsbn/image/upload/v1636749401`;
   return (
@@ -25,9 +26,10 @@ const ImageComponent = ({
       layout={layout}
       quality={quality}
       blurDataURL={blurDataURL ? blurDataURL : undefined}
-      loading={loading}
+      loading={!preload ? loading : undefined}
       objectFit={objectFit}
       objectPosition={objectPosition}
+      preload={preload}
     />
   );
 };

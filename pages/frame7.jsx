@@ -18,7 +18,7 @@ function Frame7({ headerData, footerData, holidayTags, holidays, homeData }) {
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <section className="container wd">
-          <Banner title={`Gdzie jechać na wakacje w grudniu?`} />
+          <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12">
               <Locationcard />

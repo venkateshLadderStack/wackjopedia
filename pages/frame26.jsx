@@ -21,7 +21,7 @@ function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner title="Sylwester w Dubaju" />
+          <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
               <Locationcard />

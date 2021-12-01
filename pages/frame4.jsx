@@ -22,7 +22,7 @@ const Frame4 = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner title={`Pogoda w Afryce`} />
+          <Banner data={homeData?.banner} />
         </div>
         <div className="container wd">
           <div className="my-5">
@@ -41,7 +41,7 @@ const Frame4 = ({
           </div>
         </div>
         <div className="container wd">
-          <Banner title="Blog Wakacjopedia" />
+          <Banner data={homeData?.banner} />
           <div className="mt-5">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
             <div className="row mt-1">

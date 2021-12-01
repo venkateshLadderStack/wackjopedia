@@ -25,7 +25,7 @@ export default function Home({
   return (
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">
-        <Banner image={homeData?.banner_image?.hash} />
+        <Banner data={homeData?.banner} />
         <div className="mt-5">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
