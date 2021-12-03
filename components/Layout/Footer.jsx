@@ -31,7 +31,7 @@ const Footer = ({ footerData }) => {
                     <div className={footerStyle.footer__title}>
                       <h3>{column?.title}</h3>
                     </div>
-                    <div className="footer-list">
+                    <div className={footerStyle.footer_list}>
                       <ul>
                         {column?.footer_links.map((link, i) => (
                           <li key={i}>

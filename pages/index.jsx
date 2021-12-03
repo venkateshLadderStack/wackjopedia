@@ -26,12 +26,11 @@ export default function Home({
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">
         <Banner data={homeData?.banner} />
-        <div className="mt-5">
+        <div>
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 px-0">
               <DesinationCard />
-              <h3 className="py-5">Ostatnio na naszym blogu</h3>
             </div>
             <div className="col-lg-4 col-md-12">
               <Holiday data={homeData?.featured_holiday} />
@@ -39,23 +38,20 @@ export default function Home({
           </div>
         </div>
       </div>
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 col-md-12">
-              <div className="container">
-                <div className="row my-2">
-                  {holidays?.slice(0, 5)?.map((item, index) => (
-                    <div
-                      key={index}
-                      className="col-lg-6 col-md-6 col-sm-12 my-2"
-                    >
-                      <BlogSection item={item} />
-                    </div>
-                  ))}
-                </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 col-md-12">
+            <div className="container wd my-5">
+              <h3 className="ml-4">Ostatnio na naszym blogu</h3>
+              <div className="row">
+                {holidays?.slice(0, 6)?.map((item, index) => (
+                  <div key={index} className="col-lg-6 col-md-6 col-sm-12 my-2">
+                    <BlogSection item={item} />
+                  </div>
+                ))}
               </div>
-              <div className="row pb-5">
+              <div className="row">
                 <div className="col-lg-12">
                   <Button />
                 </div>
@@ -94,9 +90,9 @@ export default function Home({
       <div className="container wd my-5">
         <h3 className="mb-5">Gorące oferty Last Minute</h3>
         <div className="row">
-          {holidays?.map((item, i) => {
-            return i <= 3 ? <OfferSection item={item} key={i} /> : null;
-          })}
+          {holidays?.slice(0, 4)?.map((item, i) => (
+            <OfferSection item={item} key={i} />
+          ))}
         </div>
         <div className="row my-5">
           <div className="col-lg-12">

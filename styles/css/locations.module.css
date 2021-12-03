@@ -1,37 +1,37 @@
 .blogText {
-    font-weight: 600 !important;
-    font-size: 17px;
-    line-height: 25px;
-    color: #00011D;
-    margin: 0;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  color: #00011d;
+  margin: 0;
 }
 
 .blog {
-    background: #ffffffd9;
-    border: 1px solid #E8E8E8;
-    box-sizing: border-box;
-    backdrop-filter: blur(42px);
-    border-radius: 30px;
-    padding: 15px;
-    padding-top: 12px;
-    margin-bottom: 24px;
-    height: 418px;
-    max-width: 330px;
-    margin: auto;
+  background: #ffffffd9;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  padding: 15px;
+  padding-top: 12px;
+  margin-bottom: 24px;
+  height: 418px;
+  max-width: 330px;
+  margin: auto;
 }
 
 .blog__img {
-    max-width: 294px;
-    max-height: 263px;
-    margin: auto;
+  max-width: 294px;
+  max-height: 263px;
+  margin: auto;
 }
 
 .blog__img span {
-    border-radius: 30px;
+  border-radius: 30px;
 }
 
 .blog span {
-    top: 4px;
+  top: 4px;
 }
 
 /* @media screen and (max-width:992px) {

@@ -1,12 +1,8 @@
-import Image from "next/image";
 import styles from "../styles/css/locations.module.css";
 import ImageComponent from "./ImageComponent";
 import Link from "next/link";
 
 const BlogSection = ({ item }) => {
-  // console.log(item, "ITEm");
-  // const items = [{ ...item }];
-  // console.log(items);
   return (
     <Link href={`/holiday/${item?.slug}`} passHref>
       <div className="pointer my-3">
@@ -19,6 +15,8 @@ const BlogSection = ({ item }) => {
               width={294}
               height={263}
               alt="blog"
+              objectFit="cover"
+              objectPosition="center"
             />
           </div>
           <p className={`${styles.blogText} mt-4`}>{item?.title}</p>

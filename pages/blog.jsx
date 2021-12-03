@@ -18,7 +18,8 @@ const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
-        <div className="container wd">
+        <div className="container wd mt-4">
+          <h3 className="section_title">Najlepsze oferty wakacyjne</h3>
           <Banner data={homeData?.banner} />
           <div className="mt-5">
             <div className="row mt-1">

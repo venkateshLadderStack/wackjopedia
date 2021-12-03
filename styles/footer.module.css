@@ -93,6 +93,24 @@
   margin: 0;
 }
 
+.footer_list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer_list li {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.footer_list li a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
 @media only screen and (min-width: 768) and (max-width: 991px) {
   .single__footer__wed {
     width: 26%;

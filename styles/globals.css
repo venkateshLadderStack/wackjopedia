@@ -200,3 +200,23 @@ a {
 .img_bod_rad {
   border-radius: 30px;
 }
+
+.blog_f1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 680px;
+  justify-content: space-between;
+}
+
+.single-blog {
+  width: 48%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  padding: 15px;
+  padding-top: 12px;
+  margin-bottom: 24px;
+  height: 418px;
+}
