@@ -1,26 +1,29 @@
-import style from "../../styles/common.module.css";
-import blogstyles from "../../styles/blog.module.css";
-import frame26styles from "../../styles/frame26.module.css";
-import Banner from "../../components/Banner";
-import Holiday from "../../components/Holidaycard";
-import Layout from "../../components/Layout";
-import Locationcard from "../../components/Locationcard";
-import OfferSection from "../../components/OfferSection";
-import Button from "../../components/Button";
-import PillSection from "../../components/PillSection";
+import style from "../../../styles/common.module.css";
+import blogstyles from "../../../styles/blog.module.css";
+import frame26styles from "../../../styles/frame26.module.css";
+import Banner from "../../../components/Banner";
+import Holiday from "../../../components/Holidaycard";
+import Layout from "../../../components/Layout";
+import Locationcard from "../../../components/Locationcard";
+import OfferSection from "../../../components/OfferSection";
+import Button from "../../../components/Button";
+import PillSection from "../../../components/PillSection";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { getHolidayData, getHolidayTags } from "../../queries/holidayData";
-import { getFooterData, getHeaderData } from "../../queries/layout";
-import { getHomePageData } from "../../queries/homePage";
+import { getHolidayData, getHolidayTags } from "../../../queries/holidayData";
+import { getFooterData, getHeaderData } from "../../../queries/layout";
+import { getHomePageData } from "../../../queries/homePage";
 import MarkdownIt from "markdown-it";
+import { getBlogData } from "../../../queries/blogData";
+import ImageComponent from "../../../components/ImageComponent";
 
 const HolidayDetail = ({
   headerData,
   footerData,
   holidays,
   holidayTags,
-  holidayDetail,
+  blogDetail,
   homeData,
+  blogs,
 }) => {
   const md = new MarkdownIt();
   return (
@@ -30,11 +33,12 @@ const HolidayDetail = ({
           <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
-              <Locationcard data={holidayDetail} />
+              <Locationcard data={blogDetail} />
+
               <div>
                 <div className={frame26styles.text__area}>
                   <h4>Gdzie w grudniu jest ciepło?</h4>
-                  <p>{holidayDetail?.hotel_info}</p>
+                  <p>{blogDetail?.hotel_info}</p>
                 </div>
               </div>
             </div>
@@ -47,7 +51,7 @@ const HolidayDetail = ({
               <div className="col-lg-8 col-md-12">
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: md.render(holidayDetail?.content),
+                    __html: md.render(blogDetail?.content),
                   }}
                 />
               </div>
@@ -58,7 +62,7 @@ const HolidayDetail = ({
             <div className="my-5">
               <h3 className="mb-5">Gorące oferty Last Minute</h3>
               <div className="row">
-                {holidays?.map((item, i) => (
+                {holidays?.slice(0, 4)?.map((item, i) => (
                   <OfferSection item={item} key={i} />
                 ))}
               </div>
@@ -96,9 +100,9 @@ export default HolidayDetail;
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
-    `https://wakacjopedia-strapi.herokuapp.com/hotels/${context.params.slug}`
+    `https://wakacjopedia-strapi.herokuapp.com/blogs/${context.params.slug}`
   );
-  const holidayDetail = await res.json();
+  const blogDetail = await res.json();
 
   const client = new ApolloClient({
     uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
@@ -124,15 +128,19 @@ export const getStaticProps = async (context) => {
   const homeData = await client.query({
     query: getHomePageData,
   });
+  const blogData = await client.query({
+    query: getBlogData,
+  });
 
   return {
     props: {
-      holidayDetail,
+      blogDetail,
       headerData: headerData?.data?.navbar,
       footerData: footerData?.data?.footer,
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      blogs: blogData?.data?.blogs,
     },
   };
 };
@@ -146,8 +154,11 @@ export async function getStaticPaths() {
   const holidayData = await client.query({
     query: getHolidayData,
   });
+  const blogData = await client.query({
+    query: getBlogData,
+  });
 
-  const data = holidayData?.data?.hotels;
+  const data = blogData?.data?.blogs;
 
   const paths = data.map((path) => {
     return {

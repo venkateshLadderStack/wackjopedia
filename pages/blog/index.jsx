@@ -1,19 +1,27 @@
-import styles from "../styles/common.module.css";
+import styles from "../../styles/common.module.css";
 import React, { useState } from "react";
-import Banner from "../components/Banner";
-import BlogSection from "../components/Locations";
-import OfferSection from "../components/OfferSection";
-import PillSection from "../components/PillSection";
-import PaginatedItems from "../components/Paginate";
-import Layout from "../components/Layout";
-import Holiday from "../components/Holidaycard";
-import Button from "../components/Button";
+import Banner from "../../components/Banner";
+import BlogSection from "../../components/Locations";
+import OfferSection from "../../components/OfferSection";
+import PillSection from "../../components/PillSection";
+import PaginatedItems from "../../components/Paginate";
+import Layout from "../../components/Layout";
+import Holiday from "../../components/Holidaycard";
+import Button from "../../components/Button";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { getHolidayData, getHolidayTags } from "../queries/holidayData";
-import { getFooterData, getHeaderData } from "../queries/layout";
-import { getHomePageData } from "../queries/homePage";
+import { getHolidayData, getHolidayTags } from "../../queries/holidayData";
+import { getFooterData, getHeaderData } from "../../queries/layout";
+import { getHomePageData } from "../../queries/homePage";
+import { getBlogData } from "../../queries/blogData";
 
-const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
+const Blog = ({
+  headerData,
+  footerData,
+  holidayTags,
+  holidays,
+  homeData,
+  blogs,
+}) => {
   const [tempList, setTempList] = useState(null);
   return (
     <>
@@ -35,7 +43,7 @@ const Blog = ({ headerData, footerData, holidayTags, holidays, homeData }) => {
                   <div className="col-12">
                     <div className={styles.pagination__area}>
                       <PaginatedItems
-                        items={holidays}
+                        items={blogs}
                         itemsPerPage={10}
                         emitCurrentItems={(data) => {
                           setTempList(data);
@@ -99,6 +107,10 @@ export const getStaticProps = async (context) => {
     query: getHolidayData,
   });
 
+  const blogData = await client.query({
+    query: getBlogData,
+  });
+
   const headerData = await client.query({
     query: getHeaderData,
   });
@@ -122,6 +134,7 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      blogs: blogData?.data?.blogs,
     },
   };
 };

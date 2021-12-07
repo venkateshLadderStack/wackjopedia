@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BlogSection = ({ item }) => {
   return (
-    <Link href={`/holiday/${item?.slug}`} passHref>
+    <Link href={`/blog/${item?.slug}`} passHref>
       <div className="pointer my-3">
         <div className={styles.blog}>
           <div className={`${styles.blog__img} `}>

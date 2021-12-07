@@ -7,7 +7,7 @@ function Locationcard({ data }) {
     <>
       <div className={styles.location__section}>
         <ImageComponent
-          src={data?.featured_image?.hash}
+          src={data?.featuredImage?.hash}
           alt="location"
           width={675}
           height={598}
