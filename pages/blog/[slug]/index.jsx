@@ -25,7 +25,7 @@ const HolidayDetail = ({
   homeData,
   blogs,
 }) => {
-  const md = new MarkdownIt();
+  // const md = new MarkdownIt();
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -51,7 +51,7 @@ const HolidayDetail = ({
               <div className="col-lg-8 col-md-12">
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: md.render(blogDetail?.content),
+                    __html: blogDetail?.content,
                   }}
                 />
               </div>
