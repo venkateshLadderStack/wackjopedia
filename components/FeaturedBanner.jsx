@@ -1,7 +1,7 @@
 import styles from "../styles/css/banner.module.css";
 import ImageComponent from "./ImageComponent";
 
-const Banner = ({ data }) => {
+const FeaturedBanner = ({ data }) => {
   return (
     <>
       <div className={`${styles.banner} py-4`}>
@@ -55,4 +55,4 @@ const Banner = ({ data }) => {
   );
 };
 
-export default Banner;
+export default FeaturedBanner;

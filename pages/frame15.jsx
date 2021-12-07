@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import styles from "../styles/common.module.css";
-import Banner from "../components/Banner";
+import Banner from "../components/FeaturedBanner";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";
 import Frame26Text, { Frame26List } from "../components/Textarea";

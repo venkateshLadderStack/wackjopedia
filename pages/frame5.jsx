@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import style from "../styles/frame5.module.css";
 import styles from "../styles/common.module.css";
-import Banner from "../components/Banner";
+import Banner from "../components/FeaturedBanner";
 import Locationcard from "../components/Locationcard";
 import Weatherdetail from "../components/Weatherdetail";
 import Frame26Text, { Frame26List } from "../components/Textarea";

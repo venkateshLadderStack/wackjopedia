@@ -1,5 +1,5 @@
 import styles from "../styles/common.module.css";
-import Banner from "../components/Banner";
+import Banner from "../components/FeaturedBanner";
 import Button from "../components/Button";
 import DesinationCard from "../components/DestinationCard";
 import Holiday from "../components/Holidaycard";

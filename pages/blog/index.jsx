@@ -1,6 +1,6 @@
 import styles from "../../styles/common.module.css";
 import React, { useState } from "react";
-import Banner from "../../components/Banner";
+import Banner from "../../components/FeaturedBanner";
 import BlogSection from "../../components/Locations";
 import OfferSection from "../../components/OfferSection";
 import PillSection from "../../components/PillSection";
