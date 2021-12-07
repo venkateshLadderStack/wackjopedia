@@ -10,6 +10,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
+import { getGlobalData } from "../queries/global";
 
 const Frame4 = ({
   headerData,
@@ -17,12 +18,13 @@ const Frame4 = ({
   holidayTags,
   holidays,
   homeData,
+  global,
 }) => {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
-          <Banner data={homeData?.banner} />
+          <Banner data={global?.banner} />
         </div>
         <div className="container wd">
           <div className="my-5">
@@ -41,7 +43,7 @@ const Frame4 = ({
           </div>
         </div>
         <div className="container wd">
-          <Banner data={homeData?.banner} />
+          <Banner data={global?.banner} />
           <div className="mt-5">
             <h3 className="py-4">Sprawdź gdzie jechać na wakacje</h3>
             <div className="row mt-1">
@@ -49,7 +51,7 @@ const Frame4 = ({
                 <DesinationCard />
               </div>
               <div className="col-lg-4 col-md-12 mt-2">
-                <Holiday data={homeData?.featured_holiday} />
+                <Holiday data={global?.featuredHoliday} />
               </div>
             </div>
           </div>
@@ -101,6 +103,9 @@ export const getStaticProps = async (context) => {
   const homeData = await client.query({
     query: getHomePageData,
   });
+  const global = await client.query({
+    query: getGlobalData,
+  });
 
   return {
     props: {
@@ -109,6 +114,7 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      global: global?.data?.global,
     },
   };
 };

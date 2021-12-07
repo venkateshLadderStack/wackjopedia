@@ -19,6 +19,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
+import { getGlobalData } from "../queries/global";
 
 const details = [
   {
@@ -119,7 +120,14 @@ const MonthlyWeather = [
   },
 ];
 
-function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
+function Frame5({
+  headerData,
+  footerData,
+  holidays,
+  holidayTags,
+  homeData,
+  global,
+}) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -150,7 +158,7 @@ function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
               <Locationcard data={holidays[0]} />
             </div>
           </div>
-          <Banner data={homeData?.banner} />
+          <Banner data={global?.banner} />
           <div className="mt-5">
             <div className={style.area__detail}>
               <div className={style.text__details}>
@@ -175,7 +183,7 @@ function Frame5({ headerData, footerData, holidays, holidayTags, homeData }) {
               </div>
               <div className={style.text__details__right}>
                 <PerfectMonth />
-                <Holiday data={homeData?.featured_holiday} />
+                <Holiday data={global?.featuredHoliday} />
               </div>
             </div>
           </div>
@@ -275,6 +283,10 @@ export const getStaticProps = async (context) => {
     query: getHomePageData,
   });
 
+  const global = await client.query({
+    query: getGlobalData,
+  });
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -282,6 +294,7 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      global: global?.data?.global,
     },
   };
 };

@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const PillSection = ({ item }) => {
   return (
-    <>
-      <a href="#">Places in {item?.tag_name}</a>
-    </>
+    <Link href="/" passHref>
+      <div>Places in {item?.tag_name}</div>
+    </Link>
   );
 };
 

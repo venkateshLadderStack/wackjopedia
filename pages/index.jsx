@@ -13,6 +13,9 @@ import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { ApolloClient, gql, InMemoryCache } from "@apollo/client";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
+import { getGlobalData } from "../queries/global";
+import { getContinentData } from "../queries/continent";
+import { getBlogData } from "../queries/blogData";
 
 export default function Home({
   headerData,
@@ -20,12 +23,14 @@ export default function Home({
   holidays,
   holidayTags,
   homeData,
-  data,
+  global,
+  continents,
+  blogs,
 }) {
   return (
     <Layout headerData={headerData} footerData={footerData}>
       <div className="container wd">
-        <Banner data={homeData?.banner} />
+        <Banner data={global?.banner} />
         <div>
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
@@ -39,13 +44,13 @@ export default function Home({
         </div>
       </div>
 
-      <div className="container">
+      <div className="container wd">
         <div className="row">
           <div className="col-lg-8 col-md-12">
             <div className="container wd my-5">
               <h3 className="ml-4">Ostatnio na naszym blogu</h3>
               <div className="row">
-                {holidays?.slice(0, 6)?.map((item, index) => (
+                {blogs?.slice(0, 6)?.map((item, index) => (
                   <div key={index} className="col-lg-6 col-md-6 col-sm-12 my-2">
                     <BlogSection item={item} />
                   </div>
@@ -130,6 +135,18 @@ export const getStaticProps = async (context) => {
     query: getHomePageData,
   });
 
+  const global = await client.query({
+    query: getGlobalData,
+  });
+
+  const continents = await client.query({
+    query: getContinentData,
+  });
+
+  const blogData = await client.query({
+    query: getBlogData,
+  });
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -137,6 +154,9 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      global: global?.data?.global,
+      continents: continents?.data?.continents,
+      blogs: blogData?.data?.blogs,
     },
   };
 };
