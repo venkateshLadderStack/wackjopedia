@@ -1,0 +1,115 @@
+.blogText {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  color: #00011d;
+  margin: 0;
+}
+
+.blog {
+  background: #ffffffd9;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  padding: 15px;
+  padding-top: 12px;
+  margin-bottom: 24px;
+  height: 418px;
+  max-width: 330px;
+  margin: auto;
+}
+
+.blog__img {
+  max-width: 294px;
+  max-height: 263px;
+  margin: auto;
+}
+
+.blog__img span {
+  border-radius: 30px;
+}
+
+.blog span {
+  top: 4px;
+}
+
+/* @media screen and (max-width:992px) {
+    .blog {
+        text-align: center;
+    }
+}
+
+@media (min-width:100px) and (max-width:420px) {
+    .blog {
+        height: 400px;
+    }
+}
+
+@media (min-width:420px) and (max-width:500px) {
+    .blog {
+        height: 450px;
+    }
+}
+
+@media (min-width:500px) and (max-width:550px) {
+    .blog {
+        height: 500px;
+    }
+}
+
+@media (min-width:550px) and (max-width:600px) {
+    .blog {
+        height: 550px;
+    }
+}
+
+@media (min-width:600px) and (max-width:650px) {
+    .blog {
+        height: 600px;
+    }
+}
+
+@media (min-width:650px) and (max-width:700px) {
+    .blog {
+        height: 650px;
+    }
+}
+
+@media (min-width:700px) and (max-width:750px) {
+    .blog {
+        height: 700px;
+    }
+}
+
+@media (min-width:750px) and (max-width:800px) {
+    .blog {
+        height: 750px;
+    }
+}
+
+@media (min-width:800px) and (max-width:850px) {
+    .blog {
+        height: 800px;
+    }
+}
+
+@media (min-width:900px) and (max-width:950px) {
+    .blog {
+        height: 900px;
+    }
+}
+
+@media (min-width:950px) and (max-width:992px) {
+    .blog {
+        height: 950px;
+        height: 418px;
+    }
+
+}
+
+@media (min-width:850px) and (max-width:900px) {
+    .blog {
+        height: 850px;
+    }
+} */

@@ -1,0 +1,77 @@
+.weather__now {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #B9C7D5;
+    box-sizing: border-box;
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    padding: 30px 15px 15px 15px;
+}
+
+.weather__now {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 27px;
+}
+
+.weather__title {
+    padding-left: 37px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #00011D;
+    margin: 0;
+}
+
+
+.area__detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.text__details {
+    width: 64.4%;
+    margin-top: 0;
+}
+
+.text__details__right {
+    width: 30%;
+}
+
+.single__detail {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: left;
+    color: #00011D;
+    margin-bottom: 24px;
+}
+
+.places {
+    width: 64.4%;
+}
+
+@media screen and (max-width: 991px) {
+    .area__detail {
+        display: block;
+    }
+
+    .text__details {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .text__details__right {
+        width: 100%;
+        margin: auto;
+    }
+
+    .places {
+        width: 100%;
+    }
+}

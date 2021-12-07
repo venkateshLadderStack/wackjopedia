@@ -1,0 +1,58 @@
+/* Text area */
+
+.weather__detail {
+    margin-bottom: 35px;
+}
+
+.weather__detail h3 {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: left;
+    color: #00011D;
+    margin-bottom: 24px;
+}
+
+.weather__detail h5 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 184.5%;
+    text-align: justify;
+    color: #00011D;
+    margin-bottom: 30px;
+}
+
+.weather__detail p {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 184.5%;
+    text-align: justify;
+    color: #00011D;
+    margin: 0;
+}
+
+.weather__detail p span {
+    font-weight: 500;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .weather__detail h3 {
+        font-size: 25px;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .weather__detail h3 {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 9px;
+    }
+
+}

@@ -1,0 +1,191 @@
+.vacation__select__title h3 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 184.5%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.vacation__select__title {
+    margin-bottom: 4px;
+}
+
+.vacation__select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacation__select .nice__select {
+    background: #2D50AB;
+    border-radius: 30px;
+    width: 100%;
+    border: 0;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 0 23px;
+}
+
+.single__vacation__select {
+    margin-bottom: 35px;
+}
+
+.nice__select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+
+.nice__select:hover {
+    border-color: #dbdbdb;
+}
+
+.nice__select:active,
+.nice__select.open,
+.nice__select:focus {
+    border-color: #999;
+}
+
+.nice__select::after {
+    border-bottom: 7px solid #1A316C;
+    border-right: 7px solid #1A316C;
+    content: '';
+    display: block;
+    height: 10px;
+    margin-top: -6px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    width: 10px;
+    border-top: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+
+.nice__select.open:after {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.nice__select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+
+.nice__select.disabled {
+    border-color: #ededed;
+    color: #999;
+    pointer-events: none;
+}
+
+.nice__select.small .option {
+    line-height: 34px;
+    min-height: 34px;
+}
+
+.nice__select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+    -ms-transform: scale(0.75) translateY(-21px);
+    transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 1;
+}
+
+.nice__select .list:hover .option:not(:hover) {
+    background-color: transparent !important;
+}
+
+.nice__select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #000;
+}
+
+.nice__select .option:hover,
+.nice__select .option.focus,
+.nice__select .option.selected.focus {
+    background-color: #e4dede;
+}
+
+
+.nice__select .option.selected {
+    font-weight: bold;
+}
+
+.nice__select .option.disabled {
+    background-color: transparent;
+    color: #999;
+    cursor: default;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .vacation__select .nice__select {
+        font-size: 10.75px;
+        padding-left: 15px;
+    }
+}

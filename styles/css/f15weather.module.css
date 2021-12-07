@@ -1,0 +1,92 @@
+.pogo__wrap {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #b9c7d5;
+    box-sizing: border-box;
+    backdrop-filter: blur(42px);
+    border-radius: 30px;
+    padding: 30px 15px 15px 15px;
+}
+
+.pogo__title h6 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #00011d;
+    margin: 0;
+}
+
+.pogo__title {
+    margin-bottom: 32px;
+}
+
+.pogo__tx__box {
+    margin-bottom: 27px;
+}
+
+.pogo__bx__tt img {
+    max-width: 36px;
+}
+
+.pogo__bx__tt h5 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 52px;
+    color: #00011d;
+    margin: 0;
+}
+
+.pogo__bx__tt span {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    color: #00011d;
+    margin-bottom: 13px;
+}
+
+.pogo__bx__tt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 136px;
+    position: relative;
+}
+
+.pog__tx p {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(0, 1, 29, 0.75);
+    text-align: center;
+    padding-right: 46px;
+}
+
+.pogo__btn a {
+    width: 100%;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #848eb5;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #00011d;
+    margin-bottom: 14px;
+    box-shadow: 8px 15px 16px -17px #b1b9b9d9;
+}
+
+.pogo__btn a:last-child {
+    margin-bottom: 0;
+}

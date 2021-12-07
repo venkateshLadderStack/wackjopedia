@@ -1,0 +1,90 @@
+.text__area {
+    margin-top: 51px;
+}
+
+.text__area h4 {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #00011D;
+    margin-bottom: 45 px;
+}
+
+.text__area p {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 184.5%;
+    text-align: justify;
+    color: #00011D;
+}
+
+.note__section {
+    background: #011A5C;
+    border-radius: 30px;
+    padding: 15px;
+    display: flex;
+    align-items: start;
+    height: auto;
+    margin-bottom: 34px;
+    max-width: 680px;
+}
+
+.note__text h4 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 184.5%;
+    text-align: justify;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+
+.note__text p {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 184.5%;
+    text-align: justify;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .text__area h4 {
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    .note__section {
+        background: #011A5C;
+        border-radius: 30px;
+        padding: 15px;
+        display: block;
+        align-items: start;
+        height: auto;
+        margin-bottom: 34px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .note__text h4 {
+        text-align: center;
+        margin-bottom: 7px;
+        margin-top: 10px;
+    }
+
+    .note__text p {
+        font-size: 16px;
+        line-height: 23px;
+        margin: 0;
+        text-align: center;
+    }
+}
