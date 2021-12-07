@@ -12,9 +12,8 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { getHolidayData, getHolidayTags } from "../../../queries/holidayData";
 import { getFooterData, getHeaderData } from "../../../queries/layout";
 import { getHomePageData } from "../../../queries/homePage";
-import MarkdownIt from "markdown-it";
 import { getBlogData } from "../../../queries/blogData";
-import ImageComponent from "../../../components/ImageComponent";
+import ReactMarkdown from "react-markdown";
 
 const HolidayDetail = ({
   headerData,
@@ -25,7 +24,6 @@ const HolidayDetail = ({
   homeData,
   blogs,
 }) => {
-  // const md = new MarkdownIt();
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -34,13 +32,6 @@ const HolidayDetail = ({
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">
               <Locationcard data={blogDetail} />
-
-              <div>
-                <div className={frame26styles.text__area}>
-                  <h4>Gdzie w grudniu jest ciepło?</h4>
-                  <p>{blogDetail?.hotel_info}</p>
-                </div>
-              </div>
             </div>
             <div className="col-lg-4 col-md-12">
               <Holiday data={homeData?.featured_holiday} />
@@ -48,12 +39,8 @@ const HolidayDetail = ({
           </div>
           <section className="pb-5">
             <div className="container wd">
-              <div className="col-lg-8 col-md-12">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: blogDetail?.content,
-                  }}
-                />
+              <div className="col-lg-8 col-md-12 text-justify">
+                <ReactMarkdown>{blogDetail?.content}</ReactMarkdown>
               </div>
             </div>
           </section>
