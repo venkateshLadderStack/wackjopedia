@@ -1,7 +1,5 @@
 import styles from "../styles/css/banner.module.css";
-import Image from "next/image";
 import ImageComponent from "./ImageComponent";
-import Link from "next/link";
 
 const Banner = ({ data }) => {
   return (
