@@ -24,6 +24,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { getGlobalData } from "../../../../queries/global";
 import { fetchSlugs } from "../../../api/hello";
+import Pills from "../../../../components/Pills";
 
 function Frame15({
   headerData,
@@ -66,9 +67,7 @@ function Frame15({
           </div>
 
           <div className={styles.multi__col}>
-            <h3 className="py-5">
-              Sprawdź pogodę w miastach i regionach {countryQuery}
-            </h3>
+            <h3 className="py-5">Sprawdź miasta i regiony {countryQuery}</h3>
             {countryDetail?.regions?.slice(0, 6)?.map((item, i) => (
               <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
                 <Places item={item} />
@@ -98,24 +97,19 @@ function Frame15({
         </div>
         <div className="container ">
           <div className="my-5">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className={styles.pills__title}>
-                  <h3>Sprawdź również</h3>
-                </div>
-                <div className={styles.pills__div}>
-                  {continents
-                    ?.filter(
-                      (item) => item?.title === countryDetail?.continent?.title
-                    )[0]
-                    ?.countries?.map((item, i) => (
-                      <Link href="/" passHref key={i}>
-                        <div>{item?.title}</div>
-                      </Link>
-                    ))}
-                </div>
-              </div>
+            <div className={styles.pills__title}>
+              <h3>Sprawdź również</h3>
             </div>
+
+            <Pills
+              data={
+                continents?.filter(
+                  (item) => item?.title === countryDetail?.continent?.title
+                )[0]?.countries
+              }
+              text={""}
+              link={`lokalizacje/${continentQuery}`}
+            />
           </div>
         </div>
       </Layout>
@@ -175,22 +169,6 @@ export const getStaticProps = async (context) => {
 
 export async function getStaticPaths() {
   const { slugs } = await fetchSlugs();
-
-  const client = new ApolloClient({
-    uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
-    cache: new InMemoryCache(),
-  });
-
-  const continents = await client.query({
-    query: getContinentData,
-  });
-
-  const continentData = continents?.data?.continents;
-  const countries = await client.query({
-    query: getCountryData,
-  });
-
-  const countryData = countries?.data?.countries;
 
   const paths = slugs.map((path) => {
     return {

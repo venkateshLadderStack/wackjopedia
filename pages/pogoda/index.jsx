@@ -16,7 +16,7 @@ import { getGlobalData } from "../../queries/global";
 import { getContinentData } from "../../queries/continent";
 import Pills from "../../components/Pills";
 
-const Lokalizacje = ({
+const Pogoda = ({
   headerData,
   footerData,
   homeData,
@@ -29,19 +29,21 @@ const Lokalizacje = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container ">
-          <p className="pt-4">Wakacjopedia / Lokalizacje</p>
-          <h1>Lokalizacje turystyczne</h1>
+          <p className="pt-4">Wakacjopedia / Pogoda</p>
+          <h1>Pogoda</h1>
           <Banner data={global?.banner} />
         </div>
         <div className="container  my-5">
           <div className={styles.pills__title}>
-            <h3>Sprawdź gdzie jechać na wakacje</h3>
+            <h3>Wybierz kontynent, aby sprawdzić pogodę dla wybranego kraju</h3>
           </div>
 
-          <Pills data={continents} text={"Places in "} link={`lokalizacje`} />
+          <Pills data={continents} text={"Places in "} link={`pogoda`} />
         </div>
         <div className="container ">
-          <h3 className="py-4">Szukaj miejsca na wakacje</h3>
+          <h3 className="py-4">
+            Lub szukaj miejsca z idealną pogodą, w wybranym miesiącu
+          </h3>
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 px-0">
               <DesinationCard />
@@ -69,7 +71,7 @@ const Lokalizacje = ({
   );
 };
 
-export default Lokalizacje;
+export default Pogoda;
 
 export const getStaticProps = async (context) => {
   const client = new ApolloClient({
