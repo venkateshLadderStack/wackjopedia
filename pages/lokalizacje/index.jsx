@@ -28,12 +28,12 @@ const Lokalizacje = ({
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
-        <div className="container wd">
+        <div className="container ">
           <p className="pt-4">Wakacjopedia / Lokalizacje</p>
           <h1>Lokalizacje turystyczne</h1>
           <Banner data={global?.banner} />
         </div>
-        <div className="container wd my-5">
+        <div className="container  my-5">
           <div className={styles.pills__title}>
             <h3>Sprawdź gdzie jechać na wakacje</h3>
           </div>
@@ -47,7 +47,7 @@ const Lokalizacje = ({
             </div>
           </div>
         </div>
-        <div className="container wd">
+        <div className="container ">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
           <div className="row mt-1">
             <div className="col-lg-8 col-md-12 px-0">
@@ -58,7 +58,7 @@ const Lokalizacje = ({
             </div>
           </div>
         </div>
-        <div className="container wd my-5">
+        <div className="container  my-5">
           <h3 className="mb-5">Gorące oferty Last Minute</h3>
           <div className="row">
             {holidays?.slice(0, 4)?.map((item, i) => (

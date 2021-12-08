@@ -23,6 +23,7 @@ import Locationcard from "../../../../components/Locationcard";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { getGlobalData } from "../../../../queries/global";
+import { fetchSlugs } from "../../../api/hello";
 
 function Frame15({
   headerData,
@@ -173,20 +174,30 @@ export const getStaticProps = async (context) => {
 };
 
 export async function getStaticPaths() {
+  const { slugs } = await fetchSlugs();
+
   const client = new ApolloClient({
     uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
     cache: new InMemoryCache(),
   });
 
+  const continents = await client.query({
+    query: getContinentData,
+  });
+
+  const continentData = continents?.data?.continents;
   const countries = await client.query({
     query: getCountryData,
   });
 
-  const data = countries?.data?.countries;
+  const countryData = countries?.data?.countries;
 
-  const paths = data.map((path) => {
+  const paths = slugs.map((path) => {
     return {
-      params: { continent: "asia", country: path.slug.toString() },
+      params: {
+        country: path.country,
+        continent: path.continent,
+      },
     };
   });
 

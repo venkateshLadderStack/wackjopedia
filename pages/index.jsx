@@ -29,7 +29,7 @@ export default function Home({
 }) {
   return (
     <Layout headerData={headerData} footerData={footerData}>
-      <div className="container wd">
+      <div className="container">
         <Banner data={global?.banner} />
         <div>
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>
@@ -44,10 +44,10 @@ export default function Home({
         </div>
       </div>
 
-      <div className="container wd">
+      <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12">
-            <div className="container wd my-5">
+            <div className="container my-5">
               <h3>Ostatnio na naszym blogu</h3>
               <div className="row">
                 {blogs?.slice(0, 6)?.map((item, index) => (
@@ -66,7 +66,7 @@ export default function Home({
         </div>
       </div>
 
-      <section className="container wd my-5">
+      <section className="container my-5">
         <h3 className="py-2">Często wyszukiwana pogoda</h3>
         <div className={style.places}>
           <div className="row">
@@ -79,7 +79,7 @@ export default function Home({
         </div>
       </section>
 
-      <div className="container wd my-5">
+      <div className="container my-5">
         <div className="row">
           <div className={styles.pills__title}>
             <h3>Sprawdź gdzie jechać na wakacje</h3>
@@ -92,7 +92,7 @@ export default function Home({
         </div>
       </div>
 
-      <div className="container wd my-5">
+      <div className="container my-5">
         <h3 className="mb-5">Gorące oferty Last Minute</h3>
         <div className="row">
           {holidays?.slice(0, 4)?.map((item, i) => (
