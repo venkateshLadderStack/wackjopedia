@@ -48,7 +48,7 @@ export default function Home({
         <div className="row">
           <div className="col-lg-8 col-md-12">
             <div className="container wd my-5">
-              <h3 className="ml-4">Ostatnio na naszym blogu</h3>
+              <h3>Ostatnio na naszym blogu</h3>
               <div className="row">
                 {blogs?.slice(0, 6)?.map((item, index) => (
                   <div key={index} className="col-lg-6 col-md-6 col-sm-12 my-2">
