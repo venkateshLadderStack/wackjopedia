@@ -1,60 +1,76 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .oppy__right__top {
-    margin-bottom: 60px;
-    width: 95%;
-    margin-left: 20px;
+  margin-bottom: 60px;
+  width: 95%;
+  margin-left: 20px;
+  max-width: 300px;
 }
 
 .oppy__ro__top__bx {
-    background: rgba(17, 255, 169, 0.21);
-    backdrop-filter: blur(42px);
-    border-radius: 30px;
-    height: 159px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 63px;
-    padding-right: 78px;
+  background: rgba(17, 255, 169, 0.21);
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  height: 159px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 63px;
+  padding-right: 78px;
 }
 
 .oppy__ro__top__bx p {
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 22px;
-    color: #00011d;
-    margin-bottom: 20px;
-    position: relative;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  color: #00011d;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .oppy__ro__top__bx h5 {
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-    color: #00011d;
-    margin: 0;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #00011d;
+  margin: 0;
 }
 
 .oppy__ro__top__bx p:before {
-    width: 28px;
-    height: 28px;
-    background: #00ffa3;
-    content: "";
-    position: absolute;
-    border-radius: 28px;
-    left: -44px;
-    top: 0;
+  width: 28px;
+  height: 28px;
+  background: #00ffa3;
+  content: "";
+  position: absolute;
+  border-radius: 28px;
+  left: -44px;
+  top: 0;
 }
 
 .oppy__ro__top__bx {
-    margin-bottom: 19px;
+  margin-bottom: 19px;
 }
 
 .oppy__ro__top__bx.cb__cg {
-    background: rgba(255, 91, 91, 0.22);
+  background: rgba(255, 91, 91, 0.22);
 }
 
 .oppy__ro__top__bx.cb__cg p:before {
-    background: #ff5656;
+  background: #ff5656;
+}
+
+@media screen and (max-width: 767px) {
+  .oppy__right__top {
+    margin-bottom: 60px;
+    width: 100%;
+    margin-left: 20px;
+    max-width: unset;
+  }
 }

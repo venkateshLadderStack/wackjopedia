@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import placeImg from "../public/img/place.png";
 import styles from "../styles/css/place.module.css";
 import ImageComponent from "./ImageComponent";
 
@@ -18,7 +16,7 @@ function Places({ item }) {
           />
         </div>
         <div className={`${styles.weather__text} m-2`}>
-          <p>{item?.city}</p>
+          <p>{item?.title || item?.city}</p>
         </div>
       </div>
     </>

@@ -1,96 +1,128 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-import React from "react";
-import Link from "next/link";
-import Banner from "../../../../components/FeaturedBanner";
-import Button from "../../../../components/Button";
-import DesinationCard from "../../../../components/DestinationCard";
-import Holiday from "../../../../components/Holidaycard";
 import Layout from "../../../../components/Layout";
-import OfferSection from "../../../../components/OfferSection";
 import styles from "../../../../styles/common.module.css";
-import style from "../../../../styles/frame5.module.css";
+import Banner from "../../../../components/FeaturedBanner";
+import Holiday from "../../../../components/Holidaycard";
+import Places from "../../../../components/Places";
+import OfferSection from "../../../../components/OfferSection";
+import PerfectMonth from "../../../../components/PerfectMonth";
+import Frame15weather from "../../../../components/Frame15weather";
+import Button from "../../../../components/Button";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 import {
   getHolidayData,
   getHolidayTags,
 } from "../../../../queries/holidayData";
 import { getFooterData, getHeaderData } from "../../../../queries/layout";
 import { getHomePageData } from "../../../../queries/homePage";
-import { getGlobalData } from "../../../../queries/global";
-import { getContinentData } from "../../../../queries/continent";
+import {
+  getContinentData,
+  getCountryData,
+} from "../../../../queries/continent";
+import ReactMarkdown from "react-markdown";
+import Locationcard from "../../../../components/Locationcard";
 import { useRouter } from "next/router";
-import { getCountryData } from "../../../../queries/continent";
+import Link from "next/link";
+import { getGlobalData } from "../../../../queries/global";
 
-const CountryPage = ({
+function Frame15({
   headerData,
   footerData,
-  homeData,
-  holidayTags,
   holidays,
-  global,
+  countries,
   continents,
   countryDetail,
-}) => {
+  global,
+}) {
   const router = useRouter();
-  const continentQuery = router.query.country;
+  const continentQuery = router.query.continent;
+  const countryQuery = router.query.country;
 
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
-        <div className="container wd">
+        <section className="container md">
           <p className="pt-4">
-            Wakacjopedia / Lokalizacje / {continentQuery} /{router.pathname}
+            Wakacjopedia / Lokalizacje / {continentQuery} / {countryQuery}
           </p>
-          <h1>Lokalizacje turystyczne w {continentQuery}</h1>
-          <Banner data={global?.banner} />
-        </div>
-        <div className="container wd my-5">
-          <div className={styles.pills__title}>
-            <h3>Sprawdź gdzie jechać na wakacje</h3>
-          </div>
+          <h1>{countryQuery} - najważniejsze informacje</h1>
           <div className="row">
-            <div className={styles.pills__div}>
-              {countryDetail?.regions?.map((item, index) => (
-                <Link
-                  href={`/lokalizacje/${continentQuery}/${item?.slug}`}
-                  key={index}
-                  passHref
-                >
-                  <div> Places in {item?.title}</div>
-                </Link>
-              ))}
+            <div className="col-lg-8 col-md-12 mt-3">
+              <Locationcard data={countryDetail} />
+            </div>
+            <div className="col-lg-4 col-md-12 mt-3">
+              <Frame15weather />
             </div>
           </div>
-        </div>
-        <div className="container wd">
-          <h3 className="py-4">Szukaj miejsca na wakacje</h3>
-          <div className="row mt-1">
-            <div className="col-lg-8 col-md-12 px-0">
-              <DesinationCard />
+          <Banner data={global?.banner} />
+          <div className="row my-5">
+            <div className="col-lg-8 col-mg-12 text-justify">
+              <ReactMarkdown>{countryDetail?.aboutCountry}</ReactMarkdown>
             </div>
-            <div className="col-lg-4 col-md-12">
+            <div className="col-lg-4 col-mg-12">
+              <PerfectMonth bestMonths={countryDetail?.best_months} />
               <Holiday data={global?.featuredHoliday} />
             </div>
           </div>
-        </div>
-        <div className="container wd my-5">
-          <h3 className="mb-5">Gorące oferty Last Minute</h3>
-          <div className="row">
-            {holidays?.slice(0, 4)?.map((item, i) => (
-              <OfferSection item={item} key={i} />
+
+          <div className={styles.multi__col}>
+            <h3 className="py-5">
+              Sprawdź pogodę w miastach i regionach {countryQuery}
+            </h3>
+            {countryDetail?.regions?.slice(0, 6)?.map((item, i) => (
+              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
+                <Places item={item} />
+              </div>
             ))}
           </div>
-          <div className="row my-5">
-            <div className="col-lg-12">
-              <Button />
+
+          <div className={`${styles.multi__col} text-justify`}>
+            <ReactMarkdown>{countryDetail?.QnA}</ReactMarkdown>
+          </div>
+        </section>
+
+        <div className="container">
+          <div className="my-5">
+            <h3 className="mb-5">Gorące oferty Last Minute</h3>
+            <div className="row">
+              {holidays?.map((item, i) => {
+                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
+              })}
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container ">
+          <div className="my-5">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className={styles.pills__title}>
+                  <h3>Sprawdź również</h3>
+                </div>
+                <div className={styles.pills__div}>
+                  {continents
+                    ?.filter(
+                      (item) => item?.title === countryDetail?.continent?.title
+                    )[0]
+                    ?.countries?.map((item, i) => (
+                      <Link href="/" passHref key={i}>
+                        <div>{item?.title}</div>
+                      </Link>
+                    ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </Layout>
     </>
   );
-};
+}
 
-export default CountryPage;
+export default Frame15;
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
@@ -115,49 +147,36 @@ export const getStaticProps = async (context) => {
     query: getFooterData,
   });
 
-  const holidayTags = await client.query({
-    query: getHolidayTags,
-  });
-
-  const homeData = await client.query({
-    query: getHomePageData,
-  });
-
-  const global = await client.query({
-    query: getGlobalData,
+  const countries = await client.query({
+    query: getCountryData,
   });
 
   const continents = await client.query({
     query: getContinentData,
   });
 
+  const global = await client.query({
+    query: getGlobalData,
+  });
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
       footerData: footerData?.data?.footer,
-      holidayTags: holidayTags?.data?.tags,
-      homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
-      global: global?.data?.global,
+      countries: countries?.data?.countries,
       continents: continents?.data?.continents,
+      global: global?.data?.global,
       countryDetail,
     },
   };
 };
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
   const client = new ApolloClient({
     uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
     cache: new InMemoryCache(),
   });
-
-  console.log(context, "CONTEXT");
-
-  //   const continents = await client.query({
-  //   query: getContinentData,
-  // });
-
-  // const data = continents?.data?.continents;
 
   const countries = await client.query({
     query: getCountryData,

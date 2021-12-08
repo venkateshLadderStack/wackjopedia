@@ -5,6 +5,18 @@ export const getContinentData = gql`
     continents {
       title
       slug
+      countries {
+        title
+        slug
+        featuredImage {
+          hash
+          url
+        }
+        thumbnail {
+          hash
+          url
+        }
+      }
     }
   }
 `;
@@ -14,11 +26,45 @@ export const getCountryData = gql`
     countries {
       title
       slug
-      image {
+      featuredImage {
         hash
         url
       }
       ISO
+      thumbnail {
+        hash
+        url
+      }
+      best_months {
+        title
+        slug
+      }
+      aboutCountry
+      QnA
+      regions {
+        title
+        slug
+        featuredImage {
+          hash
+          url
+        }
+        thumbnail {
+          hash
+          url
+        }
+        cities {
+          title
+          slug
+          thumbnail {
+            hash
+            url
+          }
+          featuredImage {
+            hash
+            url
+          }
+        }
+      }
     }
   }
 `;

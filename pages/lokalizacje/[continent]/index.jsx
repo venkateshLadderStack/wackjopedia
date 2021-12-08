@@ -19,11 +19,8 @@ import { useRouter } from "next/router";
 const ContinentPage = ({
   headerData,
   footerData,
-  homeData,
-  holidayTags,
   holidays,
   global,
-  continents,
   continentDetail,
 }) => {
   const router = useRouter();
@@ -109,14 +106,6 @@ export const getStaticProps = async (context) => {
     query: getFooterData,
   });
 
-  const holidayTags = await client.query({
-    query: getHolidayTags,
-  });
-
-  const homeData = await client.query({
-    query: getHomePageData,
-  });
-
   const global = await client.query({
     query: getGlobalData,
   });
@@ -129,8 +118,6 @@ export const getStaticProps = async (context) => {
     props: {
       headerData: headerData?.data?.navbar,
       footerData: footerData?.data?.footer,
-      holidayTags: holidayTags?.data?.tags,
-      homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
       global: global?.data?.global,
       continents: continents?.data?.continents,
