@@ -138,7 +138,7 @@ function Frame5({
                 )[0]?.countries
               }
               text={""}
-              link={`pogoda/${countryDetail?.continent?.title}`}
+              link={`pogoda/${countryDetail?.continent?.slug}`}
             />
           </div>
         </div>
