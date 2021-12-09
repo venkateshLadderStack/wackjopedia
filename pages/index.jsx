@@ -16,8 +16,11 @@ import { getHomePageData } from "../queries/homePage";
 import { getGlobalData } from "../queries/global";
 import { getContinentData } from "../queries/continent";
 import { getBlogData } from "../queries/blogData";
+import { lastMinute, lastMinuteAll } from "./api/lastMinutes";
+import LastMinuteCard from "../components/LastMinuteCard";
 
 export default function Home({
+  lastMinutes,
   headerData,
   footerData,
   holidays,
@@ -95,8 +98,8 @@ export default function Home({
       <div className="container my-5">
         <h3 className="mb-5">Gorące oferty Last Minute</h3>
         <div className="row">
-          {holidays?.slice(0, 4)?.map((item, i) => (
-            <OfferSection item={item} key={i} />
+          {lastMinutes?.slice(0, 4)?.map((item, i) => (
+            <LastMinuteCard item={item} key={i} />
           ))}
         </div>
         <div className="row my-5">
@@ -147,6 +150,8 @@ export const getStaticProps = async (context) => {
     query: getBlogData,
   });
 
+  const { data } = await lastMinuteAll();
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -157,6 +162,7 @@ export const getStaticProps = async (context) => {
       global: global?.data?.global,
       continents: continents?.data?.continents,
       blogs: blogData?.data?.blogs,
+      lastMinutes: data,
     },
   };
 };

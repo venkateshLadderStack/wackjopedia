@@ -25,6 +25,8 @@ import Link from "next/link";
 import { getGlobalData } from "../../../../queries/global";
 import { fetchSlugs } from "../../../api/hello";
 import Pills from "../../../../components/Pills";
+import LastMinuteCard from "../../../../components/LastMinuteCard";
+import { lastMinute } from "../../../api/lastMinutes";
 
 function Frame15({
   headerData,
@@ -34,6 +36,7 @@ function Frame15({
   continents,
   countryDetail,
   global,
+  lastMinutes,
 }) {
   return (
     <>
@@ -87,9 +90,9 @@ function Frame15({
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => {
-                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
-              })}
+              {lastMinutes?.slice(0, 4)?.map((item, i) => (
+                <LastMinuteCard item={item} key={i} />
+              ))}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -157,6 +160,10 @@ export const getStaticProps = async (context) => {
     query: getGlobalData,
   });
 
+  const countryName = countryDetail?.title;
+
+  const { data } = await lastMinute(countryName);
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -166,6 +173,7 @@ export const getStaticProps = async (context) => {
       continents: continents?.data?.continents,
       global: global?.data?.global,
       countryDetail,
+      lastMinutes: data,
     },
   };
 };

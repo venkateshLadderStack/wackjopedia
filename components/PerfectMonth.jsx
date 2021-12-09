@@ -22,7 +22,7 @@ function PerfectMonth({ weather }) {
               <div className="col-6 m-0 p-0" key={i}>
                 <h5>
                   {item?.month}
-                  {numOfBestMonths > i && ","} &nbsp;
+                  {numOfBestMonths > i && ","}
                 </h5>
               </div>
             ))}
@@ -35,7 +35,7 @@ function PerfectMonth({ weather }) {
               <div className="col-6 m-0 p-0" key={i}>
                 <h5>
                   {item?.month}
-                  {numOfBestMonths > i && ","} &nbsp;
+                  {numOfBestMonths > i && ","}
                 </h5>
               </div>
             ))}

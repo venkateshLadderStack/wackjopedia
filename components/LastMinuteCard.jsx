@@ -1,9 +1,10 @@
 import styles from "../styles/css/offer.module.css";
 import ImageComponent from "./ImageComponent";
 import Link from "next/link";
+import Image from "next/image";
 
-const OfferSection = ({ item }) => {
-  const fillRange = (end) => {
+const LastMinuteCard = ({ item }) => {
+  const fillRange = (end = 4) => {
     return Array(end)
       .fill()
       .map((item, index) => 1 + index);
@@ -17,10 +18,10 @@ const OfferSection = ({ item }) => {
       <div className={styles.deal}>
         <div className={styles.blog}>
           <div className={`${styles.blog__img} `}>
-            <ImageComponent
+            <Image
               loading="lazy"
               layout="responsive"
-              src={item?.thumbnail?.hash}
+              src={item?.img_url_1}
               width={294}
               height={263}
               alt="blog"
@@ -31,7 +32,7 @@ const OfferSection = ({ item }) => {
         </div>
         <div className={`${styles.deal__containt} px-3`}>
           <div className={styles.deal__title}>
-            <h3>{item?.title}</h3>
+            <h3>{item?.name}</h3>
           </div>
           <div className={styles.offer__rating}>
             {stars?.map((i) => (
@@ -43,17 +44,17 @@ const OfferSection = ({ item }) => {
           <div className={styles.deal__pp}>
             <a href="#">
               {Math.round(
-                ((item?.actual_price - item?.discount_price) /
-                  item?.discount_price) *
+                ((Number(item?.price_regular) - Number(item?.price_actual)) /
+                  Number(item?.price_regular)) *
                   100
               )}
               %
             </a>
-            <del>{item?.actual_price} zł</del>
+            <del>{item?.price_regular} zł</del>
           </div>
           <div className={styles.deal__text}>
             <p>
-              od <span>{item?.discount_price} zł</span> za os.
+              od <span>{item?.price_actual} zł</span> za os.
             </p>
           </div>
         </div>
@@ -63,4 +64,4 @@ const OfferSection = ({ item }) => {
   );
 };
 
-export default OfferSection;
+export default LastMinuteCard;

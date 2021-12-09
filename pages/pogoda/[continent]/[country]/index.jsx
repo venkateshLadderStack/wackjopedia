@@ -23,6 +23,8 @@ import ReactMarkdown from "react-markdown";
 import Pills from "../../../../components/Pills";
 import { getContinentData } from "../../../../queries/continent";
 import CountryWeatherCard from "../../../../components/CountryWeatherCard";
+import { lastMinute } from "../../../api/lastMinutes";
+import LastMinuteCard from "../../../../components/LastMinuteCard";
 
 function Frame5({
   headerData,
@@ -33,6 +35,7 @@ function Frame5({
   global,
   countryDetail,
   continents,
+  lastMinutes,
 }) {
   return (
     <>
@@ -110,9 +113,9 @@ function Frame5({
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => {
-                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
-              })}
+              {lastMinutes?.slice(0, 4)?.map((item, i) => (
+                <LastMinuteCard item={item} key={i} />
+              ))}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -135,7 +138,7 @@ function Frame5({
                 )[0]?.countries
               }
               text={""}
-              link={`lokalizacje/${countryDetail?.continent?.title}`}
+              link={`pogoda/${countryDetail?.continent?.title}`}
             />
           </div>
         </div>
@@ -185,6 +188,10 @@ export const getStaticProps = async (context) => {
     query: getContinentData,
   });
 
+  const countryName = countryDetail?.title;
+
+  const { data } = await lastMinute(countryName);
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -195,6 +202,7 @@ export const getStaticProps = async (context) => {
       global: global?.data?.global,
       continents: continents?.data?.continents,
       countryDetail,
+      lastMinutes: data,
     },
   };
 };
