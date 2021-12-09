@@ -162,7 +162,7 @@ export const getStaticProps = async (context) => {
 
   const countryName = countryDetail?.title;
 
-  const { data } = await lastMinute(countryName);
+  const { data } = await lastMinute(countryDetail?.title);
 
   return {
     props: {

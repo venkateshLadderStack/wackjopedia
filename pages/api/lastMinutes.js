@@ -8,7 +8,7 @@ export const lastMinuteAll = async () => {
   };
 };
 
-export const lastMinute = async (country = "Indie") => {
+export const lastMinute = async (country) => {
   const res = await fetch(
     "https://feeds.datafeedwatch.com/19973/3f147dff0974f74f68c672a75abb23edae110ea8.json"
   );
