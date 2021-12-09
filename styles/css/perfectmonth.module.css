@@ -15,13 +15,15 @@
   background: rgba(17, 255, 169, 0.21);
   backdrop-filter: blur(42px);
   border-radius: 30px;
-  height: 159px;
+  height: unset;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-left: 63px;
   padding-right: 78px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .oppy__ro__top__bx p {

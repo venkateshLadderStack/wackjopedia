@@ -14,7 +14,6 @@ import { getFooterData, getHeaderData } from "../../../queries/layout";
 import { getHomePageData } from "../../../queries/homePage";
 import { getGlobalData } from "../../../queries/global";
 import { getContinentData } from "../../../queries/continent";
-import { useRouter } from "next/router";
 import Pills from "../../../components/Pills";
 
 const ContinentPage = ({
@@ -24,15 +23,14 @@ const ContinentPage = ({
   global,
   continentDetail,
 }) => {
-  const router = useRouter();
-  const continentQuery = router.query.continent;
-
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container ">
-          <p className="pt-4">Wakacjopedia / Pogoda / {continentQuery}</p>
-          <h1>Pogoda w {continentQuery}</h1>
+          <p className="pt-4">
+            Wakacjopedia / Pogoda / {continentDetail?.title}
+          </p>
+          <h1>Pogoda w {continentDetail?.title}</h1>
           <Banner data={global?.banner} />
         </div>
         <div className="container  my-5">
@@ -43,7 +41,7 @@ const ContinentPage = ({
           <Pills
             data={continentDetail?.countries}
             text={"Places in "}
-            link={`pogoda/${continentQuery}`}
+            link={`pogoda/${continentDetail?.slug}`}
           />
         </div>
         <div className="container ">

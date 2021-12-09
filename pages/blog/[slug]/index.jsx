@@ -28,6 +28,8 @@ const HolidayDetail = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd">
+          <p className="pt-4">Wakacjopedia / Blog / {blogDetail?.title}</p>
+          <h1 className="section_title">Blog Wakacjopedia</h1>
           <Banner data={homeData?.banner} />
           <div className="row my-5">
             <div className="col-lg-8 col-md-12 mb-5">

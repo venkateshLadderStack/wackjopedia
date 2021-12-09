@@ -20,7 +20,7 @@ import {
 } from "../../../../queries/continent";
 import ReactMarkdown from "react-markdown";
 import Locationcard from "../../../../components/Locationcard";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 import { getGlobalData } from "../../../../queries/global";
 import { fetchSlugs } from "../../../api/hello";
@@ -35,24 +35,21 @@ function Frame15({
   countryDetail,
   global,
 }) {
-  const router = useRouter();
-  const continentQuery = router.query.continent;
-  const countryQuery = router.query.country;
-
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <section className="container md">
           <p className="pt-4">
-            Wakacjopedia / Lokalizacje / {continentQuery} / {countryQuery}
+            Wakacjopedia / Lokalizacje / {countryDetail?.continent?.title} /{" "}
+            {countryDetail?.title}
           </p>
-          <h1>{countryQuery} - najważniejsze informacje</h1>
+          <h1>{countryDetail?.title} - najważniejsze informacje</h1>
           <div className="row">
             <div className="col-lg-8 col-md-12 mt-3">
               <Locationcard data={countryDetail} />
             </div>
             <div className="col-lg-4 col-md-12 mt-3">
-              <Frame15weather />
+              <Frame15weather data={countryDetail} />
             </div>
           </div>
           <Banner data={global?.banner} />
@@ -61,24 +58,30 @@ function Frame15({
               <ReactMarkdown>{countryDetail?.aboutCountry}</ReactMarkdown>
             </div>
             <div className="col-lg-4 col-mg-12">
-              <PerfectMonth bestMonths={countryDetail?.best_months} />
+              <PerfectMonth weather={countryDetail?.weather} />
               <Holiday data={global?.featuredHoliday} />
             </div>
           </div>
-
-          <div className={styles.multi__col}>
-            <h3 className="py-5">Sprawdź miasta i regiony {countryQuery}</h3>
-            {countryDetail?.regions?.slice(0, 6)?.map((item, i) => (
-              <div key={i} className="col-6 col-lg-4 col-md-4 my-2">
-                <Places item={item} />
-              </div>
-            ))}
-          </div>
-
-          <div className={`${styles.multi__col} text-justify`}>
-            <ReactMarkdown>{countryDetail?.QnA}</ReactMarkdown>
-          </div>
         </section>
+
+        <div className="container ">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-8">
+              <h3>Sprawdź miasta i regiony {countryDetail?.title}</h3>
+              <div className="row">
+                {countryDetail?.regions?.slice(0, 6)?.map((item, i) => (
+                  <div key={i} className="col-sm-6 col-lg-4 col-md-4 my-2">
+                    <Places item={item} />
+                  </div>
+                ))}
+              </div>
+              <div className="text-justify">
+                <ReactMarkdown>{countryDetail?.QnA}</ReactMarkdown>
+              </div>
+            </div>
+            <div className="col-lg-4"></div>
+          </div>
+        </div>
 
         <div className="container">
           <div className="my-5">
@@ -108,7 +111,7 @@ function Frame15({
                 )[0]?.countries
               }
               text={""}
-              link={`lokalizacje/${continentQuery}`}
+              link={`lokalizacje/${countryDetail?.continent?.slug}`}
             />
           </div>
         </div>

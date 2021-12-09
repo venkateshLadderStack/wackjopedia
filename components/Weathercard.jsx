@@ -1,46 +1,45 @@
 import React from "react";
 import weatherStyle from "../styles/css/weathercard.module.css";
 
-function Weathercard({ detail }) {
+function Weathercard({ data }) {
+  const cardBgColor = (monthCondition) => {
+    switch (monthCondition) {
+      case "Idealna pogoda":
+        return "idealna_pogoda";
+        break;
+      case "Dobra pogoda":
+        return "dobra_pogoda";
+        break;
+      case "Zła pogoda":
+        return "zla_pogoda";
+        break;
+      case "Bardzo zła pogoda":
+        return "bardzo_zla_pogoda";
+        break;
+      case "Znośna pogoda":
+        return "znosna_pogoda";
+        break;
+      default:
+        return "idealna_pogoda";
+        break;
+    }
+  };
+
   return (
     <>
       <div
-        className={`${weatherStyle.system__single__box} 
-        ${
-          detail.month == "Styczeń"
-            ? weatherStyle.jan
-            : detail.month == "Luty"
-            ? weatherStyle.feb
-            : detail.month == "Marzec"
-            ? weatherStyle.mar
-            : detail.month == "Kwiecień"
-            ? weatherStyle.april
-            : detail.month == "Może"
-            ? weatherStyle.may
-            : detail.month == "Czerwiec"
-            ? weatherStyle.jun
-            : detail.month == "Lipiec"
-            ? weatherStyle.july
-            : detail.month == "Sierpień"
-            ? weatherStyle.aug
-            : detail.month == "Wrzesień"
-            ? weatherStyle.sep
-            : detail.month == "Październik"
-            ? weatherStyle.oct
-            : detail.month == "Listopad"
-            ? weatherStyle.nov
-            : weatherStyle.dec
-        } 
-        `}
+        className={`${weatherStyle.system__single__box} ${cardBgColor(
+          data?.monthCondition
+        )}`}
       >
         <div className={weatherStyle.system__fx}>
           <div className={weatherStyle.system__1st}>
-            <h6>{detail.month}</h6>
-            <a href="#">idealna pogoda</a>
+            <h6>{data?.month}</h6>
+            <a href="#">{data?.monthCondition}</a>
           </div>
           <div className={weatherStyle.system__2}>
-            <div className={weatherStyle.syste__2__tp}>
-              <h5>25</h5>
+            <div className={weatherStyle.system__2__tp}>
+              <h5>{data?.airTemperature}</h5>
               <span>°C</span>
             </div>
             <div className={weatherStyle.system__2__tp}>
@@ -48,30 +47,30 @@ function Weathercard({ detail }) {
             </div>
           </div>
           <div className={weatherStyle.system__2}>
-            <div className={weatherStyle.syste__2__tp}>
-              <h5>25</h5>
-              <span>°C</span>
+            <div className={weatherStyle.system__2__tp}>
+              <h5>{data?.chanceRainfall}</h5>
+              <span>%</span>
             </div>
             <div className={weatherStyle.system__2__tp}>
-              <p>Temperatura powietrza</p>
+              <p>Szansa opadów</p>
             </div>
           </div>
           <div className={weatherStyle.system__2}>
-            <div className={weatherStyle.syste__2__tp}>
-              <h5>25</h5>
+            <div className={weatherStyle.system__2__tp}>
+              <h5>{data?.waterTemperature}</h5>
               <span>°C</span>
             </div>
             <div className={weatherStyle.system__2__tp}>
-              <p>Temperatura powietrza</p>
+              <p>Temperatura wody</p>
             </div>
           </div>
           <div className={weatherStyle.system__2}>
-            <div className={weatherStyle.syste__2__tp}>
-              <h5>25</h5>
-              <span>°C</span>
+            <div className={weatherStyle.system__2__tp}>
+              <h5>{data?.hoursSunny}</h5>
+              <span>g</span>
             </div>
             <div className={weatherStyle.system__2__tp}>
-              <p>Temperatura powietrza</p>
+              <p>Godziny słoneczne</p>
             </div>
           </div>
         </div>

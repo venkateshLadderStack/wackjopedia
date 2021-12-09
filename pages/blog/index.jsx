@@ -27,7 +27,8 @@ const Blog = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <div className="container wd mt-4">
-          <h3 className="section_title">Najlepsze oferty wakacyjne</h3>
+          <p className="pt-4">Wakacjopedia / Blog</p>
+          <h1 className="section_title">Blog Wakacjopedia</h1>
           <Banner data={homeData?.banner} />
           <div className="mt-5">
             <div className="row mt-1">

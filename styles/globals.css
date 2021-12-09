@@ -225,3 +225,48 @@ a {
   width: 680px;
   height: 603px;
 }
+
+/* for weather card */
+
+.idealna_pogoda {
+  background: rgba(17, 255, 169, 0.21);
+  backdrop-filter: blur(42px);
+}
+
+.idealna_pogoda a {
+  background: linear-gradient(180deg, #00ffa3 0%, #11ffa9 100%);
+}
+
+.dobra_pogoda {
+  background: #eefff9;
+}
+
+.dobra_pogoda a {
+  background: linear-gradient(180deg, #adffe2 0%, #c5ffea 100%);
+}
+
+.zla_pogoda {
+  background: #fff4f4;
+}
+
+.zla_pogoda a {
+  background: linear-gradient(180deg, #ff7070 0%, #ff5656 100%);
+  color: #fff;
+}
+
+.bardzo_zla_pogoda {
+  background: #ff5b5b38;
+}
+
+.bardzo_zla_pogoda a {
+  background: linear-gradient(180deg, #ff7070 0%, #ff5656 100%);
+  color: #fff;
+}
+
+.znosna_pogoda {
+  background: #fff51112;
+}
+
+.znosna_pogoda a {
+  background: linear-gradient(180deg, #ffeca9 0%, #ffdc82 100%);
+}
