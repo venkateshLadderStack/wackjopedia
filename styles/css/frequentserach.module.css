@@ -1,119 +1,117 @@
 .single__weather {
-    width: 31.33%;
-    background: #ffffffd9;
-    border: 1px solid #E8E8E8;
-    box-sizing: border-box;
-    backdrop-filter: blur(42px);
+  /* width: 31.33%; */
+  background: #ffffffd9;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  padding: 13px 11px;
+  height: auto;
+  margin-bottom: 17px;
+}
+
+.weather__text p {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #00011d;
+  margin: 0;
+}
+
+.weather__box {
+  /* background: #11ffa936; */
+  backdrop-filter: blur(42px);
+  border-radius: 30px;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+.weather__btn {
+  margin-bottom: 25px;
+}
+
+.weather__btn a {
+  width: 140px;
+  height: 42px;
+  /* background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%); */
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #00011d;
+  margin: auto;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.weather__box__fx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.weather__box__lf {
+  width: 40%;
+}
+
+.weather__tp {
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.weather__tp h4 {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 37px;
+  color: #00011d;
+  margin: 0;
+}
+
+.weather__tp span {
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
+  color: #00011d;
+}
+
+.weather__tx {
+  margin-top: 10px;
+}
+
+.weather__tx p {
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 15px;
+  color: #00011dbf;
+}
+
+.weather__box__fx.lst__bx {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .single__weather {
+    width: 100%;
     border-radius: 30px;
     padding: 13px 11px;
     height: auto;
     margin-bottom: 17px;
-}
+  }
 
-.weather__text p {
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 22px;
-    color: #00011D;
-    margin: 0;
-}
-
-.weather__box {
-    background: #11ffa936;
-    backdrop-filter: blur(42px);
-    border-radius: 30px;
-    padding: 15px;
-    margin-top: 60px;
-}
-
-.weather__btn {
-    margin-bottom: 25px;
-}
-
-.weather__btn a {
-    width: 140px;
-    height: 42px;
-    background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%);
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: center;
-    color: #00011D;
-    margin: auto;
-    border: 2px solid transparent;
-    transition: .3s;
-}
-
-.weather__box__fx {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.weather__box__lf {
-    width: 40%;
-}
-
-.weather__tp {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-}
-
-.weather__tp h4 {
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 37px;
-    color: #00011D;
-    margin: 0;
-}
-
-.weather__tp span {
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: right;
-    color: #00011D;
-}
-
-.weather__tx {
-    margin-top: 10px;
-}
-
-.weather__tx p {
-    margin: 0;
-    font-family: Poppins;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 15px;
-    color: #00011dbf;
-}
-
-
-.weather__box__fx.lst__bx {
-    margin-bottom: 12px;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-
-    .single__weather {
-        width: 100%;
-        border-radius: 30px;
-        padding: 13px 11px;
-        height: auto;
-        margin-bottom: 17px;
-    }
-
-    .weather__box__wd {
-        width: 100%;
-        margin-bottom: 30px;
-    }
+  .weather__box__wd {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
