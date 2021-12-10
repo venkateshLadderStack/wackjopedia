@@ -53,3 +53,13 @@ export const getGlobalData = gql`
     }
   }
 `;
+
+
+export const getMonthData = gql`
+{
+  months{
+    title
+    slug
+  }
+}
+`

@@ -1,5 +1,5 @@
 .single__weather {
-    width: 31.33%;
+    /* width: 31.33%; */
     background: #ffffffd9;
     border: 1px solid #E8E8E8;
     box-sizing: border-box;
@@ -19,7 +19,7 @@
 }
 
 .weather__box {
-    background: #11ffa936;
+    /* background: #11ffa936; */
     backdrop-filter: blur(42px);
     border-radius: 30px;
     padding: 15px;
@@ -33,7 +33,7 @@
 .weather__btn a {
     width: 140px;
     height: 42px;
-    background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%);
+    /* background: linear-gradient(180deg, #00FFA3 0%, #11FFA9 100%); */
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@
 .weather__tp {
     display: flex;
     align-items: start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .weather__tp h4 {

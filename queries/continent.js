@@ -65,6 +65,14 @@ export const getCountryData = gql`
           }
         }
       }
+        weather{
+      month
+      monthCondition
+      airTemperature
+      waterTemperature
+      chanceRainfall
+      hoursSunny
+    }
     }
   }
 `;
