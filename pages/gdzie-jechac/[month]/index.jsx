@@ -74,9 +74,9 @@ const MonthDetail = ({
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {/* {lastMinutes?.slice(0, 4)?.map((item, i) => (
+              {lastMinutes?.slice(0, 4)?.map((item, i) => (
                 <LastMinuteCard item={item} key={i} />
-              ))} */}
+              ))}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -146,7 +146,7 @@ export const getStaticProps = async (context) => {
     query: getCountryData,
   });
 
-  // const { data } = await lastMinuteAll();
+  const { data } = await lastMinuteAll();
 
   return {
     props: {
@@ -158,7 +158,7 @@ export const getStaticProps = async (context) => {
       global: global?.data?.global,
       monthDetail,
       countries: countries?.data?.countries,
-      // lastMinutes: data,
+      lastMinutes: data,
     },
   };
 };

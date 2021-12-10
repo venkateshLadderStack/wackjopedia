@@ -2,6 +2,7 @@ import React from "react";
 import frequentsearch from "../styles/css/frequentserach.module.css";
 import Image from "next/image";
 import placeImg from "../public/img/place.png";
+import ImageComponent from "./ImageComponent";
 
 function Frequentsearch({ data, month, filterData }) {
   const monthTemp = data?.weather.filter((item) => item?.month === month);
@@ -34,13 +35,15 @@ function Frequentsearch({ data, month, filterData }) {
     <>
       <div className={frequentsearch.single__weather}>
         <div className={`${frequentsearch.weather__img} mb-2`}>
-          <Image
+          <ImageComponent
             layout="responsive"
             loading="lazy"
             width={189}
             height={121}
-            src={placeImg}
+            src={data?.thumbnail?.hash}
             alt="place-img"
+            objectFit="cover"
+            className="img_bod_rad"
           />
         </div>
         <div className={frequentsearch.weather__text}>
