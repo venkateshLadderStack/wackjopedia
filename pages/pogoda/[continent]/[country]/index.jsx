@@ -113,9 +113,9 @@ function Frame5({
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {lastMinutes?.slice(0, 4)?.map((item, i) => (
+              {/* {lastMinutes?.slice(0, 4)?.map((item, i) => (
                 <LastMinuteCard item={item} key={i} />
-              ))}
+              ))} */}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -190,7 +190,7 @@ export const getStaticProps = async (context) => {
 
   const countryName = countryDetail?.title;
 
-  const { data } = await lastMinute(countryName);
+  // const { data } = await lastMinute(countryName);
 
   return {
     props: {
@@ -202,7 +202,7 @@ export const getStaticProps = async (context) => {
       global: global?.data?.global,
       continents: continents?.data?.continents,
       countryDetail,
-      lastMinutes: data,
+      // lastMinutes: data,
     },
   };
 };

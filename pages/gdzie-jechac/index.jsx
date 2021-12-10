@@ -25,7 +25,7 @@ const WhereToGO = ({
   global,
   continents,
   months,
-  lastMinutes
+  lastMinutes,
 }) => {
   return (
     <>
@@ -37,14 +37,19 @@ const WhereToGO = ({
         </div>
         <div className="container  my-5">
           <div className={styles.pills__title}>
-            <h3>Wybierz miesiąc, aby sprawdzić gdzie warto jechać na wakacje</h3>
+            <h3>
+              Wybierz miesiąc, aby sprawdzić gdzie warto jechać na wakacje
+            </h3>
           </div>
 
           <Pills data={months} text={"Wakacje w "} link={`gdzie-jechac`} />
         </div>
         <div className="container  my-5">
           <div className={styles.pills__title}>
-            <h3>Sprawdź również gdzie warto jechać na wakacje w konkretnych okresach</h3>
+            <h3>
+              Sprawdź również gdzie warto jechać na wakacje w konkretnych
+              okresach
+            </h3>
           </div>
 
           <Pills data={continents} text={"Places in "} link={`pogoda`} />
@@ -65,9 +70,9 @@ const WhereToGO = ({
         <div className="container  my-5">
           <h3 className="mb-5">Gorące oferty Last Minute</h3>
           <div className="row">
-            {lastMinutes?.slice(0, 4)?.map((item, i) => (
+            {/* {lastMinutes?.slice(0, 4)?.map((item, i) => (
             <LastMinuteCard item={item} key={i} />
-          ))}
+          ))} */}
           </div>
           <div className="row my-5">
             <div className="col-lg-12">
@@ -116,12 +121,10 @@ export const getStaticProps = async (context) => {
     query: getContinentData,
   });
 
-  const res = await fetch(
-    `https://wakacjopedia-strapi.herokuapp.com/months`
-  );
+  const res = await fetch(`https://wakacjopedia-strapi.herokuapp.com/months`);
   const months = await res.json();
 
-  const { data } = await lastMinuteAll();
+  // const { data } = await lastMinuteAll();
 
   return {
     props: {
@@ -133,7 +136,7 @@ export const getStaticProps = async (context) => {
       global: global?.data?.global,
       continents: continents?.data?.continents,
       months,
-       lastMinutes: data,
+      //  lastMinutes: data,
     },
   };
 };
