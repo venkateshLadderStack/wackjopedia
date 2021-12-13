@@ -19,8 +19,9 @@ import ReactMarkdown from "react-markdown";
 import Pills from "../../components/Pills";
 import PaginatedItems from "../../components/Paginate";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import _ from "lodash";
 
-const wakacje = ({
+const AllInclusive = ({
   headerData,
   footerData,
   holidayTags,
@@ -44,8 +45,8 @@ const wakacje = ({
       slug: "wakacje",
     },
     {
-      title: "All Inclusive",
-      slug: "all-inclusive",
+      title: "Last Minute",
+      slug: "last-minute",
     },
     {
       title: "Gdzie jechać",
@@ -60,7 +61,7 @@ const wakacje = ({
     <>
       <Layout headerData={headerData} footerData={footerData}>
         <section className="container wd">
-          <Breadcrumbs title={`Wakacje`} />
+          <Breadcrumbs title={`All Inclusive`} />
           <h1 className="pb-4">Najlepsze oferty wakacyjne</h1>
           <div className="row">
             <div className="col-lg-8 col-md-12">
@@ -130,14 +131,18 @@ const wakacje = ({
   );
 };
 
-export default wakacje;
+export default AllInclusive;
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
     "https://feeds.datafeedwatch.com/19973/3f147dff0974f74f68c672a75abb23edae110ea8.json"
   );
 
-  const wakacjeDetail = await res.json();
+  const dataRes = await res.json();
+
+  const lastMins = dataRes?.products;
+
+  const wakacjeDetail = _?.filter(lastMins, ["board_basis", "All Inclusive"]);
 
   const client = new ApolloClient({
     uri: "https://wakacjopedia-strapi.herokuapp.com/graphql",
@@ -198,7 +203,7 @@ export const getStaticProps = async (context) => {
       wakacje: wakacje?.data?.wakacjis,
       lastMinutes: data,
       wakacjeData: wakacjeData?.data?.wakacje,
-      wakacjeDetail: wakacjeDetail?.products,
+      wakacjeDetail: wakacjeDetail,
     },
   };
 };
