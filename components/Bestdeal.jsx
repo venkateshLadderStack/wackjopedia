@@ -31,6 +31,8 @@ const Bestdeal = ({ item }) => {
             alt=""
             objectFit="cover"
             className="best_deal_img"
+            placeholder="blur"
+            blurDataURL={item?.img_url_1}
           />
           <a href="#">{item?.offer_rating || "NA"}</a>
         </div>
