@@ -112,7 +112,7 @@ const wakacje = ({
           </div>
         </div>
         <div className="container">
-          <Pills data={forPills} text={"Places in "} link={""} />
+          <Pills data={forPills} text={""} link={""} />
         </div>
       </Layout>
     </>

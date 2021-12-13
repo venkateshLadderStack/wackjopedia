@@ -20,3 +20,16 @@ export const lastMinute = async (country) => {
     data: filteredData,
   };
 };
+
+export const lastMinuteContinent = async (continent) => {
+  const res = await fetch(
+    "https://feeds.datafeedwatch.com/19973/3f147dff0974f74f68c672a75abb23edae110ea8.json"
+  );
+  const data = await res.json();
+  const filteredData = data?.products.filter(
+    (item) => item?.continent === continent
+  );
+  return {
+    data: filteredData,
+  };
+};

@@ -9,12 +9,9 @@ const Searcharea = ({ data, title, link, nameBefore }) => {
           <h3>{title}</h3>
           <ul>
             {data?.map((item, index) => {
-              const slug = item?.continent
-                ? `${item?.continent?.slug}/${item?.slug}`
-                : `${item?.slug}`;
               return (
                 <li key={index}>
-                  <Link href={`/${link}/${slug}`} passHref>
+                  <Link href={`/${link}/${item?.slug}`} passHref>
                     <div>
                       {nameBefore}
                       {item?.title}
