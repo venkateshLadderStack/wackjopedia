@@ -13,6 +13,10 @@ import { getHolidayData, getHolidayTags } from "../../queries/holidayData";
 import { getFooterData, getHeaderData } from "../../queries/layout";
 import { getHomePageData } from "../../queries/homePage";
 import { getBlogData } from "../../queries/blogData";
+import { getGlobalData } from "../../queries/global";
+import Pills from "../../components/Pills";
+import LastMinuteCard from "../../components/LastMinuteCard";
+import { lastMinuteAll } from "../api/lastMinutes";
 
 const Blog = ({
   headerData,
@@ -21,15 +25,17 @@ const Blog = ({
   holidays,
   homeData,
   blogs,
+  global,
+  lastMinutes,
 }) => {
   const [tempList, setTempList] = useState(null);
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
-        <div className="container wd mt-4">
+        <div className="container  mt-4">
           <p className="pt-4">Wakacjopedia / Blog</p>
           <h1 className="section_title">Blog Wakacjopedia</h1>
-          <Banner data={homeData?.banner} />
+          <Banner data={global?.banner} />
           <div className="mt-5">
             <div className="row mt-1">
               <div className="col-lg-8 col-md-12">
@@ -55,18 +61,18 @@ const Blog = ({
                 </div>
               </div>
               <div className="col-lg-4 col-md-12 mt-2">
-                <Holiday data={homeData?.featured_holiday} />
+                <Holiday data={global?.featuredHoliday} />
               </div>
             </div>
           </div>
         </div>
-        <div className="container wd">
+        <div className="container ">
           <div className="my-5">
             <h3 className="mb-5">Gorące oferty Last Minute</h3>
             <div className="row">
-              {holidays?.map((item, i) => {
-                return i <= 3 ? <OfferSection item={item} key={i} /> : null;
-              })}
+              {lastMinutes?.slice(0, 4)?.map((item, i) => (
+                <LastMinuteCard item={item} key={i} />
+              ))}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -75,21 +81,10 @@ const Blog = ({
             </div>
           </div>
         </div>
-        <div className="container wd">
-          <div className="my-5">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className={styles.pills__title}>
-                  <h3>Sprawdź gdzie jechać na wakacje</h3>
-                </div>
-                <div className={styles.pills__div}>
-                  {holidayTags?.map((item, index) => (
-                    <PillSection item={item} key={index} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <div className="container">
+          <h3 className="mb-4">Sprawdź również</h3>
+          <Pills data={blogs} text={""} link={`/blog`} />
         </div>
       </Layout>
     </>
@@ -128,6 +123,12 @@ export const getStaticProps = async (context) => {
     query: getHomePageData,
   });
 
+  const global = await client.query({
+    query: getGlobalData,
+  });
+
+  const { data } = await lastMinuteAll();
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -136,6 +137,8 @@ export const getStaticProps = async (context) => {
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
       blogs: blogData?.data?.blogs,
+      global: global?.data?.global,
+      lastMinutes: data,
     },
   };
 };

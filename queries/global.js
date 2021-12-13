@@ -26,6 +26,7 @@ export const getGlobalData = gql`
           hash
           url
         }
+        discountPrice
       }
     }
   }

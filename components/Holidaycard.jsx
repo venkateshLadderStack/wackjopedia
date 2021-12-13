@@ -44,7 +44,7 @@ const Holiday = ({ data }) => {
             </div>
             <div className={styles.holiday__text}>
               <p>
-                już od <span>{data?.discount_price || "2 555"} zł</span> za os.
+                już od <span>{data?.discountPrice} zł</span> za os.
               </p>
             </div>
             <div className={styles.holiday__btn}>
