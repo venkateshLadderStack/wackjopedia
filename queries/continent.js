@@ -41,6 +41,10 @@ export const getCountryData = gql`
       }
       aboutCountry
       QnA
+      continent {
+        title
+        slug
+      }
       regions {
         title
         slug

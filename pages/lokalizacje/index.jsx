@@ -38,7 +38,7 @@ const Lokalizacje = ({
             <h3>Sprawdź gdzie jechać na wakacje</h3>
           </div>
 
-          <Pills data={continents} text={"Places in "} link={`lokalizacje`} />
+          <Pills data={continents} text={"Places in "} link={`/lokalizacje`} />
         </div>
         <div className="container ">
           <h3 className="py-4">Szukaj miejsca na wakacje</h3>

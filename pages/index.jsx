@@ -41,7 +41,7 @@ export default function Home({
               <DesinationCard />
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday data={homeData?.featured_holiday} />
+              <Holiday data={global?.featuredHoliday} />
             </div>
           </div>
         </div>

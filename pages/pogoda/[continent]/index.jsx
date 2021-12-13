@@ -41,7 +41,7 @@ const ContinentPage = ({
           <Pills
             data={continentDetail?.countries}
             text={"Places in "}
-            link={`pogoda/${continentDetail?.slug}`}
+            link={`/pogoda/${continentDetail?.slug}`}
           />
         </div>
         <div className="container ">

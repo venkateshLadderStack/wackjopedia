@@ -16,38 +16,15 @@ export const getGlobalData = gql`
       }
       featuredHoliday {
         title
-        actual_price
-        city
-        content
-        country
-        discount_price
-        facilities
-        hotel_info
-        hotel_max_available_days
-        visit_holiday
         slug
-        rating
-        location
+        numOfStars
+        featuredImage {
+          hash
+          url
+        }
         thumbnail {
           hash
           url
-        }
-        featured_image {
-          hash
-          url
-        }
-        featured_showcase_image {
-          hash
-          url
-        }
-        slug
-        holiday_tags {
-          tag_name
-          slug
-        }
-        holiday_months {
-          tag_name
-          slug
         }
       }
     }

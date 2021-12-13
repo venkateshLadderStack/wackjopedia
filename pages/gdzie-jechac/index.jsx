@@ -42,7 +42,7 @@ const WhereToGO = ({
             </h3>
           </div>
 
-          <Pills data={months} text={"Wakacje w "} link={`gdzie-jechac`} />
+          <Pills data={months} text={"Wakacje w "} link={`/gdzie-jechac`} />
         </div>
         <div className="container  my-5">
           <div className={styles.pills__title}>
@@ -52,7 +52,7 @@ const WhereToGO = ({
             </h3>
           </div>
 
-          <Pills data={continents} text={"Places in "} link={`pogoda`} />
+          <Pills data={continents} text={"Places in "} link={`/pogoda`} />
         </div>
         <div className="container ">
           <h3 className="py-4">

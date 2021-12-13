@@ -11,6 +11,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
+import { getGlobalData } from "../queries/global";
 
 const pillsList = [
   {
@@ -69,6 +70,7 @@ const Frame8 = ({
   holidays,
   holidayTags,
   homeData,
+  global,
 }) => {
   return (
     <>
@@ -81,7 +83,7 @@ const Frame8 = ({
               <DesinationCard />
             </div>
             <div className="col-4">
-              <Holiday data={homeData?.featured_holiday} />
+              <Holiday data={global?.featuredHoliday} />
             </div>
           </div>
           <div>
@@ -165,6 +167,9 @@ export const getStaticProps = async (context) => {
   const homeData = await client.query({
     query: getHomePageData,
   });
+  const global = await client.query({
+    query: getGlobalData,
+  });
 
   return {
     props: {
@@ -173,6 +178,7 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      global: global?.data?.global,
     },
   };
 };

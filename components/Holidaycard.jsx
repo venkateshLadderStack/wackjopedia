@@ -21,7 +21,7 @@ const Holiday = ({ data }) => {
             }}
           >
             <Image
-              src={data?.featured_image?.url}
+              src={data?.featuredImage?.url}
               alt=""
               layout="fill"
               className={styles.bg_next}

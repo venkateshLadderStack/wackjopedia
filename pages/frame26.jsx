@@ -15,8 +15,16 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { getHolidayData, getHolidayTags } from "../queries/holidayData";
 import { getFooterData, getHeaderData } from "../queries/layout";
 import { getHomePageData } from "../queries/homePage";
+import { getGlobalData } from "../queries/global";
 
-function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
+function Frame26({
+  headerData,
+  footerData,
+  holidays,
+  holidayTags,
+  homeData,
+  global,
+}) {
   return (
     <>
       <Layout headerData={headerData} footerData={footerData}>
@@ -44,7 +52,7 @@ function Frame26({ headerData, footerData, holidays, holidayTags, homeData }) {
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
-              <Holiday data={homeData?.featured_holiday} />
+              <Holiday data={global?.featuredHoliday} />
             </div>
           </div>
           <section className="pb-5">
@@ -188,6 +196,10 @@ export const getStaticProps = async (context) => {
     query: getHomePageData,
   });
 
+  const global = await client.query({
+    query: getGlobalData,
+  });
+
   return {
     props: {
       headerData: headerData?.data?.navbar,
@@ -195,6 +207,7 @@ export const getStaticProps = async (context) => {
       holidayTags: holidayTags?.data?.tags,
       homeData: homeData?.data?.home,
       holidays: holidayData?.data?.hotels,
+      global: global?.data?.global,
     },
   };
 };

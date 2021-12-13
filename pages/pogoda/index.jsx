@@ -38,7 +38,7 @@ const Pogoda = ({
             <h3>Wybierz kontynent, aby sprawdzić pogodę dla wybranego kraju</h3>
           </div>
 
-          <Pills data={continents} text={"Places in "} link={`pogoda`} />
+          <Pills data={continents} text={"Places in "} link={`/pogoda`} />
         </div>
         <div className="container ">
           <h3 className="py-4">

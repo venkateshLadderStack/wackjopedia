@@ -35,7 +35,7 @@ const Footer = ({ footerData }) => {
                       <ul>
                         {column?.footer_links.map((link, i) => (
                           <li key={i}>
-                            <Link href={link?.url}>{link?.name}</Link>
+                            <Link href={`/${link?.slug}`}>{link?.title}</Link>
                           </li>
                         ))}
                       </ul>
@@ -55,7 +55,7 @@ const Footer = ({ footerData }) => {
                 <ul>
                   {page_links.map((link, i) => (
                     <li key={i}>
-                      <Link href={link?.url}>{link?.name}</Link>
+                      <Link href={`/${link?.slug}`}>{link?.title}</Link>
                     </li>
                   ))}
                 </ul>

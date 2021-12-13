@@ -114,7 +114,7 @@ function Frame15({
                 )[0]?.countries
               }
               text={""}
-              link={`lokalizacje/${countryDetail?.continent?.slug}`}
+              link={`/lokalizacje/${countryDetail?.continent?.slug}`}
             />
           </div>
         </div>

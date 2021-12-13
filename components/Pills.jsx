@@ -6,7 +6,7 @@ const Pills = ({ data, text, link }) => {
     <div className="row">
       {data?.map((item, index) => (
         <div className={`col-lg-4 col-md-6 col-sm-12`} key={index}>
-          <Link href={`/${link}/${item?.slug}`} passHref>
+          <Link href={`${link}/${item?.slug}`} passHref>
             <div className={`${styles.pill}`}>
               {" "}
               {text} {item?.title}

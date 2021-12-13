@@ -27,7 +27,7 @@ const Header = ({ headerData }) => {
           <ul>
             {links.map((link, i) => (
               <li key={i}>
-                <Link href={link.url}>{link.name}</Link>
+                <Link href={`/${link?.slug}`}>{link?.title}</Link>
               </li>
             ))}
           </ul>
@@ -60,7 +60,7 @@ const Header = ({ headerData }) => {
                   <ul>
                     {navlinks.map((link, i) => (
                       <li key={i}>
-                        <Link href={link?.url}>{link?.name}</Link>
+                        <Link href={`/${link?.slug}`}>{link?.title}</Link>
                       </li>
                     ))}
                   </ul>
@@ -71,7 +71,7 @@ const Header = ({ headerData }) => {
                       <AiOutlineMenu onClick={() => setShowMobileMenu(true)} />
                     </a>
                   </div>
-                  <Link href={btnLink?.url}>{btnLink?.name}</Link>
+                  <Link href={`/${btnLink?.slug}`}>{btnLink?.title}</Link>
                 </div>
               </div>
             </div>

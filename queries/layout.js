@@ -5,8 +5,8 @@ export const getHeaderData = gql`
     navbar {
       links {
         id
-        name
-        url
+        title
+        slug
       }
       logo {
         alternativeText
@@ -21,9 +21,9 @@ export const getFooterData = gql`
     footer {
       footer_columns {
         footer_links {
-          name
+          title
           id
-          url
+          slug
         }
         id
         title
@@ -37,8 +37,8 @@ export const getFooterData = gql`
       }
       page_links {
         id
-        name
-        url
+        title
+        slug
       }
     }
   }

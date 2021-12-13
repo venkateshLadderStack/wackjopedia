@@ -12,7 +12,7 @@ const Bestdeal = ({ item }) => {
       .map((item, index) => 1 + index);
   };
 
-  const stars = fillRange(item?.rating);
+  const stars = fillRange(item?.numOfStars);
 
   const { width } = useWindowSize();
 
@@ -30,12 +30,12 @@ const Bestdeal = ({ item }) => {
             objectFit="cover"
             className="best_deal_img"
           />
-          <a href="#">8.9</a>
+          <a href="#">{item?.offerRating}</a>
         </div>
         <div className={styles.holy__containt}>
           <div className={styles.holy__hu}>
             <a href="#">
-              {item?.country} / {item?.city}
+              {item?.country?.title} / {item?.city?.title}
             </a>
           </div>
           <div className={styles.holy__title}>
@@ -52,38 +52,38 @@ const Bestdeal = ({ item }) => {
             <div className={styles.holy__list}>
               <a href="#">
                 <i className="fas fa-plane"></i>
-                {item?.visit_holiday}
+                {item?.arrivalKind}
               </a>
               <a href="#" className="pl-2">
                 <Image width={1} height={10} src={dateIcon} alt="" />
-                16.10.2021 - 23.10.2021
+                {item?.arrivalDate} - {item?.departureDate}
               </a>
             </div>
             <div className={styles.holy__list}>
               <a href="#">
                 <i className="fas fa-clock"></i>
-                {item?.hotel_max_available_days} dni
+                {item?.daysCount} dni
               </a>
               <a href="#">
                 <i className="fas fa-utensils"></i>
-                {item?.facilities}
+                {item?.offerCategory}
               </a>
             </div>
           </div>
           <div className={styles.holy__last}>
             <p>
-              od <span>{item?.discount_price} zł</span> za os.
+              od <span>{item?.discountPrice} zł</span> za os.
             </p>
             <div className={styles.hhl}>
               <a href="#">
                 {Math.round(
-                  ((item?.actual_price - item?.discount_price) /
-                    item?.discount_price) *
+                  ((Number(item?.actualPrice) - Number(item?.discountPrice)) /
+                    Number(item?.discountPrice)) *
                     100
                 )}
                 %
               </a>
-              <del>{item?.actual_price} zł</del>
+              <del>{item?.actualPrice} zł</del>
             </div>
           </div>
         </div>
